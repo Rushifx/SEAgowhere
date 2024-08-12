@@ -16,5 +16,5 @@ nav ul li
 
 #uppernav
 {
-    
+    justify-content: flex-end;
 }
