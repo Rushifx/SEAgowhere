@@ -1,20 +1,45 @@
-.logo
+body
 {
-    padding: 10px 10px 10px 0px;
+    margin: 0;
 }
 
+header
+{
+    width: 120dvh;
+    height: 100dvh;
+}
+
+.logo img
+{
+    width: 210px;
+    height: 80px;
+}
+
+nav
+{
+    display: fixed;
+}
 nav ul
 {
     display: flex;
 }
 
-nav ul li
+nav ul li , nav ul a
 {
     list-style-type: none;
     margin-inline: 10px;
 }
 
+
 #uppernav
 {
     justify-content: flex-end;
+    margin-left: 60dvh;
+    margin-top: -5em;
+}
+
+#lowernav
+{
+    justify-content: flex-end;
+    margin-left: 80dvh;
 }
