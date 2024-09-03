@@ -21,3 +21,61 @@ body
     color: transparent;
     text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.9);
   }
+
+  
+
+  /** Start of PACKAGES **/
+
+.packageheader{
+    margin-top: 1rem;
+    text-align: end;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #ffffff;
+}
+
+
+.card-img{
+    max-height: 300px;
+    border-radius: 20px;
+}
+
+.card-title{
+    
+}
+
+.card-text{
+
+}
+
+/** End of PACKAGES **/
+
+
+
+
+/**Start of CAROUSEL**/
+
+.carousel-inner {
+    position: center;
+
+}
+
+.carouseloverlay { 
+    color: #000000;;
+    position: absolute;
+    z-index:12;
+    top:25%;
+    left:0;
+    width:100%;
+    font-size:  3rem;
+    text-align:center;
+  }
+  
+  .carousel-item img{
+    opacity: 1;
+  }  
+
+  .carousel-item img:hover{
+  }  
+      
+ /**End of CAROUSEL**/  
