@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {                                                             /* ! Added by Liyana */
+    /* standard browser reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {                                                          /* ! Added by Liyana */
+    font-family: 'Bona Nova', 'Lexend', sans-serif;
+    font-size: 16px;                                            /* font family set up */
+    height: 100%;                                               /* root font size set up */
+    display: flex;
+    flex-direction: column;
+}
+
 body
 {
     margin: 0;
     width: 100%;
+    height: 100%;                                               /* ! Added by Liyana */
+    display: flex;                                              /* ! Added by Liyana */
+    flex-direction: column;                                     /* ! Added by Liyana */
 }
 
 .bg-body-secondary
