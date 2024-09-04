@@ -9,6 +9,7 @@ body
     background-color: #FBB446 !important;
 }
 
+/** start of header **/
 .homebanner
 {
     min-height: 50dvh;
@@ -22,7 +23,105 @@ body
     text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, 0.9);
   }
 
-  
+  .search {
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 5px
+}
+
+.search-1 {
+    position: relative;
+    width: 100%
+}
+
+.search-1 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 34px;
+    padding-right: 10px;
+    border-right: 2px solid #eee
+}
+
+.search-1 input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+.search-1 i {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-size: 24px;
+    color: #eee
+}
+
+::placeholder {
+    color: #eee;
+    opacity: 1
+}
+
+.search-2 {
+    position: relative;
+    width: 100%
+}
+
+.search-2 input {
+    height: 45px;
+    border: none;
+    width: 100%;
+    padding-left: 18px;
+    padding-right: 100px
+}
+
+.search-2 input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+.search-2 i {
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    font-size: 24px;
+    color: #eee
+}
+
+.search-2 button {
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    border: none;
+    height: 2.5rem;
+    background-color: #3C9CD6;
+    color: #fff;
+    width: 90px;
+    border-radius: 4px;
+}
+
+@media (max-width:800px) {
+    .search-1 input {
+        border-right: none;
+        border-bottom: 1px solid #eee
+    }
+
+    .search-2 i {
+        left: 4px
+    }
+
+    .search-2 input {
+        padding-left: 34px
+    }
+
+    .search-2 button {
+        height: 37px;
+        top: 5px
+    }
+}
+
+/** end of header **/
 
   /** Start of PACKAGES **/
 
@@ -40,13 +139,13 @@ body
     border-radius: 20px;
 }
 
-.card-title{
+/* .card-title{
     
 }
 
 .card-text{
 
-}
+} */
 
 /** End of PACKAGES **/
 
@@ -75,7 +174,8 @@ body
     opacity: 1;
   }  
 
-  .carousel-item img:hover{
-  }  
+/*   .carousel-item img:hover{
+
+  } */  
       
  /**End of CAROUSEL**/  
