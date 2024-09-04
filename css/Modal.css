@@ -1,0 +1,227 @@
+/* video tutorial (modal):  https://www.youtube.com/watch?v=XH5OW46yO8I
+   video tutorial (form validation): https://www.youtube.com/watch?v=CYlNJpltjMM
+   source code for above: https://codepen.io/javascriptacademy-stash/pen/oNeNMNR
+   modal example: https://bbbootstrap.com/snippets/bootstrap-subscribe-our-newsletter-modal-form-47249479
+   video tutorial (modal): https://www.youtube.com/watch?v=tt5uUMQgzl0
+   bootstrap breakpoints: https://getbootstrap.com/docs/5.0/layout/breakpoints/
+   
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.modal-container {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.modal {
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 800px;
+    max-width: 100%;
+    height: 550px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.modal-content,
+.input-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    flex: 1;
+    font-family:'Lexend', sans-serif;
+    border: none;
+}
+
+.modal img {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.modal-content button {
+    font-family:'Lexend', sans-serif;
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #0F3244;
+    color: #e2e2e2;
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+}
+
+.modal h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Bona Nova';
+    font-size: xx-large;
+}
+
+.modal p {
+    margin-top: rem;
+    font-size: 1rem;
+    opacity: 0.8;
+    font-family: 'Lexend';
+}  
+
+.modal-content button:hover {
+    transform: scale(1.05);
+    color: #FFF;
+    background-color: #164861e8;
+    cursor: pointer;
+}
+
+/* User input in modal */
+.input-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.input-control label {
+    margin: 0.5rem 0;
+}
+
+.input-control input{
+    height: 2rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+#newsEmail {
+    width: 100%;
+}
+
+
+
+/* Open and close CSS */
+.open {
+    background-color: #3C9CD6;
+    border: 0;
+    border-radius: 5px;
+    color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 25px;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.open:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #3c9bd6ab;
+}
+
+.close {
+    position: absolute;
+    top: 10px; 
+    right: 15px;
+    z-index: 5;
+    background: none; 
+    color: #dd15156e; 
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 30px
+}
+
+.close:hover {
+    cursor: pointer;
+    color: #dd1515;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 45rem) {          /* 768px */
+    .modal img {
+        display: none;
+    }
+
+    .modal-container {
+        pointer-events: none;
+        visibility: hidden;
+        z-index: 9999;
+    }
+    
+    .modal-container.show {
+        pointer-events: auto;
+        transition: opacity 0.5s ease-in-out;
+        visibility: visible;
+    }
+
+    .modal {
+        margin: 2rem;
+        min-width: 20rem;
+    }
+
+    #form {
+       padding-left: 0.5rem;
+    }
+
+    .modal h1 {
+        font-size: x-large;
+    }
+
+    .modal p {
+        font-size: medium;
+        margin-top: 0.5rem;
+    }
+
+    .input-control label {
+        margin-bottom: 0;
+    }
+
+    .input-control input {
+        width: 100%;
+    }
+
+}
