@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-* {
+*{
     /* standard browser reset */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+html, body{
+    overflow-x: hidden;
 }
 
 html {
@@ -19,7 +24,6 @@ html {
 }
 
 body {
-    margin: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -37,6 +41,7 @@ body {
     background-image: url(../img/header.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .shadow-effects {
@@ -122,12 +127,10 @@ body {
     border-radius: 4px;
 }
 
-@media (max-width:48rem) {
+@media screen and (max-width: 48rem) {
 
     .homebanner{
         width: 100%;
-        align-content: center;
-        justify-content: center;
     }
 
     .search-1 input {
@@ -180,7 +183,6 @@ body {
 /**Start of CAROUSEL**/
 .carousel-inner {
     position: center;
-
 }
 
 .carousel-overlay {
