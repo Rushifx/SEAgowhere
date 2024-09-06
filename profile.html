@@ -38,34 +38,9 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link fw-bolder" href="./packages.html">Experiences</a>
-            </li>
+            </li>       
             <li class="nav-item fw-bolder">
               <a class="nav-link" href="#">Featured Trips</a>
-          </ul>
-
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-cart-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-person-circle" viewBox="0 0 16 16">
-                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                  <path fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                </svg>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-lighter" href="#">Login / Sign Up</a>
-            </li>
           </ul>
 
         </div>
@@ -99,7 +74,7 @@
                 <div class="card-body text-center">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6.webp" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
-                  <h5 class="my-3">ABC</h5>
+                  <h5 id="txtUsername" class="my-3 small fw-light"></h5>
                   <p class="text-muted mb-1">Frequent Flier</p>
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary ms-1 mt-3">Edit Profile</button>
                 </div>
@@ -122,7 +97,7 @@
                       <p class="mb-0">Email</p>
                     </div>
                     <div class="col-sm-9">
-                      <p class="text-muted mb-0">example@example.com</p>
+                      <p id="txtEmail" class="text-muted mb-0"></p>
                     </div>
                   </div>
                   <hr>
@@ -367,6 +342,33 @@
   <script src="js/Modal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+      <!-- External Custom Script -->
+      <script src="js/Mock.js"></script>  <!-- TODO: to remove in production env. --> 
+      <script src="js/const.js"></script>
+      
+      <script src="js/auth.js"></script>
+      <script src="js/components/NavController.js"></script>
+      <script src="js/loader.js"></script>
+      
+      <script src="js/boostrap-ftns.js"></script>
+      <script src="js/form-validate.js"></script>
+      
+      <!-- Internal Custom Script -->
+<script>
+              const token = isAuthenticated();
+  
+              if(!token)
+                  window.location = _HOME_URL;
+  
+              const user = decodeUser(token);
+              const profileEmail = document.getElementById("txtEmail");
+              const profileUsername = document.getElementById("txtUsername");
+              profileEmail.innerText = user.email;
+              profileUsername.innerText = user.uname;
+              
+  
+      </script>
 </body>
 
 </html>
