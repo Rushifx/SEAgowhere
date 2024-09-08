@@ -45,7 +45,7 @@ class Mock{
 
     // !! Mock token containing the userame (uname: momorunner) subscriber (sub: martin@example.com), and Unix Timestamps: issued at (iat: 1st Sept 2024) and expiry (exp: 1st Sept 2025)
     // static mockToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYXJ0aW5AZXhhbXBsZS5jb20iLCJpYXQiOjE3MjUxNTQzNzEsImV4cCI6MTc1NjY5MDM3M30.h2f3qzjWuDFq3p1kPqY7yFbZ5iy5XqFMRScztyL5F0k";
-    static mockToken = "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJ1bmFtZSI6ICJtb21vcnVubmVyIiwgInN1YiI6ICJtYXJ0aW5AZXhhbXBsZS5jb20iLCAiaWF0IjogMTcyNTE1NDM3MSwgImV4cCI6IDE3NTY2OTAzNzN9.dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk";
+    static mockToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vbW9ydW5uZXIiLCJlbWFpbCI6Im1hcnRpbkBleGFtcGxlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcyNTU5MDQwNywiZXhwIjoxNzU3MTI2NDA3fQ.zXMOdhfVq4ILL0JLKq0Iq2zR3f2fBdJA37F9dSQYSm4";
 
     
     // Static methods

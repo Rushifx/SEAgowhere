@@ -31,10 +31,10 @@ function decodeUser(token){
     // !! Extract authenticated user's email from the token
     const arrToken = token.split(".");                              
     const decodedToken = JSON.parse(window.atob(arrToken[1]));
-    const email = decodedToken.sub;
-    const uname = decodedToken.uname;
-    console.log(decodedToken);
-    return {email: email, uname: uname};
+    const email = decodedToken.email;
+    const username = decodedToken.username;
+    const role = decodedToken.role;
+    return {email: email, username: username, role: role};
 
 }
 

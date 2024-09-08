@@ -75,7 +75,7 @@
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6.webp" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
                   <h5 id="txtUsername" class="my-3 small fw-light"></h5>
-                  <p class="text-muted mb-1">Frequent Flier</p>
+                  <h5 class="d-block my-3 small fw-light"><span id="txtUserRole"></span></h5>
                   <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary ms-1 mt-3">Edit Profile</button>
                 </div>
               </div>
@@ -349,26 +349,12 @@
       
       <script src="js/auth.js"></script>
       <script src="js/components/NavController.js"></script>
+      <script src="js/components/Spinner.js"></script>
       <script src="js/loader.js"></script>
       
       <script src="js/boostrap-ftns.js"></script>
       <script src="js/form-validate.js"></script>
       
-      <!-- Internal Custom Script -->
-<script>
-              const token = isAuthenticated();
-  
-              if(!token)
-                  window.location = _HOME_URL;
-  
-              const user = decodeUser(token);
-              const profileEmail = document.getElementById("txtEmail");
-              const profileUsername = document.getElementById("txtUsername");
-              profileEmail.innerText = user.email;
-              profileUsername.innerText = user.uname;
-              
-  
-      </script>
 </body>
 
 </html>
