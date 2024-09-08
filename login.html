@@ -18,6 +18,20 @@
 </head>
 
 <body>
+    <!-- toast -->
+    <!-- https://getbootstrap.com/docs/5.3/components/toasts/ --> 
+    <div class="toast-container p-3 top-0 start-50 translate-middle-x">
+        <!-- Put toasts within -->
+        <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="4000">
+            <div class="d-flex">
+                <div id="msg-toast-body" class="toast-body"> 
+                <!-- Message to be added here -->
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- End of toast -->
   <div class="min-vh-75 bg-body-secondary">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-sm">
@@ -55,7 +69,45 @@
   <!-- End of Header -->
   <!-- Start of mainsection -->
   <section id="mainsection">
+    <div class="container w-50 mt-4">
 
+        <div>
+            <h1 class="display-4 text-white fw-lighter text-center">Login</h1>
+        </div>
+
+        <form id="formLogin" class="needs-validation" novalidate>
+            <!-- Email input -->
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <label class="form-label fw-lighter" for="txtEmail">Email:</label>
+                    <input type="email" id="txtEmail" class="form-control" required/>
+                    <div class="invalid-feedback text-red">
+                        Please enter a valid email.
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Message input -->
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <label class="form-label fw-lighter" for="txtPassword">Password:</label>
+                    <input type="password" id="txtPassword" class="form-control" required/>
+                    <div class="invalid-feedback text-red">
+                        Please enter a password.
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Submit button -->
+            <div class="d-flex justify-content-center pt-4">
+                <button type="submit" id="btnLogin" class="btn btn-primary btn-block ms-2">
+                Login
+                </button>
+                <button type="reset" id="btnReset" class="btn btn-secondary btn-block ms-2">Reset</button>
+            </div>
+        </form>
+
+    </div>
   </section>
   <!-- End of mainsection -->
 
@@ -243,6 +295,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="js/Modal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
   <script src="js/Mock.js"></script>  <!-- TODO: to remove in production env. --> 
   <script src="js/const.js"></script>
   
@@ -253,8 +308,50 @@
   
   <script src="js/boostrap-ftns.js"></script>
   <script src="js/form-validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Internal Custom Script -->
+    <script>
+
+        // Custom JS statements and function
+        document.getElementById("formLogin").addEventListener("submit", async (event) => {
+
+            event.preventDefault();                                                 // Prevent default browser events from happening
+
+            const email = document.getElementById("txtEmail");                      // Create constant variables to capture form inputs - txtEmail
+            const pwd = document.getElementById("txtPassword");                     // Create constant variables to capture form inputs - txtPassword
+
+            const toastElement = document.getElementById("msg-toast");              // Get the toast element - msg-toast
+            const toastBodyElement = document.getElementById("msg-toast-body");     // Get the toast element - msg-toast-body
+            
+            if(isEmpty(email.value) || isEmpty(pwd.value)){                         // Trap empty inputs for txtEmail and txtPassword - isEmpty()
+                showToast({toastElement, 
+                        toastBodyElement,
+                        bgColor: "danger", msg: "All inputs must not be empty."});
+                return;
+            }
+            
+            if(!isEmail(email.value)){                                              // Trap invalid email for txtEmail - isEmail()
+                showToast({toastElement, 
+                        toastBodyElement, 
+                        bgColor:"danger", msg: "Email is invalid."});
+                return;
+            }
+
+            spinner.createSpinner("btnLogin");                                      // Create the spinner, apply it to btnLogin
+            spinner.displaySpinner(true);
+
+            const formData = { email: email.value, password: pwd.value };           // JavaScript Object formData stores the form's input values
+            
+            const loginSuccess = await login(formData);                             // Invoke login() function, and end (return)
+            
+            if(!loginSuccess){
+                spinner.displaySpinner(false);                                                                          // If login unsuccessful, hide spinner
+                showToast({toastElement, toastBodyElement, bgColor: "danger", msg: "Unable to log in. Try again."});    // If login unsuccessful, provide feeback
+            }
+
+        });
+
+    </script>
 </body>
 
 </html>
