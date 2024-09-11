@@ -65,11 +65,12 @@ class NavController {
         
         if (item.title === _CART_TITLE) {
             const iconElement = document.createElement('i');
-            iconElement.className = "fs-3 fa fa-shopping-cart px-3";
+            iconElement.className = "fs-3 fa fa-shopping-cart px-2";
             navLink.appendChild(iconElement);
             navLink.href = item.url; // Ensure the link is maintained
         } else {
             navLink.textContent = item.title.charAt(0).toUpperCase() + item.title.slice(1); // Set the text and the link
+            navLink.href = item.url; // Ensure the link is maintained
         }
 
         if(item.title === _LOGOUT_TITLE){                                                                       // If title is 'logout', 
