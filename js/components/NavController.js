@@ -4,7 +4,7 @@ class NavController {
         this.siteMenu = document.getElementById(element);
         this.navbar = document.createElement("ul");
         this.navItems = [
-            {"title":_CONTACT_TITLE, "url": _CONTACT_URL},
+            {"title":_CART_TITLE, "url": _CART_URL},
             {"title":_LOGIN_TITLE, "url": _LOGIN_URL},
             {"title":_LOGOUT_TITLE, "url": _LOGOUT_URL}
         ];
@@ -63,6 +63,15 @@ class NavController {
 
         navLink.textContent = item.title.charAt(0).toUpperCase() + item.title.slice(1);                         // Set the text and the link
         
+        if (item.title === _CART_TITLE) {
+            const iconElement = document.createElement('i');
+            iconElement.className = "fs-3 fa fa-shopping-cart px-3";
+            navLink.appendChild(iconElement);
+            navLink.href = item.url; // Ensure the link is maintained
+        } else {
+            navLink.textContent = item.title.charAt(0).toUpperCase() + item.title.slice(1); // Set the text and the link
+        }
+
         if(item.title === _LOGOUT_TITLE){                                                                       // If title is 'logout', 
             navLink.href = "#";                                                                                 // Apply a placeholder anchor (#)
             navLink.addEventListener("click", (event) => {                                                      // add eventListener 
@@ -91,7 +100,7 @@ class NavController {
         navLink.appendChild(iconElement);
         navLink.href = item.url;
 
-        const tooltipProifleLink = navLink;                                                                     // Set a new instance of the tooltip for the profile
-        const tooltipProfile =  new bootstrap.Tooltip(tooltipProifleLink);
+        const tooltipProfileLink = navLink;                                                                     // Set a new instance of the tooltip for the profile
+        const tooltipProfile =  new bootstrap.Tooltip(tooltipProfileLink);
     }
 }
