@@ -468,6 +468,9 @@ footer {
 
 /* END OF ABOUT US */
 
+
+/* START OF MEDIA QUERIES */
+
 /* HEADER MQ */
 @media screen and (max-width: 48rem) {
 
@@ -601,5 +604,5 @@ footer {
 }
 /* End of ABOUT US MQ */
 
-/* START OF MEDIA QUERIES */
+/* END OF MEDIA QUERIES */
 
