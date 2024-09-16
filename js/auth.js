@@ -81,6 +81,31 @@ async function login(formData = {}){
     
 }
 
+// Function to Sign Up
+async function signup(formData = {}){           
+    if(Object.entries(formData).length === 0)                                               // Return if the object is empty
+        return;
+
+    try {
+        const response = Mock.getMockSuccess();
+
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+        await sleep(2000);
+
+        if(response.ok){
+            const token = Mock.getToken(true);
+            window.localStorage.setItem(_USERTOKEN, token);
+            window.location = _PROFILE_URL;
+        }
+
+        return;
+
+    } catch (error){
+        console.log("Exception error gotten is: ", error.message)
+        return;
+    }
+}
+
 // Function to logout
 function logout(){
     window.localStorage.removeItem(_USERTOKEN);                                             // Store the string in localStorage with the key 'token'

@@ -6,6 +6,7 @@ const _CONTACT_TITLE = "contact";
 const _LOGIN_TITLE = "join/log in";
 const _LOGOUT_TITLE = "logout";
 const _PROFILE_TITLE = "user profile";
+const _SIGNUP_TITLE = "sign up";
 
 // correspononding site pages' links
 const _HOME_URL = "index.html";             
@@ -15,6 +16,7 @@ const _CONTACT_URL = "contact.html";
 const _LOGIN_URL = "login.html";
 const _LOGOUT_URL = "logout.html";
 const _PROFILE_URL = "profile.html";
+const _SIGNUP_URL = "signup.html";
 
 // token name
 const _USERTOKEN = "usertoken";
