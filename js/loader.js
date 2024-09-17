@@ -32,5 +32,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         };
     };
 
+    // JavaScript for mobile dropdown
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdowns = document.querySelectorAll('.dropdown-toggle');
+        dropdowns.forEach(function(dropdown) {
+            dropdown.addEventListener('click', function(event) {
+                event.preventDefault();
+                var dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu.style.display === 'block') {
+                    dropdownMenu.style.display = 'none';
+                } else {
+                    dropdownMenu.style.display = 'block';
+                }
+            });
+        });
+    });
+
     // End here
 });

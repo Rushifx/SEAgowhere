@@ -3,12 +3,21 @@ class NavController {
     constructor(element){
         this.siteMenu = document.getElementById(element);
         this.navbar = document.createElement("ul");
+        this.middleBar = document.createElement("ul");
         this.navItems = [
             {"title":_CART_TITLE, "url": _CART_URL},
             {"title":_LOGIN_TITLE, "url": _LOGIN_URL},
             {"title":_LOGOUT_TITLE, "url": _LOGOUT_URL}
         ];
+        this.navMiddleItems = [
+            {"title":_EXPERIENCE_FOOD_TITLE, "url":_EXPERIENCE_FOOD_URL},
+            {"title":_EXPERIENCE_FESTIVAL_TITLE, "url":_EXPERIENCE_FESTIVAL_URL},
+            {"title":_EXPERIENCE_NATURE_TITLE, "url":_EXPERIENCE_NATURE_URL},{"title":_EXPERIENCE_CONCERTS_TITLE, "url":_EXPERIENCE_CONCERTS_URL},
+            {"title":_EXPERIENCE_CULTURE_TITLE,"url":_EXPERIENCE_CULTURE_URL
+            }
+        ];
     }
+
 
     displayNav(){
 
@@ -16,8 +25,27 @@ class NavController {
         this.siteMenu.appendChild(this.navbar);
 
         
+        this.middleBar.className = "dropdown-menu";
+        document.getElementById("dropdown_generator").appendChild(this.middleBar);
+
+
+        
         const token = isAuthenticated();                                                                        // Obtain the token of the authenticated user
         
+        this.navMiddleItems.forEach((item)=>{
+            const navItem = document.createElement("li");                                                   
+            const navLink = document.createElement("a");                                                            // Append link to menu item
+            navItem.appendChild(navLink);  
+            navLink.className = "dropdown-item";
+            navLink.setAttribute("data-bs-toggle", "tooltip");
+            navLink.setAttribute("href", item.url);
+            navLink.innerHTML = item.title;
+                const underLinedLink = "dropdown-item";
+                document.getElementById("dropdown_generator").getElementsByClassName("dropdown-menu")[0].appendChild(navItem);
+                console.log(item);
+            })
+
+
         this.navItems.forEach((item) => {                                                                       // Populate the navbar, and done conditionally for Login or Logout
             
             const underLinedLink = "nav-link fw-bolder text-decoration-underline";                              // Used for links that require emphasis (join/log in, logout, useremail)
