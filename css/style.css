@@ -494,6 +494,14 @@ footer {
 
 /* START OF MEDIA QUERIES */
 
+/* dropdown menu on hover for non-mobile display */
+/* Show dropdown menu on hover for larger screens */
+@media (min-width: 35rem) {
+    .dropdown:hover .dropdown-menu {
+         display: block;
+    }
+}
+
 /* HEADER MQ */
 @media screen and (max-width: 48rem) {
 

@@ -42,7 +42,6 @@ class NavController {
             navLink.innerHTML = item.title;
                 const underLinedLink = "dropdown-item";
                 document.getElementById("dropdown_generator").getElementsByClassName("dropdown-menu")[0].appendChild(navItem);
-                console.log(item);
             })
 
 
