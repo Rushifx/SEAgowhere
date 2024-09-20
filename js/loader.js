@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (user.role === "ADMIN") {
             profileRole.innerText = user.role.charAt(0).toUpperCase() + user.role.slice(1).toLowerCase();
         };
+    }else if(currentPage.includes(_SIGNUP_URL) || currentPage.includes(_LOGIN_URL)){
+
+        const token = isAuthenticated();
+        if(token)
+            window.location = _HOME_URL;
+
     };
 
     // JavaScript for mobile dropdown
