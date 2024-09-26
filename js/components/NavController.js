@@ -12,9 +12,10 @@ class NavController {
         this.navMiddleItems = [
             {"title":_EXPERIENCE_FOOD_TITLE, "url":_EXPERIENCE_FOOD_URL},
             {"title":_EXPERIENCE_FESTIVAL_TITLE, "url":_EXPERIENCE_FESTIVAL_URL},
-            {"title":_EXPERIENCE_NATURE_TITLE, "url":_EXPERIENCE_NATURE_URL},{"title":_EXPERIENCE_CONCERTS_TITLE, "url":_EXPERIENCE_CONCERTS_URL},
-            {"title":_EXPERIENCE_CULTURE_TITLE,"url":_EXPERIENCE_CULTURE_URL
-            }
+            {"title":_EXPERIENCE_NATURE_TITLE, "url":_EXPERIENCE_NATURE_URL},
+            {"title":_EXPERIENCE_CONCERTS_TITLE, "url":_EXPERIENCE_CONCERTS_URL},
+            {"title":_EXPERIENCE_CULTURE_TITLE,"url":_EXPERIENCE_CULTURE_URL},
+            {"title":_EXPERIENCE_ALL_TITLE,"url":_EXPERIENCE_ALL_URL},
         ];
     }
 
