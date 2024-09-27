@@ -22,97 +22,451 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-sm">
       <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="p-1" alt="company logo" height="100"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <li class="nav-item dropdown" id="dropdown_generator">
-                      <a class="nav-link dropdown-toggle fw-bolder" href="#" id="experiencesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Experiences
-                      </a>
-                  </li>
-                  <li class="nav-item fw-bolder">
-                      <a class="nav-link" href="packages.html">Featured Trips</a>
-                  </li>
-              </ul>
-          </div>
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="p-1" alt="company logo"
+            height="100"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown" id="dropdown_generator">
+              <a class="nav-link dropdown-toggle fw-bolder" href="#" id="experiencesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Experiences
+              </a>
+            </li>
+            <li class="nav-item fw-bolder">
+              <a class="nav-link" href="packages.html">Featured Trips</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </nav>
-</div>
-    <!-- Header -->
-    <header
-      class="container-lg homebanner rounded-4 text-center mt-1 d-flex flex-column align-items-center justify-content-center">
-      <h1 class="display-6 fw-lighter shadow-effects text-white">SeaGoWhere, Where go See, We go everywhere we see!</h1>
-      <div class="container">
-        <div class="search">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="search-1"> <i class='bx bx-search-alt'></i> <input type="text" placeholder="Experiences">
-              </div>
+    </nav>
+  </div>
+  <!-- Header -->
+  <header
+    class="container-lg homebanner rounded-4 text-center mt-1 d-flex flex-column align-items-center justify-content-center">
+    <h1 class="display-6 fw-bolder shadow-effects text-white text-uppercase">your adventure begins here!</h1>
+    <div class="container">
+      <div class="search">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="search-1"> <i class='bx bx-search-alt'></i> <input type="text" placeholder="Experiences">
             </div>
-            <div class="col-md-6">
-              <div>
-                <div class="search-2"> <i class='bx bxs-map'></i> <input type="text" placeholder="Location">
-                  <button>Search</button>
-                </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <div class="search-2"> <i class='bx bxs-map'></i> <input type="text" placeholder="Location">
+                <button>Search</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
   <!-- End of Header -->
   <!-- Start of mainsection -->
   <section id="mainsection">
 
+    <!-- Featured Section -->
+    <section class="featured mt-3">
+      <div class="featured-index container-lg mb-4">
+        <h2 class="fw-bolder mb-4">Our FEATURED trips!</h2>
+
+        <div class="d-flex align-items-start">
+          <div class="featured-pills nav flex-column nav-pills col-3 justify-content-between" id="v-pills-tab"
+            role="tablist" aria-orientation="vertical">
+            <button class="nav-link active pills h-25" id="featured-trip1-tab" data-bs-toggle="pill"
+              data-bs-target="#featured-trip1-pills" type="button" role="tab" aria-selected="true">Azure Shan
+              State</button>
+            <button class="nav-link pills h-25" id="featured-trip2-tab" data-bs-toggle="pill"
+              data-bs-target="#featured-trip2-pills" type="button" role="tab" aria-selected="false">Taste of
+              Bangkok</button>
+            <button class="nav-link pills h-25" id="featured-trip3-tab" data-bs-toggle="pill"
+              data-bs-target="#featured-trip3-pills" type="button" role="tab" aria-selected="false">Bali
+              Thrills</button>
+            <button class="nav-link pills h-25" id="featured-trip4-tab" data-bs-toggle="pill"
+              data-bs-target="#featured-trip4-pills" type="button" role="tab" aria-selected="false">Cebu Food
+              Hues</button>
+          </div>
+
+          <div class="tab-content col-9" id="v-pills-tabContent">
+            <!-- Featured Trip 1 -->
+            <div class="tab-pane fade show active position-relative" id="featured-trip1-pills" role="tabpanel"
+              aria-labelledby="featured-trip1-tab">
+              <div class="trip-details p-3">
+                <div class="trip-title text-uppercase fs-1 fw-bolder">Shan State, Myanmmar</div>
+                <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                  <p>7 Days, 6 Nights</p>
+                  <p>From SGD$<strong>3500</strong> / Pax</p>
+                </div>
+              </div>
+              <div class="trip-links d-flex justify-content-end position-absolute">
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              </div>
+            </div>
+
+            <!-- Featured Trip 2 -->
+            <div class="tab-pane fade position-relative" id="featured-trip2-pills" role="tabpanel"
+              aria-labelledby="featured-trip2-tab">
+              <div class="trip-details p-3">
+                <div class="trip-title text-uppercase fs-1 fw-bolder">taste of Bangkok, Thailand</div>
+                <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                  <p>5 Days, 4 Nights</p>
+                  <p>From SGD$<strong>2500</strong> / Pax</p>
+                </div>
+              </div>
+              <div class="trip-links d-flex justify-content-end position-absolute">
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              </div>
+            </div>
+
+            <!-- Featured Trip 3 -->
+            <div class="tab-pane fade position-relative" id="featured-trip3-pills" role="tabpanel"
+              aria-labelledby="featured-trip3-tab">
+              <div class="trip-details p-3">
+                <div class="trip-title text-uppercase fs-1 fw-bolder">Bali Thrills, Indonesia</div>
+                <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                  <p>6 Days, 5 Nights</p>
+                  <p>From SGD$<strong>1200</strong> / Pax</p>
+                </div>
+              </div>
+              <div class="trip-links d-flex justify-content-end position-absolute">
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              </div>
+            </div>
+
+            <!-- Featured Trip 4 -->
+            <div class="tab-pane fade position-relative" id="featured-trip4-pills" role="tabpanel"
+              aria-labelledby="featured-trip4-tab">
+              <div class="trip-details p-3">
+                <div class="trip-title text-uppercase fs-1 fw-bolder">Cebu Food Hues, Philippines</div>
+                <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                  <p>4 Days, 3 Nights</p>
+                  <p>From SGD$<strong>2500</strong> / Pax</p>
+                </div>
+              </div>
+              <div class="trip-links d-flex justify-content-end position-absolute">
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILE Featured Section -->
+    <section class="mobile">
+      <div class="mobile-featured-index container-lg mb-0">
+        <h2 class="fw-bolder mb-4">Our FEATURED trips!</h2>
+        <div class="mobile-tab-content col-9">
+
+          <!-- Mobile Featured Trip 1 -->
+          <div class="position-relative mobile-featured-card" id="featured-trip1-pills">
+            <div class="trip-details p-3">
+              <div class="trip-title text-uppercase fs-1 fw-bolder">Shan State, Myanmmar</div>
+              <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                <p>7 Days, 6 Nights</p>
+                <p>From SGD$<strong>3500</strong> / Pax</p>
+              </div>
+            </div>
+            <div class="trip-links d-flex justify-content-end position-absolute">
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+            </div>
+          </div>
+          <!-- Mobile Featured Trip 2 -->
+          <div class="position-relative mobile-featured-card" id="featured-trip2-pills">
+            <div class="trip-details p-3">
+              <div class="trip-title text-uppercase fs-1 fw-bolder">taste of Bangkok, Thailand</div>
+              <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                <p>6 Days, 5 Nights</p>
+                <p>From SGD$<strong>1200</strong> / Pax</p>
+              </div>
+            </div>
+            <div class="trip-links d-flex justify-content-end position-absolute">
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+            </div>
+          </div>
+          <!-- Mobile Featured Trip 3 -->
+          <div class="position-relative mobile-featured-card" id="featured-trip3-pills">
+            <div class="trip-details p-3">
+              <div class="trip-title text-uppercase fs-1 fw-bolder">Bali Thrills, Indonesia</div>
+              <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                <p>7 Days, 6 Nights</p>
+                <p>From SGD$<strong>3500</strong> / Pax</p>
+              </div>
+            </div>
+            <div class="trip-links d-flex justify-content-end position-absolute">
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+            </div>
+          </div>
+          <!-- Mobile Featured Trip 4 -->
+          <div class="position-relative mobile-featured-card" id="featured-trip4-pills">
+            <div class="trip-details p-3">
+              <div class="trip-title text-uppercase fs-1 fw-bolder">Cebu Food Hues, Philippines</div>
+              <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
+                <p>4 Days, 3 Nights</p>
+                <p>From SGD$<strong>2500</strong> / Pax</p>
+              </div>
+            </div>
+            <div class="trip-links d-flex justify-content-end position-absolute">
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category mt-3">
+
+      <div class="container">
+        <h2 class="fw-bolder mb-4 category-title">Check out our EXPERIENCES!</h2>
+
+        <div class="row">
+          <!-- Category Card 1 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/packages/005_img_1020_1.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    Foodies</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category Card 2 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/packages/005_img_1020_4.webp" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    Party Animals</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category Card 3 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/packages/005_img_1020_10.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    Music Lovers</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category Card 4 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/packages/005_img_1020_8.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    Outdoor Enthusiasts</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category Card 5 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/packages/005_img_1020_2.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    History Buffs</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <!-- Category Card 6 -->
+          <div class="col-md-4 col-sm-6">
+            <a href="#">
+              <div class="card mb-4 shadow-sm position-relative" width="100%" height="225">
+                <img src="img/008_img_1020_7.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <svg class="position-absolute" width="100%" height="100%">
+                  <rect width="100%" height="100%" fill="#7373734a"></rect>
+                  <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
+                    Undecided</text>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial container-lg mb-5">
+      <div class="testimonial-container">
+        <div class="section-title">
+          <h2 class="fw-bolder">Testimonials</h2>
+          <p class="mb-4">Check out what our customers are saying!</p>
+        </div>
+      </div>
+
+      <div class="testimonials-wrapper position-relative">
+        <i id="prev" class="fa-solid fa-angle-left d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
+        <ul class="testimonial-carousel list-unstyled d-grid gap-3 overflow-x-auto">
+
+            <!-- Testimonial 1 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user-astronaut fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Colin Toh</h4>
+                  <h5 class="fw-light small">Singapore, Singapore</h5>
+              </div>
+            </li>
+
+            <!-- Testimonial 2 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user-graduate fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Charlie Tan</h4>
+                  <h5 class="fw-light small">San Francisco, USA</h5>
+              </div>
+            </li>
+
+            <!-- Testimonial 3 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user-secret fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Liyana Afiqah</h4>
+                  <h5 class="fw-light small">Kuala Lumpur, Malaysia</h5>
+              </div>
+            </li>
+
+            <!-- Testimonial 4 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user-ninja fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Xun An</h4>
+                  <h5 class="fw-light small">Hanoi, Vietnam</h5>
+              </div>
+            </li>
+
+            <!-- Testimonial 5 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Sophia Petrillo</h4>
+                  <h5 class="fw-light small">Sicily, Italy</h5>
+              </div>
+            </li>
+
+            <!-- Testimonial 6 -->
+            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="listing-rating my-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
+                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                  veniam cumque consequatur molestias corporis a!
+                </p>
+                  <h4>Emily Oui-Oui</h4>
+                  <h5 class="fw-light small">Paris, France</h5>
+              </div>
+            </li>
+
+          </ul>
+          <i id="next" class="fa-solid fa-angle-right d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
+
+      </div>
+
+    </section>
+
   </section>
   <!-- End of mainsection -->
 
   <!-- Start of footer -->
-  <!--Bootstrap Autoplay Carousel before FOOTER -->
-  <section id="carousel">
-    <div id="carouselExampleInterval" class="slide carousel-fade" data-bs-ride="carousel"
-      data-bs-touch="false">
-      <div class="carousel-inner mt-1">
-        <div class="carousel-overlay">
-          <p>Set Away With Us!</p>
-        </div>
-        <!-- Carousel Images -->
-        <div class="carousel-item active" data-bs-interval="3000"><!-- Only the first item should be active -->
-          <img src="./img/carousel/carousel_1.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="./img/carousel/carousel_2.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="./img/carousel/carousel_3.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="./img/carousel/carousel_4.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="./img/carousel/carousel_5.png" class="d-block w-100" alt="...">
-        </div>
-      </div>
-
-
-      <!--Carousel Buttons-->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>
-
   <!-- Main Footer -->
   <!-- https://mdbootstrap.com/docs/standard/navigation/footer/ -->
   <footer class="text-center footer-container">
@@ -254,20 +608,22 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>    <!-- popper: used in modal-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>  <!-- used in modal -->
+  
+  <!-- External Custom Script -->
   <script src="js/Modal.js"></script>
-      <!-- External Custom Script -->
-      <script src="js/Mock.js"></script>  <!-- TODO: to remove in production env. --> 
-      <script src="js/const.js"></script>
-      
-      <script src="js/auth.js"></script>
-      <script src="js/components/NavController.js"></script>
-      <script src="js/components/Spinner.js"></script>
-      <script src="js/loader.js"></script>
-      
-      <script src="js/boostrap-ftns.js"></script>
-      <script src="js/form-validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  <script src="js/Mock.js"></script> <!-- TODO: to remove in production env. -->
+  <script src="js/const.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/components/NavController.js"></script>
+  <script src="js/components/Spinner.js"></script>
+  <script src="js/loader.js"></script>
+
+  <script src="js/boostrap-ftns.js"></script>
+  <script src="js/form-validate.js"></script>
+  <script src="js/review.js"></script>
 </body>
 
 </html>

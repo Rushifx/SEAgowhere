@@ -13,6 +13,7 @@ const _EXPERIENCE_FESTIVAL_TITLE = "Festival";
 const _EXPERIENCE_NATURE_TITLE = "Nature";
 const _EXPERIENCE_CONCERTS_TITLE = "Concerts";
 const _EXPERIENCE_CULTURE_TITLE = "Culture";
+const _EXPERIENCE_ALL_TITLE = "All Experiences";
 
 // correspononding site pages' links
 const _HOME_URL = "index.html";             
@@ -29,6 +30,7 @@ const _EXPERIENCE_FESTIVAL_URL = "#";
 const _EXPERIENCE_NATURE_URL = "#";
 const _EXPERIENCE_CONCERTS_URL = "#";
 const _EXPERIENCE_CULTURE_URL = "#";
+const _EXPERIENCE_ALL_URL = "#";
 
 // token name
 const _USERTOKEN = "usertoken";

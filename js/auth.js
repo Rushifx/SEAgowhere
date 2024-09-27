@@ -87,13 +87,13 @@ async function signup(formData = {}){
         return;
 
     try {
-        const response = Mock.getMockSuccess();
+        const response = Mock.getMockSuccess();                                             // TODO: remove when endpoint request is available (remove in production env.)  
 
-        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));      // TODO: remove delay when endpoint is instated
         await sleep(2000);
 
         if(response.ok){
-            const token = Mock.getToken(true);
+            const token = Mock.getToken(true);                                              // TODO: refactor when token is retrieved from response, (remove in production env.) 
             window.localStorage.setItem(_USERTOKEN, token);
             window.location = _PROFILE_URL;
         }
