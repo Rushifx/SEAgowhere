@@ -599,7 +599,7 @@ footer {
     text-shadow: 1px 0 10px #000;
 }
 
-.card:hover {
+.category-card:hover {
     scale: 1.1;
 }
 
