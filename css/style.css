@@ -132,27 +132,65 @@ body {
 
 /** Start of PACKAGES **/
 
-.packageheader {
-    margin-top: 1rem;
-    text-align: end;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    background-color: #ffffff;
+.package-main h1 {
+    font-family: 'Bona Nova', serif;
+    height: auto;
 }
 
+.package-main p {
+    font-family: 'Lexend', sans-serif;
+}
 
-.card-img {
-    max-height: 300px;
+.package-card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
     border-radius: 20px;
+    margin: 2rem 0 2rem 0;
+    position: relative;
+    width: 100%;
 }
 
-/* .card-title{
-    
+.package-card-gradient{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; 
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.756) 40%,rgba(255, 255, 255, 0) 90%);
 }
 
-.card-text{
+.package-card img {
+    border-radius: 20px; 
+    opacity: 0.;
+    border: 2px solid rgba(0, 0, 0,);
+}
 
-} */
+.card-img-overlay{
+
+}
+
+.card-title{
+padding-top: 1rem;
+padding-left: 1rem;
+padding-right: 20px;
+}
+
+.sm-img-card{
+padding-left: 1rem;
+
+}
+
+.card-text h3, h4, h5, p {
+    font-family: 'Lexend', sans-serif;
+    padding-left: 1rem;
+}
+
+
+.bottom-right {
+    position: absolute;
+    bottom: 5%;
+    right: 1.8%;
+}
+
 
 /** End of PACKAGES **/
 
@@ -548,19 +586,19 @@ footer {
 }
 
 #featured-trip1-pills {
-    background-image: url(../img/008_img_1020_7.jpg);
+    background-image: url(/SEAgowhere/img/packages/008_img_1020_7.jpg);
 }
 
 #featured-trip2-pills {
-    background-image: url(../img/packages/003_img_1020_5.jpg);
+    background-image: url(/SEAgowhere/img/packages/012_img_1020_5.jpg);
 }
 
 #featured-trip3-pills {
-    background-image: url(../img/packages/04_img_1020_2.jpg);
+    background-image: url(/SEAgowhere/img/packages/015_img_1020_2.jpg);
 }
 
 #featured-trip4-pills {
-    background-image: url(../img/packages/003_img_1020_6.jpg);
+    background-image: url(/SEAgowhere/img/packages/002_img_1020_1.jpg);
 }
 
 .trip-links {
