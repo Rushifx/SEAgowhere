@@ -17,42 +17,157 @@
 </head>
 
 <body>
-
-    <div class="min-vh-75 bg-body-secondary">
-      <!-- Navigation Bar -->
-      <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="p-1" alt="company logo" height="100"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown" id="dropdown_generator">
-                        <a class="nav-link dropdown-toggle fw-bolder" href="#" id="experiencesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Experiences
-                        </a>
-                    </li>
-                    <li class="nav-item fw-bolder">
-                        <a class="nav-link" href="packages.html">Featured Trips</a>
-                    </li>
-                </ul>
-            </div>
+  <div class="min-vh-75 bg-body-secondary">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="p-1" alt="company logo"
+            height="100"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown" id="dropdown_generator">
+              <a class="nav-link dropdown-toggle fw-bolder" href="#" id="experiencesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Experiences
+              </a>
+            </li>
+            <li class="nav-item fw-bolder">
+              <a class="nav-link" href="packages.html">Featured Trips</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-
-  <!-- Header -->
-  <!--NO HEADER-->
-  <!-- End of Header -->
-
+  </div>
+<!-- Header -->
+<!-- No Header in Packages --> 
+<!-- End of Header -->
 
   <!-- Start of mainsection -->
   <section id="mainsection">
 
+  <!-- Packages Text Container -->  
+    <div class="package-main container-fluid text-center mt-3 mx-auto"> 
+      <h1 class="fw-bolder mb-4">Featured Trips</h1>
+      <p class="mb-4">Most popular, highly recommended & hot new trips!</p>
+    </div>   
+
+  <!-- Start of Featured Trips Packages (Package Cards) -->  
+
+  <!--Container For Trip Cards and Pagination Component-->
+  <div class="container-lg mt-1 mb-1 align-items-center row-cols-lg-1">
+
+      <!--Project Card #1-->
+      <div class="package-card">
+        <div class="package-card-gradient"></div>
+        <img src="/SEAgowhere/img/packages/003_img_1020_1.jpg" alt="card image" width="100%" height="330px">
+        <div class="card-img-overlay">
+            <div class="card-title d-flex justify-content-between">
+                <h3 class="card-text text-white">Danang Sands</h3>
+                <button type="button" class="btn btn-lg fa fa-bookmark btn-primary"></button>
+            </div>
+            <h4 class="card-text text-uppercase text-white">5d4n</h4>
+            <h5 class="card-text text-white">From SGD$1000/Per Pax</h5>
+            <p class="card-text text-white">Discover Da Nang’s stunning coastline, where pristine beaches meet azure waters, and hidden coves beckon you to explore.</p>
+            <div class="position-absolute bottom-right">
+                <button type="button" class="btn btn-lg btn-primary">Let's Go!</button>
+            </div>
+            <div class="sm-img-card d-flex justify-content-start gap-3">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/003_img_1020_3.jpg" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/003_img_1020_7.jpg" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/003_img_1020_6.jpg" alt="sm image" width="col-auto" height="150px">
+            </div>
+        </div>
+      </div>
+      <!--End of Project Card #1-->  
+
+      <!--Project Card #2-->
+      <div class="package-card">
+        <div class="package-card-gradient"></div>
+        <img src="/SEAgowhere/img/packages/004_img_1020_7.jpg" alt="card image" width="100%" height="330px">
+        <div class="card-img-overlay">
+            <div class="card-title d-flex justify-content-between">
+                <h3 class="card-text text-white">Sapa Rice Trails</h3>
+                <button type="button" class="btn btn-lg fa fa-bookmark btn-primary"></button>
+            </div>
+            <h4 class="card-text text-uppercase text-white">6d5n</h4>
+            <h5 class="card-text text-white">From SGD$2400/Per Pax</h5>
+            <p class="card-text text-white">Discover a world beyond the bustle of Hanoi to the emerald-green rice terraces of Sapa.</p>
+            <div class="position-absolute bottom-right">
+                <button type="button" class="btn btn-lg btn-primary">Let's Go!</button>
+            </div>
+            <div class="sm-img-card d-flex justify-content-start gap-3">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/004_img_1020_3.jpg" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/004_img_1020_5.jpg" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/004_img_1020_6.jpg" alt="sm image" width="col-auto" height="150px">
+            </div>
+        </div>
+      </div>
+      <!--End of Project Card #2-->  
+
+      <!--Project Card #3-->
+      <div class="package-card">
+        <div class="package-card-gradient"></div>
+        <img src="/SEAgowhere/img/packages/005_img_1020_5.jpg" alt="card image" width="100%" height="330px">
+        <div class="card-img-overlay">
+            <div class="card-title d-flex justify-content-between">
+                <h3 class="card-text text-white">Pagodas of Perfume</h3>
+                <button type="button" class="btn btn-lg fa fa-bookmark btn-primary"></button>
+            </div>
+            <h4 class="card-text text-uppercase text-white">6d5n</h4>
+            <h5 class="card-text text-white">From SGD$1500/Per Pax</h5>
+            <p class="card-text text-white">Immerse yourself in the spiritual aura and culture of Vietnam’s most revered pilgrimage destination.</p>
+            <div class="position-absolute bottom-right">
+                <button type="button" class="btn btn-lg btn-primary">Let's Go!</button>
+            </div>
+            <div class="sm-img-card d-flex justify-content-start gap-3">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/005_img_1020_3.jpg" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/005_img_1020_7.webp" alt="sm image" width="col-auto" height="150px">
+                <img class="img-mini rounded" src="/SEAgowhere/img/packages/005_img_1020_11.jpg" alt="sm image" width="col-auto" height="150px">
+            </div>
+        </div>
+      </div>
+      <!--End of Project Card #3-->  
+
+
+
+
+
+
+
+      <!--End of Project Card #3-->
+
+      <!-- End of Featured Trips Packages (Cards) -->   
+
+      <!-- Start of Pagination (Centre Alignment), currently unlinked -->  
+      <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center"> <!-- Modification to set to page center-->
+            <li class="page-item disabled"> <!-- Slight modification to set disabled by default-->
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      <!-- End of Pagination -->    
+
+  </section>
   <!-- End of mainsection -->
-
+  
+    
+    
   <!-- Start of footer -->
-
+  <!-- There is no Autoplay Carousel for Packages -->
   <!-- Main Footer -->
   <!-- https://mdbootstrap.com/docs/standard/navigation/footer/ -->
   <footer class="text-center footer-container">
