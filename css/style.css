@@ -586,19 +586,19 @@ footer {
 }
 
 #featured-trip1-pills {
-    background-image: url(/SEAgowhere/img/packages/008_img_1020_7.jpg);
+    background-image: url(../img/packages/008_img_1020_7.jpg);
 }
 
 #featured-trip2-pills {
-    background-image: url(/SEAgowhere/img/packages/012_img_1020_5.jpg);
+    background-image: url(../img/packages/012_img_1020_5.jpg);
 }
 
 #featured-trip3-pills {
-    background-image: url(/SEAgowhere/img/packages/015_img_1020_2.jpg);
+    background-image: url(../img/packages/015_img_1020_2.jpg);
 }
 
 #featured-trip4-pills {
-    background-image: url(/SEAgowhere/img/packages/002_img_1020_1.jpg);
+    background-image: url(../img/packages/002_img_1020_1.jpg);
 }
 
 .trip-links {
