@@ -5,8 +5,6 @@ const arrowBtns = document.querySelectorAll(".review-nav");
 const firstCardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
 const carouselChildrens = [...carousel.children];
 
-let isDragging = false, startX, startScrollLeft;
-
 // Get the number of cards that can fit in the carousel at once
 let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
@@ -15,39 +13,12 @@ carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
     carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
 
-// Insert copies of the first few cards to end of carousel for infinite scrolling
-carouselChildrens.slice(0, cardPerView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
-
 // Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         carousel.scrollLeft += btn.id === "prev" ? -firstCardWidth : firstCardWidth;
     })
 });
-
-const dragStart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    
-    // Records the initial cursor and scroll position of the carousel
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-}
-
-const dragging = (e) => {
-    if (!isDragging) return; {      // if isDragging is false, return from here
-
-        // Updates the scroll position of the carousel based on the cursor movement
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-    }
-}
-
-const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-}
 
 const infiniteScroll = () => {
     // If the carousel is at the beginning, scroll to the end
@@ -65,7 +36,15 @@ const infiniteScroll = () => {
 
 }
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
+
+// Auto play function
+window.onload = function() {
+    var nextArrow = document.querySelector("#next");
+    
+    function clickNext() {
+      nextArrow.click();
+    }
+   
+    setInterval(clickNext, 3000);
+  };

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
@@ -15,7 +14,7 @@ body {
 }
 
 html {
-    font-family: 'Bona Nova', 'Lexend', sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-size: 16px;
     /* font family set up */
     height: 100%;
@@ -33,6 +32,12 @@ body {
 
 .bg-body-secondary {
     background-color: #FBB446 !important;
+}
+
+
+/* Start of Nav */
+.navbar .nav-item {
+    font-family: 'Lexend', sans-serif;
 }
 
 /** start of header **/
@@ -133,7 +138,7 @@ body {
 /** Start of PACKAGES **/
 
 .package-main h1 {
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
     height: auto;
 }
 
@@ -162,10 +167,6 @@ body {
     border-radius: 20px; 
     opacity: 0.;
     border: 2px solid rgba(0, 0, 0,);
-}
-
-.card-img-overlay{
-
 }
 
 .card-title{
@@ -371,7 +372,7 @@ footer {
     margin: 0;
     text-transform: uppercase;
     font-weight: bolder;
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
     font-size: xx-large;
 }
 
@@ -492,10 +493,10 @@ footer {
 
 .about-us p {
     margin-top: 0.5rem;
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
     text-align: center;
     width: 80%;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .about-us p:last-child {
@@ -536,7 +537,7 @@ footer {
 /* START OF HOME PAGE FEATURED TRIPS BAR */
 
 .featured-index {
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
     height: auto;
 }
 
@@ -558,7 +559,7 @@ footer {
 }
 
 .trip-title {
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
     text-shadow: 1px 0 10px #ffffff;
 }
 
@@ -591,6 +592,7 @@ footer {
 
 #featured-trip2-pills {
     background-image: url(../img/packages/012_img_1020_5.jpg);
+    background-position: top center;
 }
 
 #featured-trip3-pills {
@@ -624,7 +626,7 @@ footer {
 
 /* START OF CATEGORY SECTION IN HOME PAGE */
 .category-title {
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
 }
 .card svg,
 .card img {
@@ -645,16 +647,18 @@ footer {
 
 /* START OF REVIEW SECTION IN HOME PAGE */
 .section-title h2{
-    font-family: 'Bona Nova', serif;
+    font-family: 'Lexend', sans-serif;
 }
 
-.section-title p {
+.section-title p,
+.testimonials-text {
     font-family: 'Lexend', sans-serif;
 }
 
 .testimonial-card{
     border: 4px solid #FBB446;
     scroll-snap-align: start;
+    user-select: none;
 }
 
 .testimonial-carousel {
@@ -664,24 +668,6 @@ footer {
     scroll-behavior: smooth;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
-}
-
-.testimonial-carousel.dragging .testimonial-card {
-    cursor: grab;
-    user-select: none;
-}
-
-.testimonial-carousel.dragging {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-}
-
-.testimonial-carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.testimonials-text {
-    font-family: 'Lexend', sans-serif;
 }
 
 .review-nav {
