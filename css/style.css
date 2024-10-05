@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
+:root {
+    --food: #FF6347;
+    --festival: #FFAB40;
+    --concerts: #6A5ACD;
+    --nature: #4CAF50;
+    --culture: #3F51B5;
+}
 * {
     /* standard browser reset */
     margin: 0;
@@ -687,6 +694,42 @@ footer {
     right: -22px;
 }
 /* END OF REVIEW SECTION IN HOME PAGE */
+
+/* START OF USER PROFILE BOOKINGS */
+.profile-bookings span {
+    font-family: 'Lexend', sans-serif;
+}
+
+.booking-category.nature span{
+    background-color: var(--nature);
+}
+
+.booking-category.concerts span{
+    background-color: var(--concerts);
+}
+
+.booking-category.culture span{
+    background-color: var(--culture);
+}
+
+.booking-category.festival span{
+    background-color: var(--festival);
+}
+
+.booking-category.food span{
+    background-color: var(--food);
+}
+
+.book-package span {
+    background-color: #3C9CD6;
+}
+
+.book-package span:hover {
+    background-color: #FBB446;
+    color: #0F3244;
+    font-weight: 600;
+}
+/* END OF USER PROFILE BOOKINGS */
 
 /* START OF MEDIA QUERIES */
 
