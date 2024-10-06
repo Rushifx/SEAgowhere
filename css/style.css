@@ -89,7 +89,7 @@ body {
     height: 100%;
     border-radius: 20px; 
     position: absolute;
-    background-image: linear-gradient(to right, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.756) 40%,rgba(255, 255, 255, 0) 90%);
+    background-image: linear-gradient(to right, rgb(61, 156, 214) 10%, rgba(61, 156, 214, 0.756) 40%,rgba(255, 255, 255, 0) 90%);
 }
 
 .package-card img {
