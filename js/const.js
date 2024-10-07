@@ -18,7 +18,7 @@ const _EXPERIENCE_ALL_TITLE = "All Experiences";
 // correspononding site pages' links
 const _HOME_URL = "index.html";             
 const _ABOUT_URL = "about.html";
-const _CART_URL = "#";
+const _CART_URL = "booking.html";
 const _CONTACT_URL = "contact.html";
 const _LOGIN_URL = "login.html";
 const _LOGOUT_URL = "logout.html";

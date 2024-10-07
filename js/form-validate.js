@@ -38,3 +38,9 @@ function isValidDate(value){
     const dateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
     return dateRegex.test(value);
 }
+
+// Function to validate generic passport number
+function isValidPassport(value){
+    const passportRegex = /^(?!0)[a-zA-Z0-9]{6,9}$/;
+    return passportRegex.test(value);
+}

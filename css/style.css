@@ -653,6 +653,29 @@ footer {
 }
 /* END OF USER PROFILE BOOKINGS */
 
+/* START OF BOOKING */
+.booking-summary {
+    background-color: #3C9CD6;
+}
+.list-group-item-info {
+    background-color: #3C9CD6 !important;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+}
+.list-group-item-info:last-child {
+    background-color: #3C9CD6 !important;
+    border: none;
+    border-bottom: none;
+}
+
+.experience-banner {
+    background-color: #0F3244;
+    padding: 1em;
+    color: #FFFFFF;
+    width: 30rem;
+}
+/* END OF BOOKING */
+
 /* START OF MEDIA QUERIES */
 
 /* dropdown menu on hover for non-mobile display */
