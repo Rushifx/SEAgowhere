@@ -69,10 +69,12 @@
                       Please enter a valid email address for shipping updates.
                     </div>
 
-                    <div class="form-check mt-2">
+                    <div class="form-check mt-3">
                       <input type="checkbox" class="form-check-input" id="subscription">
                       <label class="form-check-label" for="subscription">Email me with news and offers</label>
                     </div>
+
+                    <hr class="my-4" />
 
                     <h4 class="mt-3">Delivery</h4>
                   </div>
@@ -126,19 +128,12 @@
                   </div>
                 </div>
       
-                <hr class="my-4">
-      
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="same-address">
-                  <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
-                </div>
-      
-                <div class="form-check">
+                <div class="form-check mt-3">
                   <input type="checkbox" class="form-check-input" id="save-info">
                   <label class="form-check-label" for="save-info">Save this information for next time</label>
                 </div>
       
-                <hr class="my-4">
+                <hr class="my-4" />
       
                 <h4 class="mb-3">Payment</h4>
       
@@ -191,8 +186,12 @@
                     </div>
                   </div>
                 </div>
+                <div class="form-check mt-3">
+                  <input type="checkbox" class="form-check-input" id="same-address">
+                  <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                </div>
       
-                <hr class="my-4">
+                <hr class="my-4" />
       
                 <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
               </form>
@@ -371,37 +370,42 @@
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
         const cardName = document.getElementById('cc-name').value;
+        const address = document.getElementById('address').value;
     
         // Validate inputs
-        if (!isEmail(email)) {
+        if(!isEmail(email)){
             showToast("danger", "Invalid email address.");
             return;
         }
-        if (isEmpty(firstName)) {
+        if(isEmpty(firstName)){
             showToast("danger", "First name is required.");
             return;
         }
-        if (isEmpty(lastName)) {
+        if(isEmpty(lastName)){
             showToast("danger", "Last name is required.");
             return;
         }
-        if (isEmpty(cardName)){
+        if(isEmail(address)){
+            showToast("danger", "Address is required");
+            return;
+        }
+        if(isEmpty(cardName)){
             showToast("danger", "Cardholder name is required");
             return;
         }
-        if (!isValidNumber(phone)) {
+        if(!isValidNumber(phone)){
             showToast("danger", "Invalid phone number.");
             return;
         }
-        if (!isValidZip(zip)) {
+        if(!isValidZip(zip)){
             showToast("danger", "Invalid zip code.");
             return;
         }
-        if (!isValidCard(cardNumber)) {
+        if(!isValidCard(cardNumber)){
             showToast("danger", "Invalid card number.");
             return;
         }
-        if (!isValidDate(expiration)) {
+        if(!isValidDate(expiration)){
             showToast("danger", "Invalid expiration date.");
             return;
         }
@@ -412,7 +416,7 @@
     }
     
     // Helper function to show toast messages
-    function showToast(type, message) {
+    function showToast(type, message){
         const toastElement = document.getElementById("msg-toast");
         const toastBodyElement = document.getElementById("msg-toast-body");
         toastBodyElement.textContent = message;
