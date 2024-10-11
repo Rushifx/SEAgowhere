@@ -489,7 +489,8 @@ footer {
 
 .trip-title {
     font-family: 'Lexend', sans-serif;
-    text-shadow: 1px 0 10px #ffffff;
+    color: #FFF;
+    text-shadow: 1px 0 10px #000;
 }
 
 .pills {
@@ -516,20 +517,20 @@ footer {
 }
 
 #featured-trip1-pills {
-    background-image: url(../img/packages/008_img_1020_7.jpg);
+    background-image: url(../img/packages/008_Myanmar_Resized_jpg/008_img_1020_7.jpg);
 }
 
 #featured-trip2-pills {
-    background-image: url(../img/packages/012_img_1020_5.jpg);
+    background-image: url(../img/packages/012_Thailand_Resized_jpg/012_img_1020_5.jpg);
     background-position: top center;
 }
 
 #featured-trip3-pills {
-    background-image: url(../img/packages/015_img_1020_2.jpg);
+    background-image: url(../img/packages/015_Indonesia_Resized_jpg/015_img_1020_8.jpg);
 }
 
 #featured-trip4-pills {
-    background-image: url(../img/packages/002_img_1020_1.jpg);
+    background-image: url(../img/packages/021_Philippines_Resized_jpg/021_img_1020_1.jpg);
 }
 
 .trip-links {
