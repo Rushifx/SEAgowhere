@@ -88,7 +88,7 @@ function btnLoadStatus(status = null){
                         btnLoad.addEventListener("click", handleLoadNone);                                      // Add EventListener handleLoadNone to btnLoad           
                         break;
                 default:
-                        btnLoad.className = "btn btn-primary text-center w-25";                                 // Style btnLoad
+                        btnLoad.className = "btn btn-danger text-center w-25";                                 // Style btnLoad
                         btnLoad.innerText = "No results. Try reloading.";                                       // Set btnLoad innerText "Load More"
                         btnLoad.addEventListener("click", handleLoadMore);                                      // Add EventListener handleLoadNone to btnLoad           
                         break;
