@@ -25,12 +25,16 @@ const _LOGOUT_URL = "logout.html";
 const _PROFILE_URL = "profile.html";
 const _SIGNUP_URL = "signup.html";
 
-const _EXPERIENCE_FOOD_URL = "#";
-const _EXPERIENCE_FESTIVAL_URL = "#";
-const _EXPERIENCE_NATURE_URL = "#";
-const _EXPERIENCE_CONCERTS_URL = "#";
-const _EXPERIENCE_CULTURE_URL = "#";
-const _EXPERIENCE_ALL_URL = "#";
+function getCategoryUrl(categoryId){
+    return `category.html?categoryId=${categoryId}`;
+}
+
+const _EXPERIENCE_FOOD_URL = getCategoryUrl(2);
+const _EXPERIENCE_FESTIVAL_URL = getCategoryUrl(3);
+const _EXPERIENCE_NATURE_URL = getCategoryUrl(1);
+const _EXPERIENCE_CONCERTS_URL = getCategoryUrl(4);
+const _EXPERIENCE_CULTURE_URL = getCategoryUrl(5);
+const _EXPERIENCE_ALL_URL = "experiences.html";
 
 // token name
 const _USERTOKEN = "usertoken";
