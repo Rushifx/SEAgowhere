@@ -7,6 +7,7 @@
     --nature: #4CAF50;
     --culture: #3F51B5;
 }
+
 * {
     /* standard browser reset */
     margin: 0;
@@ -75,8 +76,8 @@ body {
     font-family: 'Lexend', sans-serif;
 }
 
-.package-card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.package-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 20px;
     margin: 2rem 0 2rem 0;
@@ -84,29 +85,25 @@ body {
     width: 100%;
 }
 
-.package-card-gradient{
+.package-card-gradient {
     width: 100%;
     height: 100%;
-    border-radius: 20px; 
+    border-radius: 20px;
     position: absolute;
-    background-image: linear-gradient(to right, rgba(61, 155, 214, 0.658) 10%, rgba(61, 155, 214, 0.61) 30%,rgba(255, 255, 255, 0) 90%);
+    background-image: linear-gradient(to right, rgba(61, 155, 214, 0.815) 10%, rgba(61, 155, 214, 0.541) 60%, rgba(255, 255, 255, 0) 90%);
 }
 
 .package-card img {
-    border-radius: 20px; 
-    opacity: 0.;
-    border: 2px solid rgba(0, 0, 0,);
+    border-radius: 20px;
 }
 
-.card-title{
-padding-top: 1rem;
-padding-left: 1rem;
-padding-right: 20px;
+.card-title {
+    color: #0F3244;
+    text-shadow: 1px 1px 10px #ffffffb4;
 }
 
-.sm-img-card{
-padding-left: 1rem;
-    margin-top: 5rem;
+.sm-img-card {
+    padding-left: 1rem;
 }
 
 .card-text {
@@ -114,16 +111,22 @@ padding-left: 1rem;
     padding-left: 1rem;
 }
 
+.top-right {
+    top: 5%;
+    right: 1.8%;
+    height: 45px;
+}
+
+.bottom-left {
+    bottom: 5%;
+    left: 1.8%;
+}
 
 .bottom-right {
-    position: absolute;
     bottom: 5%;
     right: 1.8%;
 }
 
-.lets-go {
-    font-family: 'Lexend', sans-serif;
-}
 
 /** End of PACKAGES **/
 
@@ -561,6 +564,7 @@ footer {
 .category-title {
     font-family: 'Lexend', sans-serif;
 }
+
 .card svg,
 .card img {
     border-radius: 5px;
@@ -579,7 +583,7 @@ footer {
 /* END OF CATEGORY SECTION IN HOME PAGE */
 
 /* START OF REVIEW SECTION IN HOME PAGE */
-.section-title h2{
+.section-title h2 {
     font-family: 'Lexend', sans-serif;
 }
 
@@ -588,7 +592,7 @@ footer {
     font-family: 'Lexend', sans-serif;
 }
 
-.testimonial-card{
+.testimonial-card {
     border: 4px solid #FBB446;
     scroll-snap-align: start;
     user-select: none;
@@ -619,6 +623,7 @@ footer {
 .review-nav:last-child {
     right: -22px;
 }
+
 /* END OF REVIEW SECTION IN HOME PAGE */
 
 /* START OF PRODUCT LISTING */
@@ -635,17 +640,31 @@ footer {
     background-color: #3c9bd6d5;
 }
 
-.btn-custom:hover {
+.btn-custom-dark {
+    background-color: #3c9bd6;
+}
+
+.btn-custom:hover,
+.btn-custom-dark:hover {
     background-color: #FFAB40 !important;
     color: #0F3244 !important;
+}
+
+.rounded-custom {
+    border-radius: 30px !important;
 }
 
 .card-country {
     background-color: rgba(60, 155, 214, 0.7);
 }
+
 /* END OF PRODUCT LISTING */
 
 /* START OF USER PROFILE BOOKINGS */
+.lexend {
+    font-family: 'Lexend', sans-serif;
+}
+
 .profile-bookings span {
     font-family: 'Lexend', sans-serif;
 }
@@ -684,17 +703,20 @@ footer {
     color: #0F3244;
     font-weight: 600;
 }
+
 /* END OF USER PROFILE BOOKINGS */
 
 /* START OF BOOKING */
 .booking-summary {
     background-color: #3C9CD6;
 }
+
 .list-group-item-info {
     background-color: #3C9CD6 !important;
     border: none;
     border-bottom: 1px solid #FFFFFF;
 }
+
 .list-group-item-info:last-child {
     background-color: #3C9CD6 !important;
     border: none;
@@ -707,6 +729,7 @@ footer {
     color: #FFFFFF;
     width: 30rem;
 }
+
 /* END OF BOOKING */
 
 /* START OF MEDIA QUERIES */
@@ -860,16 +883,21 @@ footer {
 /* End of ABOUT US MQ */
 
 /* START OF FEATURED TRIPS IN INDEX.HTML MQ */
-@media screen and (min-width: 40.625rem) { /* desktop section: 650px */
+@media screen and (min-width: 40.625rem) {
+
+    /* desktop section: 650px */
     .mobile {
         display: none;
     }
 }
-@media screen and (max-width: 40.625rem) { /* mobile section: 650px */
+
+@media screen and (max-width: 40.625rem) {
+    /* mobile section: 650px */
 
     .trip-details {
         font-family: 'Lexend', sans-serif;
     }
+
     .featured-pills {
         display: none;
     }
@@ -927,41 +955,75 @@ footer {
 /* END OF FEATURED TRIPS IN INDEX.HTML MQ */
 
 /* START OF CATEGORY SECTION IN INDEX.HTML MQ */
-@media screen and (max-width: 75rem) { /* 1200px */
+@media screen and (max-width: 75rem) {
+
+    /* 1200px */
     .card text {
         font-size: large;
     }
 }
 
-@media screen and (max-width: 62rem) { /* 992px */
+@media screen and (max-width: 62rem) {
+
+    /* 992px */
     .card text {
         font-size: medium;
     }
 }
 
-@media screen and (max-width: 36rem) { /* 576px */
+@media screen and (max-width: 36rem) {
+
+    /* 576px */
     .card text {
         font-size: larger;
     }
 }
+
 /* END OF CATEGORY SECTION IN INDEX.HTML MQ */
 
 /* START OF REVIEW SECTION IN INDEX.HTML MQ */
 @media screen and (max-width: 56.25rem) {
+
     /* 900px */
     .testimonial-carousel {
         grid-auto-columns: calc((100% / 2) - 9px);
     }
-    
+
 }
 
 @media screen and (max-width: 37.5rem) {
+
     /* 600px */
     .testimonial-carousel {
         grid-auto-columns: 100%;
     }
-    
+
 }
+
 /* END OF REVIEW SECTION IN INDEX.HTML MQ */
+
+/* START OF FEATURED TRIPS MQ */
+@media screen and (max-width: 64rem) {  /* 1024px */
+    .sm-img-card img {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 48rem) {  /* 768px */
+    .sm-img-card img {
+        display: none;
+    }
+
+    .package-card-gradient {
+        background-image: linear-gradient(to right, rgba(61, 155, 214, 0.521) 10%, rgba(61, 155, 214, 0.24) 100%);
+    }
+
+    .top-right, .bottom-right {
+        right: 3%;
+    }
+
+}
+
+/* END OF FEATURED TRIPS MQ */
 
 /* END OF MEDIA QUERIES */
