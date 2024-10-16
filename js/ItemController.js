@@ -36,7 +36,7 @@ class ItemsController {
         this.itemRow.append(itemCol);
 
         const cardItem = document.createElement("div");
-        cardItem.className = "product-card border-0 rounded-4 flex-fill";
+        cardItem.className = "product-card border-0 rounded-4 flex-fill mt-3";
         itemCol.appendChild(cardItem);
 
         const cardDetailLink = document.createElement("a");
@@ -105,9 +105,23 @@ class ItemsController {
         cardDetail.setAttribute("data-bs-target", "#modalPackageDetail");
         cardButton.append(cardDetail);
         cardDetail.addEventListener("click", (event) => {
-            this.handleProductDetail(item.name, item.country, item.image_url, item.desc,
+            this.handleProductDetail(
+                item.name, 
+                item.country, 
+                item.desc,
+                item.start_date, 
+                item.end_date, 
+                item.no_of_days, 
+                item.no_of_nights,
+                item.price, 
+                item.image_1, 
+                item.image_2, 
+                item.image_3, 
+                item.image_4, 
+                event);
+            console.log("TO CHECK: ", item.name, item.country, item.desc,
                 item.start_date, item.end_date, item.no_of_days, item.no_of_nights,
-                item.price, event);
+                item.price, item.image_1, item.image_2, item.image_3, item.image_4, event)
         });
 
         const cardLink = document.createElement("a");
@@ -117,9 +131,10 @@ class ItemsController {
         cardButton.append(cardLink);
     }
 
-    handleProductDetail(name, country, image, desc, start, end, days, nights, price, event) {
+    handleProductDetail(name, country, desc, start_date, end_date, days, nights, price, image1, image2, image3, image4, event) {
 
         event.preventDefault();
+        console.log("Check against: ", name, country, desc, start_date, end_date, days, nights, price, image1, image2, image3, image4)
 
         const existingBackdrop = document.querySelector('.modal-backdrop');
         if (existingBackdrop) {
@@ -128,26 +143,80 @@ class ItemsController {
 
         // TODO to run a fetch request based on the query parameter instead.
 
-        // Set the value for the heading
         const modalPackageDetail = document.getElementById("modalPackageDetail");
+        if (!modalPackageDetail) {
+            console.error("Modal package detail element not found");
+            return;
+        }
+
+        // Clearing the previous modal content
+        const modalDialog = document.querySelector('.modal-dialog');
+        if (modalDialog) {
+            modalDialog.classList.add('modal-xl');
+        }
 
         const packageTitle = modalPackageDetail.querySelector(".modal-header h3");
-        packageTitle.textContent = name + ", " + country;
-
-        const packageDates = modalPackageDetail.querySelector(".packageDates");
-        packageDates.textContent = "Dates: " + start + " to " + end;
+        if (packageTitle) {
+            packageTitle.textContent = '';
+        }
 
         const packageDaysNights = modalPackageDetail.querySelector(".daysAndNights");
-        packageDaysNights.textContent = days + " Days, " + nights + " Nights"
+        if (packageDaysNights) {
+            packageDaysNights.textContent = '';
+        }
 
-        const packagePrice = modalPackageDetail.querySelector(".details-right");
-        packagePrice.textContent = "From $" + price + " per Pax";
+        const packageDates = modalPackageDetail.querySelector(".packageDates");
+        if (packageDates) {
+            packageDates.textContent = '';
+        }
 
-        const packageImage = modalPackageDetail.querySelector(".modal-body img");
-        packageImage.setAttribute("src", image);
+        const packagePrice = modalPackageDetail.querySelector(".price");
+        if (packagePrice) {
+            packagePrice.textContent = '';
+        }
 
         const packageDesc = modalPackageDetail.querySelector(".modal-body p");
-        packageDesc.textContent = desc;
+        if (packageDesc) {
+            packageDesc.textContent = '';
+        }
+
+        const packageImage1 = modalPackageDetail.querySelector(".modal-body .image1");
+        const packageImage2 = modalPackageDetail.querySelector(".modal-body .image2");
+        const packageImage3 = modalPackageDetail.querySelector(".modal-body .image3");
+        const packageImage4 = modalPackageDetail.querySelector(".modal-body .image4");
+
+        packageImage1.setAttribute("src", '');
+        packageImage2.setAttribute("src", '');
+        packageImage3.setAttribute("src", '');
+        packageImage4.setAttribute("src", '');
+
+        // Setting new values
+        if (packageTitle) {
+            packageTitle.textContent = `${name}, ${country}`;
+        }
+
+        if (packageDates) {
+            packageDates.textContent = `Dates: ${start_date} to ${end_date}`;
+            console.log("start_date passed to handleProductDetail: ", start_date);
+            console.log("end_date passed to handleProductDetail: ", end_date);            
+        }
+
+        if (packageDaysNights) {
+            packageDaysNights.textContent =`${days} Days, ${nights} Nights`            
+        }
+
+        if (packagePrice) {
+            packagePrice.textContent = `From $${price} per Pax`;            
+        }
+
+        if (packageDesc) {
+            packageDesc.textContent = desc;            
+        }
+
+        if(packageImage1) packageImage1.setAttribute("src", image1 || '');
+        if(packageImage2) packageImage2.setAttribute("src", image2 || '');
+        if(packageImage3) packageImage3.setAttribute("src", image3 || '');
+        if(packageImage4) packageImage4.setAttribute("src", image4 || '');
 
         const modal = new bootstrap.Modal(modalPackageDetail);
         modal.show();
