@@ -126,8 +126,8 @@ class ItemsController {
 
         const cardLink = document.createElement("a");
         cardLink.className = "btn btn-custom rounded-4 text-white text-center mt-2 me-2";
-        cardLink.innerText = "Add to Cart";
-        // cardLink.href = "cart.html?id=" + item.id;           // TODO: Add link to Cart.html
+        cardLink.innerText = "Book Now!";
+        cardLink.href = `${_CART_URL}?id=${item.id}`;           // DONE: Add link to Cart.html
         cardButton.append(cardLink);
     }
 

@@ -25,7 +25,7 @@ window.fetchProductsByCategoryId = async function (categoryId) {                
     productSpinner.createSpinner(spinnerContainerName);                                               // Prepend productSpinner to spinnerContainer
     productSpinner.displaySpinner(true);                                                              // Display spinner
 
-    const url = `http://localhost:8080/api/packages/category/${categoryId}`;                          // API Fetch url                           
+    const url = `http://localhost:8080/public/api/packages/category/${categoryId}`;
 
     try {
         const response = await fetch(url);                                                            // Await fetch response from API
