@@ -428,6 +428,7 @@
         // implement a try/catch block (exception handling) to send our message data to an enpoint
         try {
         // Perform a POST fetch request to process form data
+        // TODO the url should look like http://127.0.0.1:8080/users/api/booking
         const response = await fetch("https://getform.io/f/arolvmwb", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -443,6 +444,7 @@
             await sleep(4000);
 
             // Redirect the user
+            // TODO redirect to bookingcomplete.html
             window.location = "/payment.html";
         } else {
             // Show toast for unsuccessful submission
