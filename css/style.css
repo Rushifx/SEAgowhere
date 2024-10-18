@@ -658,6 +658,15 @@ footer {
     background-color: rgba(60, 155, 214, 0.7);
 }
 
+.modal-header {
+    background-color: #3c9bd6;
+    padding: 1rem !important;
+}
+
+.details-right {
+    color: #FFAB40;
+    text-shadow: 1px 1px 2px #0000007c;
+}
 /* END OF PRODUCT LISTING */
 
 /* START OF USER PROFILE BOOKINGS */
