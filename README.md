@@ -11,7 +11,6 @@
     <a href="https://liyanaaj.netlify.app/">
         <img src="img/logo2-transparent.png" alt="Logo" width="150">
     </a>
-      </br>
         <h1>SEAGoWhere</h1>
         <h3>Set Away With Us!</h3>
 </div>
@@ -104,42 +103,43 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Web Application 
 
 ### Tech Stack 
-Some air-time is warranted to talk about skills and the applications that each of you had trained and prepared for and later, demonstrated through each assessment and culminating into a capstone. 
+The stack of technologies chosen for this application comes from two key criteria:
+- Fufillment of our stated key requirements (particularly in User and Technical requirements)
+- DIrect application of technical skills and technologies learnt from Generation cirriculum 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+| Frontend          | Backend             | Tools               |App Deployment      |
+| :---------------- | :------------------ | :-------------      |:-------------      |
+| HTML5             | MySQL (Workbench)   | Visual Studio Code  |Netlify             |
+| CSS3              | Java                | IntelliJ IDEA       |                    |
+| JavaScript(JS)8   | Spring Data JPA     | Github              |                    |
+| Bootstrap V5.3.3  | Spring Framework    | Mockito             |                    |
+|                   |                     | JUnit 5             |                    |
+|                   |                     | Postman             |                    |
 
-Standard Frontend Web Stack with use of Bootstrap CSS Framework for responsive design components
+</br>
+</br>
 
-Backend Spring Java Persistence API (Spring JPA) as persistence layer with Springboot
-MySQL for RDBMS
-Java OOP langauge
-Spring JPA for Persistence Layer
-Spring Framework
+Our Frontend stack consists of the 3 core programming languages, with the decision to incorporate the [Bootstrap](https://getbootstrap.com/) V5.3.3 Framework and library owing to its responsive design components and ease of insertion and use within HTML/CSS code syntax.
 
-Tools
-VSS and IntelliJ IDE environment
-Git and Github for Version Control 
-Mockito and JUnit5 Framework for testing 
-Postman API testing tool 
+For our Backend stack, the decision to use ***[MySQL](https://www.mysql.com/) Relational Database Management System (RDBMS)*** and ***[Spring](https://spring.io/) Application Framework***, inclusive of ***[SpringBoot](https://spring.io/projects/spring-boot)*** and ***[Spring](https://spring.io/projects/spring-data-jpa) Data JPA (Java Persistence API)*** within a Java language environment primarily stems from Spring's versitality and ease of deployability, particularly in the area of autoconfigured **dependency injections**. This includes the ***[Spring](https://spring.io/projects/spring-security) Security*** dependency, which accords highly customizable authentication and access control frameworks, critical to our application requirements as a travel booking website. 
 
+The suite of tools that support this tech stack include Visual Studio Code and IntelliJ IDEA Integrated Development Environment (IDE) for its versatility as well as Git Terminal Command Line Utility (CLI) features, with ***[GitHub](http://github.com/)*** serving as the repository platform for code sharing, deployment and version control. This is rounded off by a suite of validation and unit testing frameworks, including ***[Mockito](https://site.mockito.org/)***, ***[JUnit5](https://junit.org/junit5/)*** and ***[Postman](https://www.postman.com/)*** API platform.
 
-| Frontend          | Backend             | Tools               |
-| :---------------- | :------------------ | :-------------      |
-| HTML5             | MySQL               | Visual Studio Code  |
-| CSS3              | Java                | IntelliJ IDEA       |
-| JavaScript(JS)8   | Spring Data JPA     | Github              |
-| Bootstrap V5.3.3  | Spring Framework    | Mockito             |
-|                   |                     | JUnit 5             |
-|                   |                     | Postman             |
+</br>
+
+---
 
 ### Site Map
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+SEAGoWhere's Site Map diagramming can be defined as a typical product booking application, with heavy emphasis on the product experience and payment (Experiences, Featured Trips, Booking), which is illustrated in the User Flow. This structure also allows for future expansion into either further subcategories or features. 
+
+</br>
 
 <img src="img/diagram/SEAGoWhere Sitemap.drawio.png" alt="Site Map" width="800" height="500">
 </br>
 
 ### User Flow
+
 A key focus of this web application was the user flow and intuitive experience of a visitor visting, signing up and booking a package, whilst ensuring credential and payment security throughout. 
 
 <img src="img/diagram/SEAGoWhere_Userflow.drawio.png" alt="User Flow" width="800" height="300">
@@ -149,9 +149,16 @@ This is acheived primarily through the use of the following Java dependency inje
 - User authentication via JWT (JSON Web Token)
 - Form validation and constraints (Spring Framework Web Security/Jakarta Bean validation)
 
-Briefly state key dependencies used in Backend
+Other supporting dependencies, tools and libraries include: 
+- Jackson Annotation (JSON Manipulation)
+- Maven (Dependency Management)
+- Lombok (Java Library)
+
 
 ### Entity Relationship Diagram
+
+(To confirm ERD Saturday Morning for lock-in)
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 <img src="img/diagram/SEAGowhere ERD Final.png" alt="ERD" width="600" height="400">
@@ -201,3 +208,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Contact
 
+<h3>Xun Chia</h3>
+
+- [LinkedIn](https://www.linkedin.com/feed/)
+- [Github](https://github.com/xunchiasg)
+- [Portfolio](https://xunchia.com/)
+
+<h3>Colin Toh</h3>
+
+- [LinkedIn]()
+- [Github]()
+- [Portfolio]()
+
+<h3>Liyana Afiqah</h3>
+
+- [LinkedIn]()
+- [Github]()
+- [Portfolio]()
+
+<h3>Charlie Tan</h3>
+
+- [LinkedIn]()
+- [Github]()
+- [Portfolio]()
