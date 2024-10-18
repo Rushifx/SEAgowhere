@@ -52,26 +52,29 @@
         <!-- https://www.geeksforgeeks.org/bootstrap-5-varying-modal-content/ -->
         <div class="modal fade" id="modalPackageDetail" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content rounded-3">
-                    <div class="modal-header border-bottom-0 pb-0">
-                        <h3>
+                <div class="modal-content rounded-3 pt-3 px-4 lexend">
+                    <div class="modal-header border-bottom-0 mb-2 rounded-bottom-3">
+                        <h3 class="mb-0 fs-1">
                             <!-- Package Name goes here -->
                         </h3>
                     </div>
-                    <div class="modal-details d-flex flex-row justify-content-between">
-                        <div class="details-left">
+                    <div class="modal-details d-flex flex-row justify-content-between fw-bolder text-uppercase fs-4">
+                        <div class="details-left px-3">
                             <p class="packageDates"></p>
                             <p class="daysAndNights"></p>
                         </div>
-                        <div class="details-right pe-4 d-flex align-items-center fw-medium">
-                            
+                        <div class="details-right pe-4 d-flex align-items-center fw-bold text-uppercase fs-4">
+                            <p class="price"></p>
                         </div>
                     </div>
-                    <div class="modal-body border-0">
-                        <img alt="" class="figure-img img-fluid rounded-3">
+                    <div class="modal-body border-0 d-flex row w-100">
                         <p class="fw-light">
                             <!-- Package description goes here -->
                         </p>
+                        <img alt="" class="figure-img img-fluid w-25 image1">
+                        <img alt="" class="figure-img img-fluid w-25 image2">
+                        <img alt="" class="figure-img img-fluid w-25 image3">
+                        <img alt="" class="figure-img img-fluid w-25 image4">
                     </div>
                     <div class="modal-footer border-0">
                         <button type="button" class="btn btn-secondary rounded-3 border-0"
