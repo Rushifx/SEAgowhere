@@ -8,12 +8,10 @@
 
 <!-- PROJECT LOGO/TITLE -->
 <div align="center">
-    <a href="https://liyanaaj.netlify.app/">
         <img src="img/logo2-transparent.png" alt="Logo" width="150">
-    </a>
-        <h1>SEAGoWhere</h1>
-        <h3>Set Away With Us!</h3>
+        <h2>SEAGoWhere <br><br> Set Away With Us!</h2>
 </div>
+
 <!-- TITLE CONTENTS -->
 <div align="center">
     <h3>Final Capstone Project for Generation FSD-04</h3>
@@ -127,7 +125,6 @@ The suite of tools that support this tech stack include Visual Studio Code and I
 
 </br>
 
----
 
 ### Site Map
 
@@ -171,18 +168,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Knowledge and Skills Application
 
 ### Behavioural Skills and Mindsets Applied
+
+Intersect with the Martin's feedback on feature/tech learning apppication 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Skill 1
+**USER LOGIN AND AUTHENTICATION**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Skill 2
+**UX UI for TRAVEL PACKAGE**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Skill 3
+**BACKEND FOR BOOKING AND PAYMENT**
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Skill 4
+**USER PROFILE AND API***
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ---
@@ -192,19 +195,47 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Project Management
 
 ### Project Timeline
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+(Finalise Saturday Monring upon schedule completion - anticipated no more new tasks after implementation of **Unit Testing**)
+
+12 Weeks , typical 40 hours load
+
+-Usage of Agile Principles and Scrum Framework
+-Microsoft Project Planner (Buckets and Ticketing)
+-Sprints Planning 
+-Workload Planning and Task Switching/Pivoting
+-MoSCow Prioritzation in latter part of project
 
 ### Future Roadmap
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Wishlisted (MoSCow) features due to requirement prioritization due to project timeline
+
+To be implemented future product roadmap, learning of technologies to enhance current web application 
+Hypothetical schedule if additional 12-14 weeks time extension
+
+| Wishlisted            | Details             | Technologies        |Hypothetical Timeframe  |
+| :----------------     | :------------------ | :-------------      |:-------------          |
+| Bucket List           | MySQL (Workbench)   | Visual Studio Code  |Netlify                 |
+| Thematic Categories   | Java                | IntelliJ IDEA       |                        |
+| Search Function       | Spring Data JPA     | Github              |                        |
+| Payment Gateway       | Spring Framework    | Mockito             |                        |
+| Subscription Features |                     |                     | JUnit 5                |                 
 
 ### Team Composition
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 
 ---
 
 <!-- SALIENT POINTS -->
 
 ## Key Lessons Learnt
+
+Already elaborated above, summarise to close the project off
+
+<h3>Point 1</h3>
+<h3>Point 2</h3>
+<h3>Point 3</h3>
 
 ## Contact
 
