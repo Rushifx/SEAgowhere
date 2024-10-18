@@ -30,7 +30,7 @@ productSpinner.createSpinner(spinnerContainerName);                             
 productSpinner.displaySpinner(true);                                                                            // Show the spinner
     
         setTimeout(() => {
-            fetch(`http://localhost:8080/api/packages/listing?page=${page}&perPage=${perPage}`)                 // Fetch products from the API
+            fetch(`http://localhost:8080/public/api/packages/listing?page=${page}&perPage=${perPage}`)                 // Fetch products from the API
                 .then(response => response.json())                                                              // Convert response to JSON
                 .then(response => {                                                                             // Handle the JSON response
                     const { data, page, per_page, total, total_pages } = response;                              // Destructure the response
