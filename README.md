@@ -86,7 +86,7 @@
 ## Project Requirements
 
 ### Problem Statement
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+A large segment of travel package and booking websites as web applications can swing between being too utilitarian or having too many details, leading to a diminished User Experience as well as information overload. International travel websites, being globally focused, can also lack a level of curation.
 
 ### Proposed Web Application Product
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -104,16 +104,58 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Web Application 
 
 ### Tech Stack 
+Some air-time is warranted to talk about skills and the applications that each of you had trained and prepared for and later, demonstrated through each assessment and culminating into a capstone. 
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Standard Frontend Web Stack with use of Bootstrap CSS Framework for responsive design components
+
+Backend Spring Java Persistence API (Spring JPA) as persistence layer with Springboot
+MySQL for RDBMS
+Java OOP langauge
+Spring JPA for Persistence Layer
+Spring Framework
+
+Tools
+VSS and IntelliJ IDE environment
+Git and Github for Version Control 
+Mockito and JUnit5 Framework for testing 
+Postman API testing tool 
+
+
+| Frontend          | Backend             | Tools               |
+| :---------------- | :------------------ | :-------------      |
+| HTML5             | MySQL               | Visual Studio Code  |
+| CSS3              | Java                | IntelliJ IDEA       |
+| JavaScript(JS)8   | Spring Data JPA     | Github              |
+| Bootstrap V5.3.3  | Spring Framework    | Mockito             |
+|                   |                     | JUnit 5             |
+|                   |                     | Postman             |
 
 ### Site Map
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+<img src="img/diagram/SEAGoWhere Sitemap.drawio.png" alt="Site Map" width="800" height="500">
+</br>
+
 ### User Flow
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+A key focus of this web application was the user flow and intuitive experience of a visitor visting, signing up and booking a package, whilst ensuring credential and payment security throughout. 
+
+<img src="img/diagram/SEAGoWhere_Userflow.drawio.png" alt="User Flow" width="800" height="300">
+</br>
+
+This is acheived primarily through the use of the following Java dependency injections within Spring JPA:
+- User authentication via JWT (JSON Web Token)
+- Form validation and constraints (Spring Framework Web Security/Jakarta Bean validation)
+
+Briefly state key dependencies used in Backend
 
 ### Entity Relationship Diagram
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+<img src="img/diagram/SEAGowhere ERD Final.png" alt="ERD" width="600" height="400">
+</br>
 
 ---
 
