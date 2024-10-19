@@ -273,15 +273,10 @@
               </div>
             </div>
           </div>
-          <div class="form-check mt-3">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing
-              address</label>
-          </div>
           <!-- End of Payment -->
 
           <div class="text-center">
-            <button class="w-50 mt-5 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+            <button class="w-50 mt-5 btn btn-primary btn-lg" type="submit">Checkout Now!</button>
           </div>
         </form>
       </div>
@@ -506,7 +501,7 @@
 
         if (response.ok) {
           // Show toast for successful submission
-          showToast("success", "Proceeding to payment.");
+          showToast("success", "Booking Completed!");
 
           // Wait for 4 seconds
           const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
@@ -514,7 +509,7 @@
 
             // Redirect the user
             // TODO redirect to bookingcomplete.html
-            window.location = "payment.html";
+            window.location = "bookingcomplete.html";
         } else {
           // Show toast for unsuccessful submission
           showToast("danger", "Something went wrong. Please try again.");

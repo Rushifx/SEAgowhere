@@ -741,6 +741,25 @@ footer {
 
 /* END OF BOOKING */
 
+/* START OF BOOKING CREATED */
+
+.booking-complete {
+    border: 2px solid red;
+    min-height: 700px;
+}
+
+.big-complete {
+    font-size: 4rem;
+    color: #3C9CD6;
+}
+
+.small-complete {
+    font-size: 2rem;
+    color: #FFAB40;
+
+}
+/* START OF BOOKING CREATED */
+
 /* START OF MEDIA QUERIES */
 
 /* dropdown menu on hover for non-mobile display */
