@@ -80,7 +80,7 @@ class ItemsController {
         cardBody.append(cardCountry);
 
         const cardText = document.createElement("p");
-        cardText.className = "card-blurb fw-light small mt-4 px-2";
+        cardText.className = "card-blurb fw-light lexend small mt-4 px-2";
         cardText.innerText = item.blurb;
         cardBody.append(cardText);
 

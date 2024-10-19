@@ -748,12 +748,12 @@ footer {
     min-height: 700px;
 }
 
-.big {
+.big-complete {
     font-size: 4rem;
     color: #3C9CD6;
 }
 
-.small {
+.small-complete {
     font-size: 2rem;
     color: #FFAB40;
 

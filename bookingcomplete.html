@@ -60,8 +60,8 @@
 
   <!-- Main Section -->
   <div class="booking-complete h-100 d-flex flex-column justify-content-center align-items-center">
-    <p class="lexend fw-bolder big">Thank you for booking with us!</p>
-    <p class="lexend fw-bolder small">Enjoy your trip!</p>
+    <p class="lexend fw-bolder big-complete">Thank you for booking with us!</p>
+    <p class="lexend fw-bolder small-complete">Enjoy your trip!</p>
   </div>
   <!-- End of Main Section -->
 
@@ -228,9 +228,13 @@
 
   <script>
     window.onload = function() {
-      showToast("success", "Redirecting you back to the homepage!");
+      showToast("success", "Redirecting you back to the homepage in 3s!");
+
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 3000)
     }
-    
+
 
     // Helper function to show toast messages
     function showToast(type, message) {
