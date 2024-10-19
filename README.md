@@ -103,7 +103,7 @@ The aim was to engineer based off both the cirriculum learnt, as well as in alig
 - Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
 
 <br>
-<img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="800" height="500">
+<img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="700" height="400">
 <br>
 
 ### Key Features
@@ -117,7 +117,7 @@ The key application and experience features of the SEAGoWhere web application in
 *Wishlist Feature
 
 <br>
-<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="800" height="500">
+<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="700" height="400">
 <br>
 ---
 
@@ -233,22 +233,32 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Future Roadmap
 
-Wishlisted (MoSCow) features due to requirement prioritization due to project timeline
+As part of the web application development, several application features were proposed with the intent to enhance either Business or User requirements. Some of these features, which were wishlisted through MoSCow prioritization (Must,Should,Could have) are listed below. 
 
-To be implemented future product roadmap, learning of technologies to enhance current web application 
-Hypothetical schedule if additional 12-14 weeks time extension
+| Wishlisted            | Details                                                           | Technologies        |Hypothetical Timeframe  |
+| :----------------     | :------------------                                               | :-------------      |:-------------          |
+| Bucket List           | Proposed Package curation of user unique 'Bucket List' criteria   | JS, Spring Framework|Q4 2024                 |
+| Thematic Categories   | Increased Categories, Tags                                        | MySQL               |Q1 2025                 |
+| Search Function       | Search bar with Results                                           | JS, React           |Q1 2025                 |
+| Payment Gateway       | Secure Payment Gateway portal API (Stripe)                        | Java                |Q1 2025                 |
+| Subscription Features | Paid Subscription service with customised curation to user profile| JS, Spring Framework|Q2 2025                 |    
 
-| Wishlisted            | Details             | Technologies        |Hypothetical Timeframe  |
-| :----------------     | :------------------ | :-------------      |:-------------          |
-| Bucket List           | MySQL (Workbench)   | Visual Studio Code  |Netlify                 |
-| Thematic Categories   | Java                | IntelliJ IDEA       |                        |
-| Search Function       | Spring Data JPA     | Github              |                        |
-| Payment Gateway       | Spring Framework    | Mockito             |                        |
-| Subscription Features |                     |                     | JUnit 5                |                 
+<br>*To be implemented future product roadmap with a hypothetical schedule if additional 12-14 weeks time extension
 
 ### Team Composition
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+The SEAGoWhere team composition, as well as its task distribution is listed below.While each team member has a general defined role, the usage of agile principles and scrum methodology, as well as the application of BSMs such as **Proactiveness** and **Teamwork** means that each member steps up whenever needed to make the project a success. 
+
+| Charlie - Full Stack Support    | Colin - Backend/Frameworks    | Liyana - Frontend/UI    |Xun - Project Management  |
+| :----------------               | :------------------           | :-------------          |:-------------            |
+| Package Data Wrangling          | Github Repo Owner             | Frontend Design (FE)    |Product Owner             |
+| Package Booking Modal (FE)      | Spring Framework (BE)         | Design Documentation    |Package Design(FE)        |
+| Presentation (Deck Support)     | User Login/JWT Authentication | UX/UI                   |Unit Testing (BE)         |
+|                                 | Package Booking               | MySQL Database (BE)     |Presentation (Deck)       |
+|                                 | Payment                       |                         |Github Readme             |  
+
+FE - Frontend <br>
+BE - Backend
 
 ---
 
@@ -256,7 +266,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Key Lessons Learnt
 
-Already elaborated above, summarise to close the project off
 
 <h3>Point 1</h3>
 <h3>Point 2</h3>
