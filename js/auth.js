@@ -65,7 +65,7 @@ async function login(formData = {}){
             const result = await response.json();
             const token = result.token;                                                   
             const user = decodeUser(token);
-                                                  
+
             window.localStorage.setItem(_USERTOKEN, token);                                 // Store the string in localStorage with the key 'usertoken'
             window.location = _HOME_URL;                                                    // Redirect the user to homepage
 
@@ -86,16 +86,26 @@ async function signup(formData = {}){
         return;
 
     try {
-        const response = Mock.getMockSuccess();                                             // TODO: remove when endpoint request is available (remove in production env.)  
 
-        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));      // TODO: remove delay when endpoint is instated
-        await sleep(2000);
+        const response = await fetch(_ENDPOINT_SIGNUP, {                                 // Perform an async POST request to process the form data
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(formData)
+            });
 
-        if(response.ok){
-            const token = Mock.getToken(true);                                              // TODO: refactor when token is retrieved from response, (remove in production env.) 
-            window.localStorage.setItem(_USERTOKEN, token);
-            window.location = _PROFILE_URL;
-        }
+            if (response.ok) {
+    
+                // Automatically log the user in with the same email and password after successful signup
+                const loginData = {
+                    email: formData.email,
+                    password: formData.password
+                };
+    
+                // Call the login function to automatically log in the user after signing up
+                await login(loginData);
+            } else {
+                console.log("Signup failed:", await response.json());
+            }
 
         return;
 
