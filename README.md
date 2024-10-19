@@ -116,10 +116,8 @@ The key application and experience features of the SEAGoWhere web application in
 
 *Wishlist Feature
 
-<br>
 <img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="700" height="400">
 <br>
----
 
 <!-- WEB APPLICATION -->
 
@@ -140,16 +138,13 @@ The stack of technologies chosen for this application comes from two key criteri
 |                   |                     | Postman             |                    |
 
 </br>
-</br>
 
 Our Frontend stack consists of the 3 core programming languages, with the decision to incorporate the [Bootstrap](https://getbootstrap.com/) V5.3.3 Framework and library owing to its responsive design components and ease of insertion and use within HTML/CSS code syntax.
 
 For our Backend stack, the decision to use ***[MySQL](https://www.mysql.com/) Relational Database Management System (RDBMS)*** and ***[Spring](https://spring.io/) Application Framework***, inclusive of ***[SpringBoot](https://spring.io/projects/spring-boot)*** and ***[Spring](https://spring.io/projects/spring-data-jpa) Data JPA (Java Persistence API)*** within a Java language environment primarily stems from Spring's versitality and ease of deployability, particularly in the area of autoconfigured **dependency injections**. This includes the ***[Spring](https://spring.io/projects/spring-security) Security*** dependency, which accords highly customizable authentication and access control frameworks, critical to our application requirements as a travel booking website. 
 
 The suite of tools that support this tech stack include Visual Studio Code and IntelliJ IDEA Integrated Development Environment (IDE) for its versatility as well as Git Terminal Command Line Utility (CLI) features, with ***[GitHub](http://github.com/)*** serving as the repository platform for code sharing, deployment and version control. This is rounded off by a suite of validation and unit testing frameworks, including ***[Mockito](https://site.mockito.org/)***, ***[JUnit5](https://junit.org/junit5/)*** and ***[Postman](https://www.postman.com/)*** API platform.
-
 </br>
-
 
 ### Site Map
 
@@ -175,18 +170,15 @@ Other supporting dependencies, tools and libraries include:
 - Jackson Annotation (JSON Manipulation)
 - Maven (Dependency Management)
 - Lombok (Java Library)
-
+<br>
 
 ### Entity Relationship Diagram
 
-(To confirm ERD Saturday Morning for lock-in)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+For our database, we have opted to use MySQL Workbench RDBMS owing to its open-source nature and utility to fit our project requirements. 
+<br> The database, as well as table cardinality is designed to acheive the required user flow and experience for a package booking.
 
 <img src="img/diagram/SEAGowhere ERD Final.png" alt="ERD" width="600" height="400">
-</br>
-
----
+<br>
 
 <!-- BSM AND KNOWLEDGE APPLICATION -->
 
@@ -247,15 +239,15 @@ As part of the web application development, several application features were pr
 
 ### Team Composition
 
-The SEAGoWhere team composition, as well as its task distribution is listed below.While each team member has a general defined role, the usage of agile principles and scrum methodology, as well as the application of BSMs such as **Proactiveness** and **Teamwork** means that each member steps up whenever needed to make the project a success. 
+The SEAGoWhere team composition, as well as its task distribution is listed below. While each team member has a general defined role and scope, the usage of agile principles and scrum methodology, as well as the application of BSMs such as **Proactiveness** and **Teamwork** means that each member steps up whenever needed to make the project a success. 
 
 | Charlie - Full Stack Support    | Colin - Backend/Frameworks    | Liyana - Frontend/UI    |Xun - Project Management  |
 | :----------------               | :------------------           | :-------------          |:-------------            |
-| Package Data Wrangling          | Github Repo Owner             | Frontend Design (FE)    |Product Owner             |
-| Package Booking Modal (FE)      | Spring Framework (BE)         | Design Documentation    |Package Design(FE)        |
-| Presentation (Deck Support)     | User Login/JWT Authentication | UX/UI                   |Unit Testing (BE)         |
+| Package Data Wrangling          | Github Repo Owner             | UX/UI Owner             |Product Owner             |
+| Package Booking Modal (FE)      | Spring Framework (BE)         | Frontend Design (FE)    |Package Design (FE)       |
+| Presentation (Deck Support)     | User Login/JWT Authentication | Design Documentation    |Unit Testing (BE)         |
 |                                 | Package Booking               | MySQL Database (BE)     |Presentation (Deck)       |
-|                                 | Payment                       |                         |Github Readme             |  
+|                                 | Payment                       | Frontend Design (FE)    |Github Readme             |  
 
 FE - Frontend <br>
 BE - Backend
