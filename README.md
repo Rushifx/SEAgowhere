@@ -74,10 +74,8 @@
 
 ## About The Project
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
----
-
+SEAGoWhere is full stack web application product developed as a platform for the modern traveller and thrillseeker to seek out bespoke and novel experiences within the South East Asian (SEA) region. Its premise is to enable the user to simply find what visually hooks them, book, pay and finally set off for their next adventure with ease via a deliberately crafted frontend UI/UX as well as robust backend applications supporting authentication, booking and payment functions. 
+<br>
 <!-- PROJECT REQUIREMENTS -->
 
 ## Project Requirements
@@ -85,12 +83,14 @@
 ### Problem Statement
 A large segment of travel package and booking websites as web applications can swing between being too utilitarian or having too many details, leading to a diminished User Experience as well as information overload. International travel websites, being globally focused, can also lack a level of curation.
 
-- Image 1, Caption
-- Image 2, Caption
-- Image 3, Caption
+<img src="img/diagram/SEAGOWhere_Ancillary_Problem.png" alt="Current Websites" width="700" height="400">
+<br>
 
 ### Proposed Web Application Product
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+<img src="img/diagram/SEAGoWhere_Design.png/" alt="Website Design" width="700" height="400">
+<br>
 
 ### Key Application Requirements
 
@@ -102,7 +102,6 @@ The aim was to engineer based off both the cirriculum learnt, as well as in alig
 - User Requirements - The UX/UI as well as the client-side frontend needs to be intuitive and responsive to a user to book and poay for a package
 - Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
 
-<br>
 <img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="700" height="400">
 <br>
 
@@ -149,8 +148,6 @@ The suite of tools that support this tech stack include Visual Studio Code and I
 ### Site Map
 
 SEAGoWhere's Site Map diagramming can be defined as a typical product booking application, with heavy emphasis on the product experience and payment (Experiences, Featured Trips, Booking), which is illustrated in the User Flow. This structure also allows for future expansion into either further subcategories or features. 
-
-</br>
 
 <img src="img/diagram/SEAGoWhere Sitemap.drawio.png" alt="Site Map" width="800" height="500">
 </br>
@@ -213,15 +210,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Project Timeline
 
-(Finalise Saturday Monring upon schedule completion - anticipated no more new tasks after implementation of **Unit Testing**)
+The SEAGoWhere web application was planned, designed and built over a period of 12 weeks, in line with the academic cirriculum of the Generation bootcamp.<br> To aid in rapid development as well as direct application from course to product agile principles and scrum elements were used to aid in workload planning and prioritization, with the use of Microsoft Planner as a scrum board to plan sprints.
+<br>
 
-12 Weeks , typical 40 hours load
-
--Usage of Agile Principles and Scrum Framework
--Microsoft Project Planner (Buckets and Ticketing)
--Sprints Planning 
--Workload Planning and Task Switching/Pivoting
--MoSCow Prioritzation in latter part of project
+<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="700" height="400">
+<br>
 
 ### Future Roadmap
 
