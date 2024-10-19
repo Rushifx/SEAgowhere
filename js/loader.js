@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         profileEmail.innerText = user.email;
         profileUsername.innerText = user.username;
 
+        console.log(user);
+
         if (user.role === "ADMIN") {
             profileRole.innerText = user.role.charAt(0).toUpperCase() + user.role.slice(1).toLowerCase();
         };

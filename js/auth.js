@@ -50,23 +50,22 @@ async function login(formData = {}){
 
     // !! Try/catch block (exception handling) to send data to login enpoint
     try {
-        // FETCH requests - send data or retrive data by calling an API endpoint            // TODO: refactor when end-point is available
-        /* 
+        // FETCH requests - send data or retrive data by calling an API endpoint            
+         
             const response = await fetch(_ENDPOINT_LOGIN, {                                 // Perform an async POST request to process the form data
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(formData)
             });
-        */
+        
 
-        const response = Mock.getMockSuccess();                                             // TODO: remove when endpoint request is available (remove in production env.)  
-
-        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));      // TODO: remove delay when endpoint is instated
-        await sleep(2000);
         
         if(response.ok){                                                                    // If response is ok
             
-            const token = Mock.getToken(true);                                              // TODO: refactor when token is retrieved from response, (remove in production env.) 
+            const result = await response.json();
+            const token = result.token;                                                   
+            const user = decodeUser(token);
+                                                  
             window.localStorage.setItem(_USERTOKEN, token);                                 // Store the string in localStorage with the key 'usertoken'
             window.location = _HOME_URL;                                                    // Redirect the user to homepage
 
