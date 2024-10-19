@@ -94,7 +94,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Key Application Requirements
 
-To achieve a Minimum Viable Product for the proposed web application, the following key requirements were derived from a requirement analysis, illustrated below through an iterative process, as well as the MoSCoW prioritization. 
+To achieve a Minimum Viable Product (MVP) for the proposed web application, the following key requirements were derived from a requirement analysis, illustrated below through an iterative process, as well as the MoSCoW prioritization. 
 <br>
 The aim was to engineer based off both the cirriculum learnt, as well as in alignment of the overall vision of the application a set of key required features in the domain of:
 
@@ -102,8 +102,8 @@ The aim was to engineer based off both the cirriculum learnt, as well as in alig
 - User Requirements - The UX/UI as well as the client-side frontend needs to be intuitive and responsive to a user to book and poay for a package
 - Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
 
-[Requirements]()
-
+<br>
+<img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="800" height="500">
 <br>
 
 ### Key Features
@@ -116,8 +116,9 @@ The key application and experience features of the SEAGoWhere web application in
 
 *Wishlist Feature
 
-[Features]()
-
+<br>
+<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="800" height="500">
+<br>
 ---
 
 <!-- WEB APPLICATION -->
