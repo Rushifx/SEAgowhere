@@ -85,14 +85,38 @@
 ### Problem Statement
 A large segment of travel package and booking websites as web applications can swing between being too utilitarian or having too many details, leading to a diminished User Experience as well as information overload. International travel websites, being globally focused, can also lack a level of curation.
 
+- Image 1, Caption
+- Image 2, Caption
+- Image 3, Caption
+
 ### Proposed Web Application Product
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ### Key Application Requirements
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+To achieve a Minimum Viable Product for the proposed web application, the following key requirements were derived from a requirement analysis, illustrated below through an iterative process, as well as the MoSCoW prioritization. 
+<br>
+The aim was to engineer based off both the cirriculum learnt, as well as in alignment of the overall vision of the application a set of key required features in the domain of:
+
+- Business Requirements - The Application has to have travel package, booking and payment feunctionality 
+- User Requirements - The UX/UI as well as the client-side frontend needs to be intuitive and responsive to a user to book and poay for a package
+- Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
+
+[Requirements]()
+
+<br>
 
 ### Key Features
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The key application and experience features of the SEAGoWhere web application includes: 
+
+- <h4> Featured Trips</h4> - Bespoke travel experiences within SEA
+- <h4> Tailored Experiences</h4> Compared to other travel web applications, SEAGoWhere's packages are carefully curated into selected category buckets, which also from part of the overall user experience
+- <h4> Like It? Just Book and Go</h4> - The technology stack used, coupled with frontend design allows from a seamless, simple experience with key details to help travellers make a decision
+- <h4> User Profiles</h4> - Portal that acts as a user's unique travel passport. Book a trip? It's in there! Unsure if it's the trip? Bookmark it in your Bucket List for future reference*</h4>
+
+*Wishlist Feature
+
+[Features]()
 
 ---
 
