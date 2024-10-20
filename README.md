@@ -83,12 +83,22 @@ SEAGoWhere is full stack web application product developed as a platform for the
 ### Problem Statement
 A large segment of travel package and booking websites as web applications can swing between being too utilitarian or having too many details, leading to a diminished User Experience as well as information overload. International travel websites, being globally focused, can also lack a level of curation.
 
-<img src="img/diagram/SEAGOWhere_Ancillary_Problem.png" alt="Current Websites" width="700" height="400">
+<br>
+<img src="img/diagram/SEAGOWhere_Ancillary_Problem.png" alt="Current Websites" width="700" height="300">
 <br>
 
 ### Proposed Web Application Product
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The team thus proposes and developed the following full stack web application product, SEAGoWhere.
+<br>
+SEAGoWhere is a 'Bespoke Experiential Travel Package Website' where a user can, in three simple steps, both on desktop and mobile:
 
+- Access Expertly curated packages unique to South East Asia 
+- See what you like? Book it now!
+- Your adventure begins!
+
+[**Design**](https://docs.google.com/drawings/d/1nZnkPzIRbuK2zkWE0VKzaOYUx5HRV6sWJSLApGe5t9Q/edit?usp=sharing)
+
+<br>
 <img src="img/diagram/SEAGoWhere_Design.png/" alt="Website Design" width="700" height="400">
 <br>
 
@@ -102,6 +112,7 @@ The aim was to engineer based off both the cirriculum learnt, as well as in alig
 - User Requirements - The UX/UI as well as the client-side frontend needs to be intuitive and responsive to a user to book and poay for a package
 - Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
 
+<br>
 <img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="700" height="400">
 <br>
 
@@ -174,7 +185,7 @@ Other supporting dependencies, tools and libraries include:
 For our database, we have opted to use MySQL Workbench RDBMS owing to its open-source nature and utility to fit our project requirements. 
 <br> The database, as well as table cardinality is designed to acheive the required user flow and experience for a package booking.
 
-<img src="img/diagram/SEAGowhere ERD Final.png" alt="ERD" width="600" height="400">
+<img src="img/diagram/SEAgowhereERD.drawio.png" alt="ERD" width="600" height="400">
 <br>
 
 <!-- BSM AND KNOWLEDGE APPLICATION -->
