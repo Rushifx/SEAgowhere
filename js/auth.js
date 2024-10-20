@@ -32,9 +32,10 @@ function decodeUser(token){
     const arrToken = token.split(".");                              
     const decodedToken = JSON.parse(window.atob(arrToken[1]));
     const email = decodedToken.email;
-    const username = decodedToken.username;
+    const username = decodedToken.lastName + " " + decodedToken.firstName;
+    const fullname = decodedToken.lastName + " " + decodedToken.firstName;
     const role = decodedToken.role;
-    return {email: email, username: username, role: role};
+    return {email: email, username: username, fullname: fullname, role: role};
 
 }
 

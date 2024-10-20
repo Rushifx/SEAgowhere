@@ -22,10 +22,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const user = decodeUser(token);
         const profileEmail = document.getElementById("txtEmail");
         const profileUsername = document.getElementById("txtUsername");
+        const profileFullName = document.getElementById("txtFullName");
         const profileRole = document.getElementById("txtUserRole");
         profileUsername.classList.add("fw-bold");
         profileEmail.innerText = user.email;
         profileUsername.innerText = user.username;
+        profileFullName.innerText = user.fullname;
 
         console.log(user);
 
