@@ -34,8 +34,9 @@ function decodeUser(token){
     const email = decodedToken.email;
     const username = decodedToken.lastName + " " + decodedToken.firstName;
     const fullname = decodedToken.lastName + " " + decodedToken.firstName;
+    const phoneNumber = decodedToken.number;
     const role = decodedToken.role;
-    return {email: email, username: username, fullname: fullname, role: role};
+    return {email: email, username: username, fullname: fullname, number: phoneNumber, role: role};
 
 }
 

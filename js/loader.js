@@ -24,10 +24,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const profileUsername = document.getElementById("txtUsername");
         const profileFullName = document.getElementById("txtFullName");
         const profileRole = document.getElementById("txtUserRole");
+        const profileNumber = document.getElementById("txtPhone")
         profileUsername.classList.add("fw-bold");
         profileEmail.innerText = user.email;
         profileUsername.innerText = user.username;
         profileFullName.innerText = user.fullname;
+        profileNumber.innerText = user.number;
 
         console.log(user);
 
@@ -40,6 +42,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if(token)
             window.location = _HOME_URL;
 
+    }else if(currentPage.includes(_CART_URL)){
+
+        const token = isAuthenticated();
+
+        if(!token)
+            window.location = _LOGIN_URL;
     };
 
     // JavaScript for mobile dropdown
