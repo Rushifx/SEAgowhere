@@ -127,7 +127,6 @@ body {
     right: 1.8%;
 }
 
-
 /** End of PACKAGES **/
 
 /**Start of CAROUSEL**/
@@ -176,10 +175,6 @@ body {
 .carousel-control-next {
     right: 0;
 }
-
-/*   .carousel-item img:hover{
-
-  } */
 /**End of CAROUSEL**/
 
 /* START OF FOOTER */
@@ -648,6 +643,7 @@ footer {
 .btn-custom-dark:hover {
     background-color: #FFAB40 !important;
     color: #0F3244 !important;
+    font-weight: 500;
 }
 
 .rounded-custom {
@@ -744,7 +740,6 @@ footer {
 /* START OF BOOKING CREATED */
 
 .booking-complete {
-    border: 2px solid red;
     min-height: 700px;
 }
 
