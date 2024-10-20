@@ -221,10 +221,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Project Timeline
 
-The SEAGoWhere web application was planned, designed and built over a period of 12 weeks, in line with the academic cirriculum of the Generation bootcamp.<br> To aid in rapid development as well as direct application from course to product agile principles and scrum elements were used to aid in workload planning and prioritization, with the use of Microsoft Planner as a scrum board to plan sprints.
+The SEAGoWhere web application was planned, designed and built over a period of 12 weeks from start to handoff, in line and pace with the academic cirriculum of the Generation bootcamp.<br> To aid in rapid development as well as direct application from course to product agile principles and scrum elements were used to aid in workload planning and prioritization, with the use of Microsoft Planner as a scrum board to plan sprints as illustrated in three sprint periods where multiple aspects of the application were developed in tandem.
 <br>
 
-<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="700" height="400">
+<img src="img/diagram/SEAGOWhere_Timeline.png" alt="Timeline" width="700" height="400">
 <br>
 
 ### Future Roadmap
@@ -262,16 +262,15 @@ BE - Backend
 
 ## Key Lessons Learnt
 
-
-<h3>Point 1</h3>
-<h3>Point 2</h3>
-<h3>Point 3</h3>
+<h4>- Each team member, regardless of their scope and level oftechnical competency has a part to play within a functional team</h4>
+<h4>- A problem solving and communicative team approach is critical in ensuring project outcome success</h4>
+<h4>- Having SMART goals, as well as being agile and prioritising what needs to be done, even if it means disagreeing and committing is sometimes part of a software development cycle</h4>
 
 ## Contact
 
 <h3>Xun Chia</h3>
 
-- [LinkedIn](https://www.linkedin.com/feed/)
+- [LinkedIn](https://www.linkedin.com/in/xunc/)
 - [Github](https://github.com/xunchiasg)
 - [Portfolio](https://xunchia.com/)
 
@@ -283,9 +282,9 @@ BE - Backend
 
 <h3>Liyana Afiqah</h3>
 
-- [LinkedIn]()
-- [Github]()
-- [Portfolio]()
+- [LinkedIn](https://www.linkedin.com/in/liyanaafiqahjazmi/)
+- [Github](https://github.com/Liyyy9)
+- [Portfolio](https://liyanaaj.netlify.app/)
 
 <h3>Charlie Tan</h3>
 
