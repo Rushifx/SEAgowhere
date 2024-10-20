@@ -56,13 +56,14 @@
       </div>
     </nav>
   </div>
+
   <!-- Start of main section -->
   <div class="container mt-4 mb-4">
     <div class="row g-5">
       <!-- Experience Details on the Left -->
       <div class="col-md-7 col-lg-6">
         <h4 class="mb-3 experience-banner">Your Experience Details</h4>
-        <h2 class="fw-bolder">Penang Power (5D3N)</h2>
+        <h2 class="fw-bolder booking-title"></h2>
         <div class="row mt-3">
           <div class="col-6">
             <div class="d-flex justify-content-between">
@@ -70,7 +71,7 @@
                 <p>Departure Date</p>
               </div>
               <div>
-                <p>09-08-2024</p>
+                <p class="dep-date"></p>
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@
                 <p>Return Date</p>
               </div>
               <div>
-                <p>13-08-2024</p>
+                <p class="return-date"></p>
               </div>
             </div>
           </div>
@@ -106,20 +107,14 @@
             <!-- Data Rows -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-6">Adult</div>
-              <div class="col-2 text-end">$20</div>
-              <div class="col-2 text-end">2</div>
-              <div class="col-2 text-end">$40</div>
-            </div>
-            <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
-              <div class="col-6">Children</div>
-              <div class="col-2 text-end">$10</div>
-              <div class="col-2 text-end">3</div>
-              <div class="col-2 text-end">$30</div>
+              <div class="col-2 text-end booking-price"></div>
+              <div class="col-2 text-end">1</div>
+              <div class="col-2 text-end booking-total"></div>
             </div>
             <!-- Total Row -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-8 text-end"><strong>Total (SGD)</strong></div>
-              <div class="col-4 text-end"><strong>$70</strong></div>
+              <div class="col-4 text-end"><strong class="total-price">$70</strong></div>
             </div>
           </div>
         </div>
@@ -442,6 +437,7 @@
   <script src="js/boostrap-ftns.js"></script>
   <script src="js/form-validate.js"></script>
   <script src="js/review.js"></script>
+  <script src="js/BookingController.js"></script>
   <script>
     async function submitForm() {
       event.preventDefault(); // Prevent default form submission

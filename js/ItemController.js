@@ -196,7 +196,9 @@ class ItemsController {
         }
 
         if (packageDates) {
-            packageDates.textContent = `Dates: ${start_date} to ${end_date}`;
+            const formattedStart = formatDate(start_date);
+            const formattedEnd = formatDate(end_date)
+            packageDates.textContent = `Dates: ${formattedStart} to ${formattedEnd}`;
             console.log("start_date passed to handleProductDetail: ", start_date);
             console.log("end_date passed to handleProductDetail: ", end_date);            
         }
@@ -252,4 +254,9 @@ function getCategoryClass(categoryClass) {
         case "culture": return "culture";
         default: return "unknown"
     }
+}
+
+const formatDate = (date) => {
+    const parts = date.split('-');
+    return `${parts[2]}-${parts[1]}-${parts[0]}`;
 }
