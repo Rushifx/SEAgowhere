@@ -194,24 +194,49 @@ For our database, we have opted to use MySQL Workbench RDBMS owing to its open-s
 
 ### Behavioural Skills and Mindsets Applied
 
-Intersect with the Martin's feedback on feature/tech learning apppication 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Technical and non-technical aspects of the cirriculum, including the application of Behaviours, Skills and Mindsets (BSM) is illustrated within SEAGoWhere main User Flow:
 
-### Skill 1
-**USER LOGIN AND AUTHENTICATION**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+### User Signup and Authentication
 
-### Skill 2
-**UX UI for TRAVEL PACKAGE**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<img src="submission/SEAGoWhere_Diagrams/path_1_signup.png" alt="User Signup" width="500" height="300">
+</br>
 
-### Skill 3
-**BACKEND FOR BOOKING AND PAYMENT**
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+When a user first signs up for an account on SEAGoWhere, several REST API requests are made based off the form fields (POST) and the database is updated. 
 
-### Skill 4
-**USER PROFILE AND API***
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<img src="submission/SEAGoWhere_Diagrams/path_1_login.png" alt="User Login" width="500" height="300">
+
+Authentication for subsequent logins will involve JSON Web Token (JWT) authentication to authorise login and updates to a user profile.
+
+<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+</br>
+
+JSON Web Token (JWT) authentication to encrypt unique user information as a Springboot dependency feature.
+
+### Booking and Payment of Package
+
+When the user browses through the site, either at the 'Experiences' or 'Featured Trips' pages, several API calls (GET) are made for Springboot to load the relevant packages containing image and text assets from the database. A pagination JS feature is embedded within the HTML to throttle loading at the backend. 
+
+<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+</br>
+
+The database adminstrator will have access to manipulate the database downstream, either in terms of modifying the number and content of experience categories, or the pacakges themselves. This includes aspects such as create, update and delete.
+
+<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+</br>
+
+Once the user opts to book a package, he will be taken to the booking page where an API call to retreive the relevant package will be shown. Upon input of passenger details (where the booking is made), the booking instance will be created (GET) and stored in the database linked to the unique user. 
+
+<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+</br>
+
+### User Profile 
+
+As per the cardinality shown between a unique user and a booking within the ERD, the user profile will contain fields tied to that particular user. This includes the bookings associated with him, where an API call will retrieve the relevant booking to display within the page. 
+
+<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+</br>
+
+In terms of testing the website's robustness, the use of [Postman](https://www.postman.com/) API platform was used for to make dummy API calls to SEAGoWhere. Internally, within the Java application itself, the use of Unit Testing dependencies such as Mockito and JUnit 5 is also conducted.
 
 ---
 
@@ -276,9 +301,9 @@ BE - Backend
 
 <h3>Colin Toh</h3>
 
-- [LinkedIn]()
-- [Github]()
-- [Portfolio]()
+- [LinkedIn](www.linkedin.com/in/toh-colin)
+- [Github](https://github.com/Rushifx)
+- [Portfolio](https://colintohportfolio.netlify.app/)
 
 <h3>Liyana Afiqah</h3>
 
@@ -288,6 +313,5 @@ BE - Backend
 
 <h3>Charlie Tan</h3>
 
-- [LinkedIn]()
-- [Github]()
-- [Portfolio]()
+- [Github](https://github.com/Ceeyestano)
+
