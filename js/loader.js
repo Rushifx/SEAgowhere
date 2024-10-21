@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     spinner = new Spinner();
 
     const currentPage = window.location.pathname; //checks the page name
-    if (currentPage.includes(_PROFILE_URL)) { //
-        console.log('profile page');
+    if (currentPage.includes(_PROFILE_URL)) {
 
         const token = isAuthenticated();
 
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         const profileUsername = document.getElementById("txtUsername");
         const profileFullName = document.getElementById("txtFullName");
         const profileFirstName = document.getElementById("txtFirstName");
-        const profileLastName = document.getElementById("txtLastname");
+        const profileLastName = document.getElementById("txtLastName");
         const profileRole = document.getElementById("txtUserRole");
         const profileNumber = document.getElementById("txtPhone")
         profileUsername.classList.add("fw-bold");
@@ -44,8 +43,10 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             profileUsername.innerText = user.firstName + " " + user.lastName;
             profileFullName.innerText = user.lastName + " " + user.firstName;
             profileNumber.innerText = user.number;
+
+            console.log(user);
         };
-        console.log(user);
+
 
         if (user.role === "ADMIN") {
             profileRole.innerText = user.role.charAt(0).toUpperCase() + user.role.slice(1).toLowerCase();
@@ -62,6 +63,42 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
         if(!token)
             window.location = _LOGIN_URL;
+    }else if(currentPage.includes(_UPROFILE_URL)){
+
+        const token = isAuthenticated();
+
+        if (!token) {
+            window.location = _HOME_URL;  // Redirect if not authenticated
+            return;
+        }
+
+        const profileFirstName = document.getElementById("txtFirstName");
+        const profileLastName = document.getElementById("txtLastName");
+        const profileEmail = document.getElementById("txtEmail");
+        const profilePhone = document.getElementById("txtPhone");
+
+
+        const response = await fetch(_ENDPOINT_PROFILE, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,  // Send Bearer token for authentication
+                "Content-Type": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            const user = await response.json();  // Parse the response JSON
+
+            // Pre-fill the form with the current user's data
+            profileFirstName.value = user.firstName;
+            profileLastName.value = user.lastName;
+            profileEmail.innerHTML = user.email;  // Email is read-only, but we still populate it
+            profilePhone.value = user.number;
+
+        } else {
+            console.error("Failed to load profile data");
+        }
+
     };
 
     // JavaScript for mobile dropdown

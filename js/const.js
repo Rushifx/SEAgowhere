@@ -23,6 +23,7 @@ const _CONTACT_URL = "contact.html";
 const _LOGIN_URL = "login.html";
 const _LOGOUT_URL = "logout.html";
 const _PROFILE_URL = "profile.html";
+const _UPROFILE_URL = "updateprofile.html";
 const _SIGNUP_URL = "signup.html";
 
 function getCategoryUrl(categoryId){
