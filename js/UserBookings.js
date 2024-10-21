@@ -1,31 +1,37 @@
 async function fetchBookingsByUserId() {
-    const url = 'http://localhost:8080/user/api/booking/user';
-    try {
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': "application/json",
-                'Authorization': 'Bearer ' + localStorage.getItem('usertoken')
-            }
-        });
-        console.log("Token: ", localStorage.getItem('usertoken'));
+  const url = 'http://localhost:8080/user/api/booking/user';
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': "application/json",
+        'Authorization': 'Bearer ' + localStorage.getItem('usertoken')
+      }
+    });
+    console.log("Token: ", localStorage.getItem('usertoken'));
 
-        if(!response.ok){
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-        const bookings = await response.json();
-        const bookingsContainer = document.querySelector(".profile-bookings");
+    const bookings = await response.json();
+    const bookingsContainer = document.querySelector(".profile-bookings");
 
-        bookings.forEach(booking => {
-            console.log("booking details: ", booking);
-            console.log("package details: ", booking.packages)
+    const uniqueBookings = new Set();
 
-            const packageDetails = booking.packages;
-            const categoryDetails = booking.packages.category;
-            console.log("Category Details: ",categoryDetails)
+    bookings.forEach(booking => {
+      console.log("booking details: ", booking);
+      console.log("package details: ", booking.packages)
 
-            const bookingCard = `
+      const packageDetails = booking.packages;
+
+      if (!uniqueBookings.has(packageDetails.id)) {
+        uniqueBookings.add(packageDetails.id);
+
+        const categoryDetails = booking.packages.category;
+        console.log("Category Details: ", categoryDetails)
+
+        const bookingCard = `
                 <div class="col-md-4 col-sm-6 mb-3 d-flex">
                       <div class="booking-card border border-2 border-black rounded-2 flex-fill">
                         <div class="booking-img">
@@ -47,29 +53,33 @@ async function fetchBookingsByUserId() {
                       </div>
                     </div>
             `;
-            
-            bookingsContainer.innerHTML += bookingCard;
-        });
-    } catch (error) {
-        console.log("Error fetching bookings: ", error);
-    }
+
+        bookingsContainer.innerHTML += bookingCard;
+      } else {
+        console.log(`Duplicate package detected: ${packageDetails.name}`);
+      }
+    });
+    
+  } catch (error) {
+    console.log("Error fetching bookings: ", error);
+  }
 }
 
-function packageDuration(packageDetails){
-    const days = packageDetails.no_of_days;
-    const nights = packageDetails.no_of_nights;
-    return `${days}D${nights}N`;
+function packageDuration(packageDetails) {
+  const days = packageDetails.no_of_days;
+  const nights = packageDetails.no_of_nights;
+  return `${days}D${nights}N`;
 }
 
 function getCategoryName(categoryName) {
-    switch (categoryName) {
-        case 1: return "nature";
-        case 2: return "food";
-        case 3: return "festivals";
-        case 4: return "concerts";
-        case 5: return "culture";
-        default: return "unknown"
-    }
+  switch (categoryName) {
+    case 1: return "nature";
+    case 2: return "food";
+    case 3: return "festivals";
+    case 4: return "concerts";
+    case 5: return "culture";
+    default: return "unknown"
+  }
 }
 
 fetchBookingsByUserId();
