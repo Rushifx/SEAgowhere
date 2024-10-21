@@ -117,6 +117,47 @@ async function signup(formData = {}){
     }
 }
 
+// Function to update profile
+async function update(formData = {}){
+    
+    const token = localStorage.getItem(_USERTOKEN);
+
+    if(Object.entries(formData).length === 0)                                               // Return if the object is empty
+        return;
+
+    try {
+
+        const response = await fetch(_ENDPOINT_UPDATEPROFILE, {
+                method: "PUT",
+                headers: {  "Content-Type": "application/json",
+                            "Authorization": `Bearer ${token}`, // Send the bearer token for authentication
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+    
+                const result = await response.json();
+                const newToken = result.token; 
+
+                window.localStorage.removeItem(_USERTOKEN);
+                window.localStorage.setItem(_USERTOKEN, newToken);
+                
+                // Redirect back to profile.html
+                window.location = _PROFILE_URL;
+
+            } else {
+                console.log("Update failed:", await response.json());
+            }
+
+        return;
+
+    } catch (error){
+        console.log("Exception error gotten is: ", error.message)
+        return;
+    }
+}
+
 // Function to logout
 function logout(){
     window.localStorage.removeItem(_USERTOKEN);                                             // Store the string in localStorage with the key 'token'

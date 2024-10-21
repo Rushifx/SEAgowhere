@@ -322,7 +322,13 @@
             spinner.createSpinner("btnSignup");                                      // Create the spinner, apply it to btnSignup
             spinner.displaySpinner(true);
 
-            const formData = {firstName: firstName.value, lastName: lastName.value, email: email.value, number: number.value, password: pwd.value, role: "USER"};           // JavaScript Object formData stores the form's input values
+            const formData = {
+                firstName: firstName.value,
+                lastName: lastName.value, 
+                email: email.value, 
+                number: number.value, 
+                password: pwd.value, 
+                role: "USER"};           // JavaScript Object formData stores the form's input values
 
             const signUpSuccess = await signup(formData);                             // Invoke signup() function, and end (return)
 
