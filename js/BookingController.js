@@ -1,5 +1,6 @@
 let packageId = window.location.href.match(/id=([^&]*)/);
 console.log("package id: ", packageId[1]);
+let packageDetails;
 
 fetchPackageDetails(packageId[1]);
 
@@ -10,10 +11,10 @@ async function fetchPackageDetails (packageId) {
         const response = await fetch(url);
         if (!response.ok) throw new (`HTTP error! status: ${response.status}`);
     
-        const packageDetails = await response.json();
+        packageDetails = await response.json();
         console.log("Package Details: ", packageDetails);
-        this.displayPackageDetails(packageDetails);
-
+        displayPackageDetails(packageDetails);
+        console.log("Hello World")
         return packageDetails;
     
     } catch (error) {
@@ -37,13 +38,14 @@ function displayPackageDetails(packageDetails) {
     endDate.textContent = formatDate(packageDetails.end_date);
 
     const bookingPrice = document.getElementsByClassName('booking-price')[0];
-    bookingPrice.textContent = `S$${packageDetails.price}`;
+    bookingPrice.textContent = "123"/* `S$${packageDetails.price}`; */
 
-    const bookingTotal = document.getElementsByClassName('booking-total')[0];
-    bookingTotal.textContent = `S$${packageDetails.price}`;
+    const bookingTotal = document.getElementsById('bookingTotal');
+    bookingTotal.textContent = "456"/* `S$${packageDetails.price}`; */
+    console.log(bookingTotal)
 
-    const totalPrice = document.getElementsByClassName('total-price')[0];
-    totalPrice.textContent = `S$${packageDetails.price}`;
+    const totalPrice = document.getElementsByClassName('totalPrice')[0];
+    totalPrice.textContent = "123"/* `S$${packageDetails.price}`; */
     
 }
 
@@ -51,3 +53,23 @@ const formatDate = (date) => {
     const parts = date.split('-');
     return `${parts[2]}-${parts[1]}-${parts[0]}`;
 }
+
+// function multiply(updatedPax = 1) {
+//     const totalPrice = packageDetails.price * updatedPax;
+//     console.log("PRICE: " + totalPrice)
+    
+//     const bookingTotal = document.getElementsByClassName('booking-total')[0];
+//     bookingTotal.textContent = `S$${totalPrice}`;
+
+// }
+
+// function updatePrice(packageDetails) {
+//     const bookingPrice = document.getElementsByClassName('booking-price')[0];
+//     const bookingTotal = document.getElementsByClassName('booking-total')[0];
+
+//     const total = multiply(packageDetails);
+
+//     bookingPrice.textContent = `S$${total}`;
+//     bookingTotal.textContent = `S$${total}`;
+
+// }

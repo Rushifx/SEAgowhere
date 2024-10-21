@@ -94,27 +94,27 @@
       <div class="col-md-5 col-lg-6 order-md-last">
         <div class="booking-summary rounded-5 p-3">
           <h5 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="pt-1">Booking Summary</span>
+            <span class="pt-1 lexend">Booking Summary</span>
           </h5>
           <div class="list-group mb-3">
             <!-- Header Row -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-6"><strong></strong></div>
               <div class="col-2 text-end"><strong>Price</strong></div>
-              <div class="col-2 text-end"><strong>Qty</strong></div>
+              <div class="col-2 text-end"><strong>Pax</strong></div>
               <div class="col-2 text-end"><strong>Total</strong></div>
             </div>
             <!-- Data Rows -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-6">Adult</div>
               <div class="col-2 text-end booking-price"></div>
-              <div class="col-2 text-end">1</div>
-              <div class="col-2 text-end booking-total"></div>
+              <div class="col-2 text-end booking-pax">1</div>
+              <div class="col-2 text-end" id="bookingTotal"></div>
             </div>
             <!-- Total Row -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-8 text-end"><strong>Total (SGD)</strong></div>
-              <div class="col-4 text-end"><strong class="total-price">$70</strong></div>
+              <div class="col-4 text-end"><strong class="totalPrice"></strong></div>
             </div>
           </div>
         </div>
@@ -125,8 +125,8 @@
     <div class="row g-5 mt-4">
       <div class="col-12">
         <h4 class="mb-3 experience-banner">Passenger Details</h4>
-        <form class="needs-validation" onsubmit="submitForm()" novalidate>
-          <div class="row g-3">
+        <form class="needs-validation" onsubmit="submitForm(event)" novalidate>
+          <div class="row g-3" id="passenger-details">
             <div class="col-md-3">
               <label for="title" class="form-label">Title</label>
               <select class="form-select" id="title" required>
@@ -204,7 +204,7 @@
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
               <label for="mobile" class="form-label">Mobile</label>
               <input type="tel" class="form-control" id="mobile" placeholder="" required>
               <div class="invalid-feedback">
@@ -213,6 +213,7 @@
             </div>
           </div>
 
+          <button type="button" id="add-passenger-btn" class="btn btn-custom-dark lexend">Add New Passenger</button>
           <hr class="my-4">
 
           <!-- Start of Payment -->
@@ -438,94 +439,137 @@
   <script src="js/form-validate.js"></script>
   <script src="js/review.js"></script>
   <script src="js/BookingController.js"></script>
+  <script src="js/AddPassengers.js"></script>
   <script>
-    async function submitForm() {
-      event.preventDefault(); // Prevent default form submission
-      console.log("testing")
+    async function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    console.log("Testing form submission");
 
-      // Capture form inputs
-      const nationality = document.getElementById('nationality').value;
-      const gender = document.getElementById('gender').value;
-      const dob = document.getElementById('dob').value;
-      const passportNumber = document.getElementById('passportNumber').value;
-      const passportExpiry = document.getElementById('passportExpiry').value;
-      const mobile = document.getElementById('mobile').value;
+    // Create an array to hold form data objects
+    const allFormData = [];
 
-      // Validate inputs
-      if (!isValidPassport(passportNumber)) {
+    // Capture static form inputs directly by their IDs
+    const staticNationality = document.getElementById('nationality').value;
+    const staticGender = document.getElementById('gender').value;
+    const staticDob = document.getElementById('dob').value;
+    const staticPassportNumber = document.getElementById('passportNumber').value;
+    const staticPassportExpiry = document.getElementById('passportExpiry').value;
+    const staticMobile = document.getElementById('mobile').value;
+
+    // Validate inputs for the static row
+    if (!isValidPassport(staticPassportNumber)) {
         showToast("danger", "Invalid passport number.");
         return false;
-      }
-      if (!isValidNumber(mobile)) {
+    }
+    if (!isValidNumber(staticMobile)) {
         showToast("danger", "Invalid mobile number.");
         return false;
-      }
+    }
 
-      // If all validations pass
-      showToast("success", "Proceeding to the payment page!");
-      // You can proceed with form submission or further processing here
-      // FETCH requests - send data or retrive data by calling an API endpoint
-      // create JavaScript Object to store our form data
-      const formData = {
-        nationality: nationality,
-        gender: gender,
-        dob: new Date(dob).toISOString(),
-        passportNo: passportNumber,
-        passportExp: new Date(passportExpiry).toISOString(),
-        mobile: mobile
-      };
+    // Create the form data object for the static row
+    allFormData.push({
+        nationality: staticNationality,
+        gender: staticGender,
+        dob: new Date(staticDob).toISOString(),
+        passportNo: staticPassportNumber,
+        passportExp: new Date(staticPassportExpiry).toISOString(),
+        mobile: staticMobile
+    });
 
-      // implement a try/catch block (exception handling) to send our message data to an enpoint
-      try {
-        // Perform a POST fetch request to process form data
-        const packageId = window.location.href.match(/id=([^&]*)/);
-        const token = isAuthenticated();
-        if (!token){
-          window.location = _HOME_URL;
+    // Capture dynamic passenger rows
+    const passengerDetails = document.querySelectorAll("#passenger-details .row");
+    passengerDetails.forEach(row => {
+        if (!row.hasAttribute('data-dynamic')) { // Check if it's a static row
+            return; // Skip static rows
         }
-        console.log(token);
-        console.log(formData);
-        // TODO the url should look like http://127.0.0.1:8080/user/api/booking
-        const response = await fetch(`http://127.0.0.1:8080/user/api/booking/${packageId[1]}`, {
-          method: "POST",
-          headers: { 
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`,                                         // !! Send the bearer token to allow server-side authentication
-          },
-          body: JSON.stringify(formData)
+
+        // Capture dynamic row inputs
+        const dynamicNationality = row.querySelector('select[id^="nationality"]').value;
+        const dynamicGender = row.querySelector('select[id^="gender"]').value;
+        const dynamicDob = row.querySelector('input[id^="dob"]').value;
+        const dynamicPassportNumber = row.querySelector('input[id^="passportNumber"]').value;
+        const dynamicPassportExpiry = row.querySelector('input[id^="passportExpiry"]').value;
+        const dynamicMobile = row.querySelector('input[id^="mobile"]').value;
+
+        // Validate inputs for the dynamic row
+        if (!isValidPassport(dynamicPassportNumber)) {
+            showToast("danger", "Invalid passport number for dynamic passenger.");
+            return false;
+        }
+        if (!isValidNumber(dynamicMobile)) {
+            showToast("danger", "Invalid mobile number for dynamic passenger.");
+            return false;
+        }
+
+        // Create the form data object for the dynamic row
+        allFormData.push({
+            nationality: dynamicNationality,
+            gender: dynamicGender,
+            dob: new Date(dynamicDob).toISOString(),
+            passportNo: dynamicPassportNumber,
+            passportExp: new Date(dynamicPassportExpiry).toISOString(),
+            mobile: dynamicMobile
         });
+    });
 
-        if (response.ok) {
-          // Show toast for successful submission
-          showToast("success", "Booking Completed!");
+    // Implement a try/catch block for sending the data to the endpoint
+    try {
+        // Extract the package ID from the URL
+        const packageIdMatch = window.location.href.match(/id=([^&]*)/);
+        let packageId;
 
-          // Wait for 4 seconds
-          const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-          await sleep(2000);
-
-            // Redirect the user
-            // TODO redirect to bookingcomplete.html
-            window.location = "bookingcomplete.html";
+        if (packageIdMatch) {
+            packageId = packageIdMatch[1];
         } else {
-          // Show toast for unsuccessful submission
-          showToast("danger", "Something went wrong. Please try again.");
+            console.error("Package ID not found in the URL.");
+            return; // Handle case where the ID is not present
         }
-      } catch (error) {
-        console.log("Exception error gotten is: ", error.message);
-        // Show toast for any other errors
-        showToast("danger", "Error submitting details. Please try again later.");
-      }
-    }
 
-    // Helper function to show toast messages
-    function showToast(type, message) {
-      const toastElement = document.getElementById("msg-toast");
-      const toastBodyElement = document.getElementById("msg-toast-body");
-      toastBodyElement.textContent = message;
-      toastElement.className = `toast align-items-center mt-2 bg-${type}`;
-      const toast = new bootstrap.Toast(toastElement);
-      toast.show();
+        const token = isAuthenticated();
+        if (!token) {
+            window.location = _HOME_URL; // Redirect if not authenticated
+        }
+
+        console.log(token);
+
+        // Loop through all form data and send a POST request for each entry
+        for (const formData of allFormData) {
+            console.log("Sending form data:", formData);
+            const response = await fetch(`http://127.0.0.1:8080/user/api/booking/${packageId}`, {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`, // Send the bearer token for authentication
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                showToast("success", "Booking Completed!");
+            } else {
+                showToast("danger", "Something went wrong while submitting one of the bookings. Please try again.");
+            }
+        }
+
+        // Final redirect after all requests are complete
+        window.location = "bookingcomplete.html";
+        
+    } catch (error) {
+        console.log("Exception error caught: ", error.message);
+        showToast("danger", "Error submitting details. Please try again later.");
     }
+}
+
+
+// Helper function to show toast messages
+function showToast(type, message) {
+    const toastElement = document.getElementById("msg-toast");
+    const toastBodyElement = document.getElementById("msg-toast-body");
+    toastBodyElement.textContent = message;
+    toastElement.className = `toast align-items-center mt-2 bg-${type}`;
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
   </script>
 </body>
 
