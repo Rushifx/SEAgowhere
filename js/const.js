@@ -42,3 +42,5 @@ const _USERTOKEN = "usertoken";
 // endponts
 const _ENDPOINT_LOGIN = "http://localhost:8080/auth/api/signin";
 const _ENDPOINT_SIGNUP = "http://localhost:8080/auth/api/signup";
+const _ENDPOINT_PROFILE = "http://localhost:8080/restricted/api/profile";
+const _ENDPOINT_UPDATEPROFILE = "http://localhost:8080/restricted/api/profile/update";
