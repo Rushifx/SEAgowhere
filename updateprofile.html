@@ -309,6 +309,51 @@
   <script src="js/form-validate.js"></script>
 
   <script>
+
+  document.addEventListener("DOMContentLoaded", async (event) => {
+
+        const token = isAuthenticated();
+
+    console.log("im in update profile");
+
+    if (!token) {
+        window.location = _HOME_URL;  // Redirect if not authenticated
+        return;
+    }
+
+    const profileFirstName = document.getElementById("txtFirstName");
+    const profileLastName = document.getElementById("txtLastName");
+    const profileEmail = document.getElementById("txtEmail");
+    const profilePhone = document.getElementById("txtPhone");
+    const profilePwd = document.getElementById("txtPassword")
+
+
+    const response = await fetch(_ENDPOINT_PROFILE, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`,  // Send Bearer token for authentication
+            "Content-Type": "application/json"
+        }
+    });
+
+    if (response.ok) {
+        const user = await response.json();  // Parse the response JSON
+
+        // Pre-fill the form with the current user's data
+        profileFirstName.value = user.firstName;
+        profileLastName.value = user.lastName;
+        profileEmail.innerHTML = user.email;  // Email is read-only, but we still populate it
+        profilePhone.value = user.number;
+        profilePwd.value = user.password;
+
+        console.log(user);
+
+    } else {
+        console.error("Failed to load profile data");
+    }
+
+  });
+
     document.getElementById("updateProfile").addEventListener("submit", async (event) => {
 
         const token = window.localStorage.getItem(_USERTOKEN);

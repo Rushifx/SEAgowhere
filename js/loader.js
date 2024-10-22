@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
             profileFullName.innerText = user.lastName + " " + user.firstName;
             profileNumber.innerText = user.number;
 
+            profileFirstName.value = user.firstName;
+            profileLastName.value = user.lastName;
+
             console.log(user);
         };
 
@@ -63,42 +66,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
         if(!token)
             window.location = _LOGIN_URL;
-    }else if(currentPage.includes(_UPROFILE_URL)){
-
-        const token = isAuthenticated();
-
-        if (!token) {
-            window.location = _HOME_URL;  // Redirect if not authenticated
-            return;
-        }
-
-        const profileFirstName = document.getElementById("txtFirstName");
-        const profileLastName = document.getElementById("txtLastName");
-        const profileEmail = document.getElementById("txtEmail");
-        const profilePhone = document.getElementById("txtPhone");
-
-
-        const response = await fetch(_ENDPOINT_PROFILE, {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`,  // Send Bearer token for authentication
-                "Content-Type": "application/json"
-            }
-        });
-
-        if (response.ok) {
-            const user = await response.json();  // Parse the response JSON
-
-            // Pre-fill the form with the current user's data
-            profileFirstName.value = user.firstName;
-            profileLastName.value = user.lastName;
-            profileEmail.innerHTML = user.email;  // Email is read-only, but we still populate it
-            profilePhone.value = user.number;
-
-        } else {
-            console.error("Failed to load profile data");
-        }
-
     };
 
     // JavaScript for mobile dropdown
