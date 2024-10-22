@@ -100,7 +100,7 @@ document.getElementById("add-passenger-btn").addEventListener("click", () => {
         </div>
 
         <!-- Remove Passenger Button -->
-        <div class="col-md-4 mt-5">
+        <div class="col-md-4 remove-button">
             <button class="btn btn-danger remove-passenger-btn" onclick="removePassenger(${dynamicCounter})">Remove Passenger</button>
         </div>
     </div>

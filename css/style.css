@@ -1049,4 +1049,19 @@ footer {
 
 /* END OF FEATURED TRIPS MQ */
 
+/* START OF REMOVE PASSENGER MQ */
+@media screen and (min-width: 48rem) {          /* 768px */
+    .remove-button .remove-passenger-btn {
+        margin-top: 2rem ;
+    }
+}
+
+@media screen and (max-width: 47.9375rem) {          /* 767px */
+    .remove-button .remove-passenger-btn {
+        margin-top: 0 !important;
+        margin-bottom: 2rem !important;
+    }
+}
+/* END OF REMOVE PASSENGER MQ */
+
 /* END OF MEDIA QUERIES */
