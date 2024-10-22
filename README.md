@@ -15,14 +15,14 @@
 <!-- TITLE CONTENTS -->
 <div align="center">
     <h3>Final Capstone Project for Generation FSD-04</h3>
-        <a href="https://liyanaaj.netlify.app/"><strong>Live Website</strong></a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
+        <a href="https://seagowhere.netlify.app/"><strong>SEAGoWhere Website</strong></a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
           <br />
           <br />
               <a href="https://github.com/Rushifx/SEAgowhere">Frontend Repo</a>
               ·
               <a href="https://github.com/Liyyy9/SEAGoWhere-BackEnd">Backend Repo</a>
               ·
-              <a href="https://liyanaaj.netlify.app/">Presentation Slides/Documents</a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
+              <a href="https://drive.google.com/drive/folders/15WKz0gDHOjkiZ1vZeMbvkwCUz0h_8htj?usp=sharing">Presentation Slides/Documents</a> 
 </div>
 </br>
 
@@ -36,7 +36,7 @@
     <li>
       <a href="#project-requirements">Project Requirements</a>
       <ul>
-        <li><a href="#problem-statement">Problem Statement</a></li>
+        <li><a href="#idea">Idea</a></li>
         <li><a href="#proposed-web-application-product">Proposed Web Application Product</a></li>
         <li><a href="#key-application-requirements">Key Application Requirements</a></li>
         <li><a href="#key-features">Key Features</a></li>
@@ -80,11 +80,13 @@ SEAGoWhere is full stack web application product developed as a platform for the
 
 ## Project Requirements
 
-### Problem Statement
-A large segment of travel package and booking websites as web applications can swing between being too utilitarian or having too many details, leading to a diminished User Experience as well as information overload. International travel websites, being globally focused, can also lack a level of curation.
+### Idea
+Post-COVID has seen a resurgence in travel ("Revenge Travel") throughout the world as a response to the prolonged lockdown during that period. This is also reflected within the South East Asian (SEA) region, where tourism levels have been edging towards pre-pandemic levels. 
+
+As such, Team SEAGoWhere sees this backdrop as an opportunity to create a software web application to address this resurgence, opting to focus on providing bespoke and curated travel experience as a unique product offering to such travelers.
 
 <br>
-<img src="img/diagram/SEAGOWhere_Ancillary_Problem.png" alt="Current Websites" width="700" height="300">
+<img src="img/diagram/SEAGOWhere_Idea.png" alt="Current Websites" width="700" height="400">
 <br>
 
 ### Proposed Web Application Product
@@ -113,20 +115,19 @@ The aim was to engineer based off both the cirriculum learnt, as well as in alig
 - Technical Requirements - The server-side backend architecture, which includes aspects such as the database, backend application and APIs endpoints necessary for user login, authentication and package booking
 
 <br>
-<img src="img/diagram/SEAGOWhere_Requirements.png" alt="Requirements" width="700" height="400">
+<img src="img/diagram/SEAGOWhere_Requirements_updated.png" alt="Requirements" width="700" height="400">
 <br>
 
 ### Key Features
 The key application and experience features of the SEAGoWhere web application includes: 
 
-- <h4> Featured Trips</h4> - Bespoke travel experiences within SEA
-- <h4> Tailored Experiences</h4> Compared to other travel web applications, SEAGoWhere's packages are carefully curated into selected category buckets, which also from part of the overall user experience
+- <h4> Tailored Trip Experiences</h4> Compared to other travel web applications, SEAGoWhere's packages are carefully curated into selected category buckets, which also from part of the overall user experience
 - <h4> Like It? Just Book and Go</h4> - The technology stack used, coupled with frontend design allows from a seamless, simple experience with key details to help travellers make a decision
 - <h4> User Profiles</h4> - Portal that acts as a user's unique travel passport. Book a trip? It's in there! Unsure if it's the trip? Bookmark it in your Bucket List for future reference*</h4>
 
 *Wishlist Feature
 
-<img src="img/diagram/SEAGOWhere_Features.png" alt="Features" width="700" height="400">
+<img src="img/diagram/SEAGOWhere_Features_Updated.png" alt="Features" width="700" height="400">
 <br>
 
 <!-- WEB APPLICATION -->
@@ -160,7 +161,7 @@ The suite of tools that support this tech stack include Visual Studio Code and I
 
 SEAGoWhere's Site Map diagramming can be defined as a typical product booking application, with heavy emphasis on the product experience and payment (Experiences, Featured Trips, Booking), which is illustrated in the User Flow. This structure also allows for future expansion into either further subcategories or features. 
 
-<img src="img/diagram/SEAGoWhere Sitemap.drawio.png" alt="Site Map" width="800" height="500">
+<img src="img/diagram/SEAGoWhere Sitemap_updated.drawio.png" alt="Site Map" width="800" height="500">
 </br>
 
 ### User Flow
@@ -198,42 +199,50 @@ Technical and non-technical aspects of the cirriculum, including the application
 
 ### User Signup and Authentication
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_signup.png" alt="User Signup" width="500" height="300">
+<img src="submission/SEAGoWhere_Diagrams/skill_1_signup.png" alt="User Signup" width="500" height="300">
 </br>
 
-When a user first signs up for an account on SEAGoWhere, several REST API requests are made based off the form fields (POST) and the database is updated. 
+When a user first signs up for an account on SEAGoWhere, several REST API requests are made based off the form fields (POST) and the database is updated. This process will be unique for each user ID (Email).
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_login.png" alt="User Login" width="500" height="300">
+<img src="submission/SEAGoWhere_Diagrams/skill_1_login.png" alt="User Login" width="500" height="300">
 
 Authentication for subsequent logins will involve JSON Web Token (JWT) authentication to authorise login and updates to a user profile.
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+<img src="submission/SEAGoWhere_Diagrams/skill_1-jwt.png" alt="Authentication" width="500" height="200">
 </br>
 
 JSON Web Token (JWT) authentication to encrypt unique user information as a Springboot dependency feature.
 
 ### Booking and Payment of Package
 
+<img src="submission/SEAGoWhere_Diagrams/skill_2_packages.png" alt="Booking Main" width="500" height="250">
+</br>
+
 When the user browses through the site, either at the 'Experiences' or 'Featured Trips' pages, several API calls (GET) are made for Springboot to load the relevant packages containing image and text assets from the database. A pagination JS feature is embedded within the HTML to throttle loading at the backend. 
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+<img src="submission/SEAGoWhere_Diagrams/skill_2_trips.png" alt="Trip Categories" width="500" height="250">
 </br>
 
 The database adminstrator will have access to manipulate the database downstream, either in terms of modifying the number and content of experience categories, or the pacakges themselves. This includes aspects such as create, update and delete.
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+<img src="submission/SEAGoWhere_Diagrams/skill_2_modal.png" alt="Modal" width="500" height="250">
 </br>
 
-Once the user opts to book a package, he will be taken to the booking page where an API call to retreive the relevant package will be shown. Upon input of passenger details (where the booking is made), the booking instance will be created (GET) and stored in the database linked to the unique user. 
+Once the user opts to book a package, he will be taken to the booking page where an API call to retreive the relevant package will be shown. Upon input of passenger details (where the booking is made), the booking instance will be created (GET) and stored in the database linked to the unique user. The booking summary will also be updated to reflect the number of passengers in a single booking.
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+<img src="submission/SEAGoWhere_Diagrams/skill_2_booking.png" alt="Booking" width="500" height="600">
+</br>
+
+A successful booking with a handshake from the front and backend will result in the following screen.
+
+<img src="submission/SEAGoWhere_Diagrams/skill_2_success.png" alt="Success" width="500" height="250">
 </br>
 
 ### User Profile 
 
-As per the cardinality shown between a unique user and a booking within the ERD, the user profile will contain fields tied to that particular user. This includes the bookings associated with him, where an API call will retrieve the relevant booking to display within the page. 
+As per the table relationship shown between a unique user and a booking within the Database, the user profile will contain fields tied to that particular user. This includes the bookings associated with him, where an API call will retrieve the relevant booking to display within the page. 
 
-<img src="submission/SEAGoWhere_Diagrams/path_1_jwt.png" alt="Authentication" width="500" height="250">
+<img src="submission/SEAGoWhere_Diagrams/skill_3_profile.png" alt="User Profile" width="500" height="300">
 </br>
 
 In terms of testing the website's robustness, the use of [Postman](https://www.postman.com/) API platform was used for to make dummy API calls to SEAGoWhere. Internally, within the Java application itself, the use of Unit Testing dependencies such as Mockito and JUnit 5 is also conducted.
@@ -246,10 +255,13 @@ In terms of testing the website's robustness, the use of [Postman](https://www.p
 
 ### Project Timeline
 
-The SEAGoWhere web application was planned, designed and built over a period of 12 weeks from start to handoff, in line and pace with the academic cirriculum of the Generation bootcamp.<br> To aid in rapid development as well as direct application from course to product agile principles and scrum elements were used to aid in workload planning and prioritization, with the use of Microsoft Planner as a scrum board to plan sprints as illustrated in three sprint periods where multiple aspects of the application were developed in tandem.
-<br>
+The SEAGoWhere web application was planned, designed and built over a period of 12 weeks from start to handoff, in line and pace with the academic cirriculum of the Generation bootcamp.
 
-<img src="img/diagram/SEAGOWhere_Timeline.png" alt="Timeline" width="700" height="400">
+To aid in rapid development as well as direct application from course to product agile principles and scrum elements were used to aid in workload planning and prioritization, with the use of Microsoft Planner as a scrum board to plan sprints as illustrated in three sprint periods where multiple aspects of the application were developed in tandem.
+
+The use of Github as a key tool in managing code revisions as a single source of truth (SSOT), as well as version control was also paramount in enabling the level of agility in our software development cycle sprints.
+
+<img src="img/diagram/SEAGOWhere_Timeline_updated.png" alt="Timeline" width="700" height="400">
 <br>
 
 ### Future Roadmap
