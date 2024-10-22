@@ -64,12 +64,12 @@ function multiply(packageDetails) {
 }
 
 function updatePrice(packageDetails) {
-    const bookingTotal = document.getElementsByClassName('booking-total')[0];
+    // const bookingTotal = document.getElementsByClassName('booking-total')[0];
     const totalPrice = document.getElementsByClassName('total-price')[0];
 
     const total = multiply(packageDetails);
     
-    bookingTotal.textContent = `S$${total}`;
+    // bookingTotal.textContent = `S$${total}`;
     totalPrice.textContent = `S$${total}`;
     
 }

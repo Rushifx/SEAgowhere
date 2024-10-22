@@ -33,7 +33,7 @@ async function fetchBookingsByUserId() {
 
         const bookingCard = `
                 <div class="col-md-4 col-sm-6 mb-3 d-flex">
-                      <div class="booking-card border border-2 border-black rounded-2 flex-fill">
+                      <div class="booking-card border border-2 border-dark-subtle rounded-2 flex-fill">
                         <div class="booking-img">
                           <img src="${packageDetails.image_url}" alt="${packageDetails.name}"
                             class="h-25 w-100 rounded-0 rounded-1">
@@ -75,7 +75,7 @@ function getCategoryName(categoryName) {
   switch (categoryName) {
     case 1: return "nature";
     case 2: return "food";
-    case 3: return "festivals";
+    case 3: return "festival";
     case 4: return "concerts";
     case 5: return "culture";
     default: return "unknown"

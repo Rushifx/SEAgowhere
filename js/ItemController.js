@@ -106,18 +106,18 @@ class ItemsController {
         cardButton.append(cardDetail);
         cardDetail.addEventListener("click", (event) => {
             this.handleProductDetail(
-                item.name, 
-                item.country, 
+                item.name,
+                item.country,
                 item.desc,
-                item.start_date, 
-                item.end_date, 
-                item.no_of_days, 
+                item.start_date,
+                item.end_date,
+                item.no_of_days,
                 item.no_of_nights,
-                item.price, 
-                item.image_1, 
-                item.image_2, 
-                item.image_3, 
-                item.image_4, 
+                item.price,
+                item.image_1,
+                item.image_2,
+                item.image_3,
+                item.image_4,
                 event);
             console.log("TO CHECK: ", item.name, item.country, item.desc,
                 item.start_date, item.end_date, item.no_of_days, item.no_of_nights,
@@ -127,7 +127,31 @@ class ItemsController {
         const cardLink = document.createElement("a");
         cardLink.className = "btn btn-custom rounded-4 text-white text-center mt-2 me-2";
         cardLink.innerText = "Book Now!";
-        cardLink.href = `${_CART_URL}?id=${item.id}`;           // DONE: Add link to Cart.html
+
+        const token = isAuthenticated();
+
+        if (!token) {
+            cardLink.href = "#";
+
+            cardLink.addEventListener("click", (event) => {
+                event.preventDefault();
+
+                const currentURL = `${_CART_URL}?id=${item.id}`; 
+                localStorage.setItem('redirectTo', currentURL);
+                console.log("Redirect URL Set: " + currentURL); 
+
+                showToast("danger", "Not logged in! Redirecting to login page in 2s.");
+                setTimeout(() => {
+                    window.location = _LOGIN_URL;
+                }, 2000);
+            });
+        } else {
+            cardLink.addEventListener("click", (event) => {
+                event.preventDefault();
+                window.location = `${_CART_URL}?id=${item.id}`;
+            });
+        }
+
         cardButton.append(cardLink);
     }
 
@@ -200,25 +224,25 @@ class ItemsController {
             const formattedEnd = formatDate(end_date)
             packageDates.textContent = `Dates: ${formattedStart} to ${formattedEnd}`;
             console.log("start_date passed to handleProductDetail: ", start_date);
-            console.log("end_date passed to handleProductDetail: ", end_date);            
+            console.log("end_date passed to handleProductDetail: ", end_date);
         }
 
         if (packageDaysNights) {
-            packageDaysNights.textContent =`${days} Days, ${nights} Nights`            
+            packageDaysNights.textContent = `${days} Days, ${nights} Nights`
         }
 
         if (packagePrice) {
-            packagePrice.textContent = `From $${price} per Pax`;            
+            packagePrice.textContent = `From $${price} per Pax`;
         }
 
         if (packageDesc) {
-            packageDesc.textContent = desc;            
+            packageDesc.textContent = desc;
         }
 
-        if(packageImage1) packageImage1.setAttribute("src", image1 || '');
-        if(packageImage2) packageImage2.setAttribute("src", image2 || '');
-        if(packageImage3) packageImage3.setAttribute("src", image3 || '');
-        if(packageImage4) packageImage4.setAttribute("src", image4 || '');
+        if (packageImage1) packageImage1.setAttribute("src", image1 || '');
+        if (packageImage2) packageImage2.setAttribute("src", image2 || '');
+        if (packageImage3) packageImage3.setAttribute("src", image3 || '');
+        if (packageImage4) packageImage4.setAttribute("src", image4 || '');
 
         const modal = new bootstrap.Modal(modalPackageDetail);
         modal.show();
@@ -259,4 +283,13 @@ function getCategoryClass(categoryClass) {
 const formatDate = (date) => {
     const parts = date.split('-');
     return `${parts[2]}-${parts[1]}-${parts[0]}`;
+}
+
+function showToast(type, message) {
+    const toastElement = document.getElementById("msg-toast");
+    const toastBodyElement = document.getElementById("msg-toast-body");
+    toastBodyElement.textContent = message;
+    toastElement.className = `toast align-items-center mt-2 bg-${type}`;
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
 }

@@ -1,18 +1,18 @@
 // Function to authenticate the user via site's JWT token
-function isAuthenticated(){
+function isAuthenticated() {
 
     const token = window.localStorage.getItem(_USERTOKEN);          // Retrieve usertoken from local storage
-    
+
     const expired = isTokenExpired(token);                          // Check the token's expiry 
-    
-    if(expired)                                                     // If expired, return (false)
+
+    if (expired)                                                     // If expired, return (false)
         return;
 
     return token;                                                   // Else return token (usertoken)
 }
 
 // Function to check if the token has expired
-function isTokenExpired(token) {                                    
+function isTokenExpired(token) {
 
     if (!token) return true;                                        // Return true if token passed in is undefined 
 
@@ -26,17 +26,17 @@ function isTokenExpired(token) {
 }
 
 // Function to decode the user's email from the parameter
-function decodeUser(token){                                         
-    
+function decodeUser(token) {
+
     // !! Extract authenticated user's email from the token
-    const arrToken = token.split(".");                              
+    const arrToken = token.split(".");
     const decodedToken = JSON.parse(window.atob(arrToken[1]));
     const email = decodedToken.email;
     const username = decodedToken.lastName + " " + decodedToken.firstName;
     const fullname = decodedToken.lastName + " " + decodedToken.firstName;
     const phoneNumber = decodedToken.number;
     const role = decodedToken.role;
-    return {email: email, username: username, fullname: fullname, number: phoneNumber, role: role};
+    return { email: email, username: username, fullname: fullname, number: phoneNumber, role: role };
 
 }
 
@@ -45,121 +45,137 @@ function decodeUser(token){
 // ?? In an async function, await pauses execution for the function until a Promise is resolved/rejected. 
 
 // Funtion to login
-async function login(formData = {}){
-    
-    if(Object.entries(formData).length === 0)                                               // Return if the object is empty
+async function login(formData = {}) {
+
+    if (Object.entries(formData).length === 0)                                               // Return if the object is empty
         return;
 
     // !! Try/catch block (exception handling) to send data to login enpoint
     try {
         // FETCH requests - send data or retrive data by calling an API endpoint            
-         
-            const response = await fetch(_ENDPOINT_LOGIN, {                                 // Perform an async POST request to process the form data
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(formData)
-            });
-        
 
-        
-        if(response.ok){                                                                    // If response is ok
-            
+        const response = await fetch(_ENDPOINT_LOGIN, {                                 // Perform an async POST request to process the form data
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+
+
+        if (response.ok) {                                                                    // If response is ok
+
             const result = await response.json();
-            const token = result.token;                                                   
+            const token = result.token;
             const user = decodeUser(token);
-
+            const redirectTo = window.localStorage.getItem('redirectTo')
             window.localStorage.setItem(_USERTOKEN, token);                                 // Store the string in localStorage with the key 'usertoken'
-            window.location = _HOME_URL;                                                    // Redirect the user to homepage
+
+            if (redirectTo) {
+                console.log("Redirecting to: " + redirectTo);
+                window.location.href = redirectTo;
+                localStorage.removeItem('redirectTo');
+            } else {
+                console.log("No redirectTo found, going to home.");
+                window.location.href = _HOME_URL;                                           // Redirect the user to homepage
+            }
 
         }
-        
+
         return;                                                                             // Else return false
 
     } catch (error) {
         console.log("Exception error gotten is: ", error.message);
         return;
     }
-    
+
 }
 
 // Function to Sign Up
-async function signup(formData = {}){           
-    if(Object.entries(formData).length === 0)                                               // Return if the object is empty
+async function signup(formData = {}) {
+    if (Object.entries(formData).length === 0)                                               // Return if the object is empty
         return;
 
     try {
+        const response = await fetch(_ENDPOINT_SIGNUP, { // Perform an async POST request to process the form data
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
 
-        const response = await fetch(_ENDPOINT_SIGNUP, {                                 // Perform an async POST request to process the form data
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(formData)
-            });
+        if (response.ok) {
+            const loginData = {
+                email: formData.email,
+                password: formData.password
+            };
 
-            if (response.ok) {
-    
-                // Automatically log the user in with the same email and password after successful signup
-                const loginData = {
-                    email: formData.email,
-                    password: formData.password
-                };
-    
-                // Call the login function to automatically log in the user after signing up
-                await login(loginData);
-            } else {
-                console.log("Signup failed:", await response.json());
+            const loginResult = await login(loginData);
+
+            if (loginResult) {
+                const redirectTo = window.localStorage.getItem('redirectTo');
+
+                if (redirectTo) {
+                    console.log("Redirecting to: " + redirectTo);
+                    window.location.href = redirectTo;
+                    localStorage.removeItem('redirectTo');
+                } else {
+                    console.log("No redirectTo found, going to home.");
+                    window.location.href = _HOME_URL; 
+                }
             }
+        } else {
+            console.log("Signup failed:", await response.json());
+        }
 
-        return;
-
-    } catch (error){
-        console.log("Exception error gotten is: ", error.message)
+    } catch (error) {
+        console.log("Exception error gotten is: ", error.message);
         return;
     }
 }
 
 // Function to update profile
-async function update(formData = {}){
-    
+async function update(formData = {}) {
+
     const token = localStorage.getItem(_USERTOKEN);
 
-    if(Object.entries(formData).length === 0)                                               // Return if the object is empty
+    if (Object.entries(formData).length === 0)                                               // Return if the object is empty
         return;
 
     try {
 
         const response = await fetch(_ENDPOINT_UPDATEPROFILE, {
-                method: "PUT",
-                headers: {  "Content-Type": "application/json",
-                            "Authorization": `Bearer ${token}`, // Send the bearer token for authentication
-                },
-                body: JSON.stringify(formData)
-            });
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`, // Send the bearer token for authentication
+            },
+            body: JSON.stringify(formData)
+        });
 
-            if (response.ok) {
-    
-                const result = await response.json();
-                const newToken = result.token; 
+        if (response.ok) {
 
-                window.localStorage.removeItem(_USERTOKEN);
-                window.localStorage.setItem(_USERTOKEN, newToken);
-                
-                // Redirect back to profile.html
-                window.location = _PROFILE_URL;
+            const result = await response.json();
+            const newToken = result.token;
 
-            } else {
-                console.log("Update failed:", await response.json());
-            }
+            window.localStorage.removeItem(_USERTOKEN);
+            window.localStorage.setItem(_USERTOKEN, newToken);
+
+            // Redirect back to profile.html
+            window.location = _PROFILE_URL;
+
+        } else {
+            console.log("Update failed:", await response.json());
+        }
 
         return;
 
-    } catch (error){
+    } catch (error) {
         console.log("Exception error gotten is: ", error.message)
         return;
     }
 }
 
 // Function to logout
-function logout(){
+function logout() {
     window.localStorage.removeItem(_USERTOKEN);                                             // Store the string in localStorage with the key 'token'
     window.location = _HOME_URL;                                                            // Redirect the user to homepage
 }
