@@ -15,14 +15,14 @@
 <!-- TITLE CONTENTS -->
 <div align="center">
     <h3>Final Capstone Project for Generation FSD-04</h3>
-        <a href="https://liyanaaj.netlify.app/"><strong>Live Website</strong></a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
+        <a href="https://seagowhere.netlify.app/"><strong>SEAGoWhere Website</strong></a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
           <br />
           <br />
               <a href="https://github.com/Rushifx/SEAgowhere">Frontend Repo</a>
               ·
               <a href="https://github.com/Liyyy9/SEAGoWhere-BackEnd">Backend Repo</a>
               ·
-              <a href="https://liyanaaj.netlify.app/">Presentation Slides/Documents</a> <!-- CURRENT WEBSITE PLACEHOLDER IS LIYANA'S PORTFOLIO-->
+              <a href="https://drive.google.com/drive/folders/15WKz0gDHOjkiZ1vZeMbvkwCUz0h_8htj?usp=sharing">Presentation Slides/Documents</a> 
 </div>
 </br>
 
