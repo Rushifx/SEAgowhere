@@ -100,16 +100,16 @@
             <!-- Header Row -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-6"><strong></strong></div>
-              <div class="col-2 text-end lexend"><strong>Price</strong></div>
               <div class="col-2 text-end lexend"><strong>Pax</strong></div>
-              <div class="col-2 text-end lexend"><strong>Total</strong></div>
+              <div class="col-2 text-end lexend"><strong>Price</strong></div>
+              <!-- <div class="col-2 text-end lexend"><strong>Total</strong></div> -->
             </div>
             <!-- Data Rows -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
               <div class="col-6 lexend">Adult</div>
-              <div class="col-2 text-end lexend booking-price"></div>
               <div class="col-2 text-end lexend booking-pax">1</div>
-              <div class="col-2 text-end lexend booking-total"></div>
+              <div class="col-2 text-end lexend booking-price"></div>
+              <!-- <div class="col-2 text-end lexend booking-total"></div> -->
             </div>
             <!-- Total Row -->
             <div class="list-group-item d-flex justify-content-between align-items-center list-group-item-info">
@@ -552,7 +552,9 @@
         }
 
         // Final redirect after all requests are complete
-        window.location = "bookingcomplete.html";
+        setTimeout(()=> {
+          window.location = "bookingcomplete.html";
+        }, 2000)
         
     } catch (error) {
         console.log("Exception error caught: ", error.message);

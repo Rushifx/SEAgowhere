@@ -13,7 +13,7 @@ document.getElementById("add-passenger-btn").addEventListener("click", () => {
     updatePrice(packageDetails);
 
     const newPassengerRow = `
-    <div class="row g-3 additional-passenger border-top pt-3" data-dynamic="true">
+    <div class="row g-3 additional-passenger border-top pt-3" data-dynamic="true" id="passenger-${dynamicCounter}">
         <div class="col-md-3">
             <label for="title-${dynamicCounter}" class="form-label">Title</label>
             <select class="form-select fw-light" id="title-${dynamicCounter}" required>
@@ -98,9 +98,29 @@ document.getElementById("add-passenger-btn").addEventListener("click", () => {
                 Please enter your mobile number.
             </div>
         </div>
+
+        <!-- Remove Passenger Button -->
+        <div class="col-md-4 remove-button">
+            <button class="btn btn-danger remove-passenger-btn" onclick="removePassenger(${dynamicCounter})">Remove Passenger</button>
         </div>
     </div>
     `;
 
     passengerContainer.insertAdjacentHTML("beforeend", newPassengerRow);
 });
+
+function removePassenger(counter) {
+    const passengerRow = document.getElementById(`passenger-${counter}`);
+    if (passengerRow) {
+        passengerRow.remove();
+        dynamicCounter--;
+        console.log("Passenger removed. Count: " + dynamicCounter);
+
+        // Update the quantity in the booking display
+        const bookingQty = document.querySelector(".booking-pax");
+        bookingQty.textContent = dynamicCounter;
+        console.log("Updated QTY: " + bookingQty.innerHTML);
+
+        updatePrice(packageDetails);
+    }
+}
