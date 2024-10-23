@@ -125,7 +125,7 @@ async function signup(formData = {}) {
         } else {
             console.log("Signup failed:", await response.json());
         }
-
+        return;
     } catch (error) {
         console.log("Exception error gotten is: ", error.message);
         return;
