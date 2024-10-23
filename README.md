@@ -261,7 +261,7 @@ To aid in rapid development as well as direct application from course to product
 
 The use of Github as a key tool in managing code revisions as a single source of truth (SSOT), as well as version control was also paramount in enabling the level of agility in our software development cycle sprints.
 
-<img src="img/diagram/SEAGOWhere_Timeline_updated.png" alt="Timeline" width="700" height="400">
+<img src="img/diagram/SEAgowhere_Presentation_TL_v3.png" alt="Timeline" width="700" height="400">
 <br>
 
 ### Future Roadmap
