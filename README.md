@@ -268,7 +268,7 @@ To aid in rapid development as well as direct application from course to product
 
 The use of Github platform and repository was also a key tool in managing version control in code revisions (via approved reviews and merges) throughout the software development cycle, particularly during sprints. 
 
-<img src="img/diagram/SEAgowhere_Presentation_TL_v3.png" alt="Timeline" width="700" height="400">
+<img src="img/diagram/SEAGOWhere_Timeline_v3.png" alt="Timeline" width="700" height="400">
 <br>
 
 ### Future Roadmap
@@ -283,7 +283,7 @@ As part of the web application development, several application features were pr
 | Payment Gateway       | Secure Payment Gateway portal API (Stripe)                        | Java                |Q1 2025                 |
 | Subscription Features | Paid Subscription service with customised curation to user profile| JS, Spring Framework|Q2 2025                 |    
 
-<br>*To be implemented future product roadmap with a hypothetical schedule if additional 12-14 weeks time extension
+<br>*Future product features to be implemented with a hypothetical 12-14 weeks time extension from end October 2024
 
 ### Team Composition
 
