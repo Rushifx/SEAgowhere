@@ -127,7 +127,6 @@ body {
     right: 1.8%;
 }
 
-
 /** End of PACKAGES **/
 
 /**Start of CAROUSEL**/
@@ -176,10 +175,6 @@ body {
 .carousel-control-next {
     right: 0;
 }
-
-/*   .carousel-item img:hover{
-
-  } */
 /**End of CAROUSEL**/
 
 /* START OF FOOTER */
@@ -648,6 +643,7 @@ footer {
 .btn-custom-dark:hover {
     background-color: #FFAB40 !important;
     color: #0F3244 !important;
+    font-weight: 500;
 }
 
 .rounded-custom {
@@ -658,6 +654,15 @@ footer {
     background-color: rgba(60, 155, 214, 0.7);
 }
 
+.modal-header {
+    background-color: #3c9bd6;
+    padding: 1rem !important;
+}
+
+.details-right {
+    color: #FFAB40;
+    text-shadow: 1px 1px 2px #0000007c;
+}
 /* END OF PRODUCT LISTING */
 
 /* START OF USER PROFILE BOOKINGS */
@@ -731,6 +736,24 @@ footer {
 }
 
 /* END OF BOOKING */
+
+/* START OF BOOKING CREATED */
+
+.booking-complete {
+    min-height: 700px;
+}
+
+.big-complete {
+    font-size: 4rem;
+    color: #3C9CD6;
+}
+
+.small-complete {
+    font-size: 2rem;
+    color: #FFAB40;
+
+}
+/* START OF BOOKING CREATED */
 
 /* START OF MEDIA QUERIES */
 
@@ -1025,5 +1048,20 @@ footer {
 }
 
 /* END OF FEATURED TRIPS MQ */
+
+/* START OF REMOVE PASSENGER MQ */
+@media screen and (min-width: 48rem) {          /* 768px */
+    .remove-button .remove-passenger-btn {
+        margin-top: 2rem ;
+    }
+}
+
+@media screen and (max-width: 47.9375rem) {          /* 767px */
+    .remove-button .remove-passenger-btn {
+        margin-top: 0 !important;
+        margin-bottom: 2rem !important;
+    }
+}
+/* END OF REMOVE PASSENGER MQ */
 
 /* END OF MEDIA QUERIES */

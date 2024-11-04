@@ -44,9 +44,24 @@
       </div>
     </nav>
   </div>
-  
+
   <!-- End of Header -->
   <!-- Start of mainsection -->
+  <!-- toast -->
+  <!-- https://getbootstrap.com/docs/5.3/components/toasts/ -->
+  <div class="toast-container p-3 top-0 start-50 translate-middle-x">
+    <!-- Put toasts within -->
+    <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-autohide="true" data-bs-delay="4000">
+      <div class="d-flex">
+        <div id="msg-toast-body" class="toast-body">
+          <!-- Message to be added here -->
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
   <section id="mainsection">
 
     <!-- Featured Section -->
@@ -83,8 +98,10 @@
                 </div>
               </div>
               <div class="trip-links d-flex justify-content-end position-absolute">
-                <a href="packages.html#package-1" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+                <a href="packages.html#package-1"
+                  class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded"
+                  onclick="checkAuthentication(this)" data-package-name="Azure Shan State, Myanmmar">Book Now!</a>
               </div>
             </div>
 
@@ -92,15 +109,17 @@
             <div class="tab-pane fade position-relative" id="featured-trip2-pills" role="tabpanel"
               aria-labelledby="featured-trip2-tab">
               <div class="trip-details p-3">
-                <div class="trip-title text-uppercase fs-1 fw-bolder">taste of Bangkok, Thailand</div>
+                <div class="trip-title text-uppercase fs-1 fw-bolder">Taste of Bangkok, Thailand</div>
                 <div class="trip-content text-light fs-4 shadow-effects ms-5 mt-3">
                   <p>5 Days, 4 Nights</p>
                   <p>From SGD$<strong>2500</strong> / Pax</p>
                 </div>
               </div>
               <div class="trip-links d-flex justify-content-end position-absolute">
-                <a href="packages.html#package-2" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+                <a href="packages.html#package-2"
+                  class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded"
+                  onclick="checkAuthentication(this)" data-package-name="Taste of Bangkok, Thailand">Book Now!</a>
               </div>
             </div>
 
@@ -115,8 +134,10 @@
                 </div>
               </div>
               <div class="trip-links d-flex justify-content-end position-absolute">
-                <a href="packages.html#package-3" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+                <a href="packages.html#package-3"
+                  class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded"
+                onclick="checkAuthentication(this)" data-package-name="Bali Thrills, Indonesia">Book Now!</a>
               </div>
             </div>
 
@@ -131,8 +152,10 @@
                 </div>
               </div>
               <div class="trip-links d-flex justify-content-end position-absolute">
-                <a href="packages.html#package-4" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+                <a href="packages.html#package-4"
+                  class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+                <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded"
+                onclick="checkAuthentication(this)" data-package-name="Cebu Food Hues, Philippines">Book Now!</a>
               </div>
             </div>
           </div>
@@ -156,8 +179,8 @@
               </div>
             </div>
             <div class="trip-links d-flex justify-content-end position-absolute">
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              <a href="packages.html#package-1" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded" onclick="checkAuthentication(this)" data-package-name="Azure Shan State, Myanmmar">Book Now!</a>
             </div>
           </div>
           <!-- Mobile Featured Trip 2 -->
@@ -170,8 +193,8 @@
               </div>
             </div>
             <div class="trip-links d-flex justify-content-end position-absolute">
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              <a href="packages.html#package-2" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded" onclick="checkAuthentication(this)" data-package-name="Taste of Bangkok, Thailand">Book Now!</a>
             </div>
           </div>
           <!-- Mobile Featured Trip 3 -->
@@ -184,8 +207,8 @@
               </div>
             </div>
             <div class="trip-links d-flex justify-content-end position-absolute">
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              <a href="packages.html#package-3" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded" onclick="checkAuthentication(this)" data-package-name="Bali Thrills, Indonesia">Book Now!</a>
             </div>
           </div>
           <!-- Mobile Featured Trip 4 -->
@@ -198,8 +221,8 @@
               </div>
             </div>
             <div class="trip-links d-flex justify-content-end position-absolute">
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
-              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded">Book Now!</a>
+              <a href="packages.html#package-4" class="text-decoration-none text-light text-center py-3 me-3 rounded">Find Out More!</a>
+              <a href="#" class="text-decoration-none text-light text-center py-3 me-3 rounded" onclick="checkAuthentication(this)" data-package-name="Cebu Food Hues, Philippines">Book Now!</a>
             </div>
           </div>
 
@@ -218,7 +241,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="category.html?categoryId=2">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="img/packages/006_Malaysia_Resized_jpg/006_img_1020_4.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/006_Malaysia_Resized_jpg/006_img_1020_4.jpg" alt="#" width="100%" height="225"
+                  class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -232,7 +256,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="category.html?categoryId=3">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="img/packages/013_Thailand_Resized_jpg/013_img_1020_5.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/013_Thailand_Resized_jpg/013_img_1020_5.jpg" alt="#" width="100%" height="225"
+                  class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -246,7 +271,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="category.html?categoryId=4">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="../img/packages/011_Singapore_Resized_jpg/011_img_1020_10.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/011_Singapore_Resized_jpg/011_img_1020_10.jpg" alt="#" width="100%"
+                  height="225" class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -260,7 +286,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="category.html?categoryId=1">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="../img/packages/005_Vietnam_Resized_jpg/005_img_1020_8.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/005_Vietnam_Resized_jpg/005_img_1020_8.jpg" alt="#" width="100%" height="225"
+                  class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -274,7 +301,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="category.html?categoryId=5">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="../img/packages/005_Vietnam_Resized_jpg/005_img_1020_2.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/005_Vietnam_Resized_jpg/005_img_1020_2.jpg" alt="#" width="100%" height="225"
+                  class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -288,7 +316,8 @@
           <div class="col-md-4 col-sm-6">
             <a href="experiences.html">
               <div class="category-card card mb-4 shadow-sm position-relative" width="100%" height="225">
-                <img src="../img/packages/008_Myanmar_Resized_jpg/008_img_1020_7.jpg" alt="#" width="100%" height="225" class="object-fit-cover">
+                <img src="./img/packages/008_Myanmar_Resized_jpg/008_img_1020_7.jpg" alt="#" width="100%" height="225"
+                  class="object-fit-cover">
                 <svg class="position-absolute" width="100%" height="100%">
                   <rect width="100%" height="100%" fill="#7373734a"></rect>
                   <text x="50%" y="50%" fill="#FFF" dy=".3em" alignment-baseline="middle" text-anchor="middle">For The
@@ -311,171 +340,181 @@
       </div>
 
       <div class="testimonials-wrapper position-relative">
-        <i id="prev" class="fa-solid fa-angle-left d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
+        <i id="prev"
+          class="fa-solid fa-angle-left d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
         <ul class="testimonial-carousel list-unstyled d-grid gap-3 overflow-x-auto">
 
-            <!-- Testimonial 1 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user-astronaut fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Colin Toh</h4>
-                  <h5 class="fw-light small">Singapore, Singapore</h5>
+          <!-- Testimonial 1 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user-astronaut fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Colin Toh</h4>
+              <h5 class="fw-light small">Singapore, Singapore</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 2 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user-graduate fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Charlie Tan</h4>
-                  <h5 class="fw-light small">San Francisco, USA</h5>
+          <!-- Testimonial 2 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user-graduate fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Charlie Tan</h4>
+              <h5 class="fw-light small">San Francisco, USA</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 3 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user-secret fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Liyana Afiqah</h4>
-                  <h5 class="fw-light small">Kuala Lumpur, Malaysia</h5>
+          <!-- Testimonial 3 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user-secret fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Liyana Afiqah</h4>
+              <h5 class="fw-light small">Kuala Lumpur, Malaysia</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 4 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user-ninja fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Xun An</h4>
-                  <h5 class="fw-light small">Hanoi, Vietnam</h5>
+          <!-- Testimonial 4 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user-ninja fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Xun An</h4>
+              <h5 class="fw-light small">Hanoi, Vietnam</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 5 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Sophia Petrillo</h4>
-                  <h5 class="fw-light small">Sicily, Italy</h5>
+          <!-- Testimonial 5 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Sophia Petrillo</h4>
+              <h5 class="fw-light small">Sicily, Italy</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 6 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Dorothy Zbornak</h4>
-                  <h5 class="fw-light small">Paris, France</h5>
+          <!-- Testimonial 6 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Dorothy Zbornak</h4>
+              <h5 class="fw-light small">Paris, France</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 7 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Blanche Devereaux</h4>
-                  <h5 class="fw-light small">Bavaria, Germany</h5>
+          <!-- Testimonial 7 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Blanche Devereaux</h4>
+              <h5 class="fw-light small">Bavaria, Germany</h5>
+            </div>
+          </li>
 
-            <!-- Testimonial 8 -->
-            <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
-              <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
-              <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="listing-rating my-2">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi dolores
-                  aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
-                  veniam cumque consequatur molestias corporis a!
-                </p>
-                  <h4>Rose Nylund</h4>
-                  <h5 class="fw-light small">Quebec, Canada</h5>
+          <!-- Testimonial 8 -->
+          <li class="testimonial-card rounded d-flex flex-column align-items-center justify-content-center p-3">
+            <div class="testi-avatar"><i class="fa-solid fa-user fa-4x"></i></div>
+            <div class="testimonials-text d-flex flex-column align-items-center justify-content-center text-center">
+              <div class="listing-rating my-2">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
-            </li>
-            
-          </ul>
-          <i id="next" class="fa-solid fa-angle-right d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
+              <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quas, minus animi
+                dolores
+                aliquam voluptates numquam dolorum possimus molestiae quisquam, doloremque consectetur eaque eos
+                veniam cumque consequatur molestias corporis a!
+              </p>
+              <h4>Rose Nylund</h4>
+              <h5 class="fw-light small">Quebec, Canada</h5>
+            </div>
+          </li>
+
+        </ul>
+        <i id="next"
+          class="fa-solid fa-angle-right d-flex justify-content-center align-items-center rounded-circle top-50 position-absolute fs-5 review-nav"></i>
 
       </div>
 
@@ -503,7 +542,7 @@
           <div class="row d-flex justify-content-center pt-2 align-items-center">
             <!--Grid column-->
             <div class="col-auto">
-              <img src="../img/logo2-transparent.png" alt="SEAGoWhere logo" class="footer-logo">
+              <img src="./img/logo2-transparent.png" alt="SEAGoWhere logo" class="footer-logo">
             </div>
             <!--Grid column-->
 
@@ -626,9 +665,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>    <!-- popper: used in modal-->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>  <!-- used in modal -->
-  
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <!-- popper: used in modal-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script> <!-- used in modal -->
+
   <!-- External Custom Script -->
   <script src="js/Modal.js"></script>
   <script src="js/Mock.js"></script> <!-- TODO: to remove in production env. -->
@@ -642,6 +682,53 @@
   <script src="js/boostrap-ftns.js"></script>
   <script src="js/form-validate.js"></script>
   <script src="js/review.js"></script>
+  <script>
+    function checkAuthentication(element) {
+      const packageName = element.getAttribute('data-package-name');
+      console.log("Package Name: ", packageName);
+
+      const token = isAuthenticated();
+
+      if (!token) {
+        const redirectUrl = packageLink(packageName);
+        console.log("Redirect URL: ", redirectUrl);
+
+        if (redirectUrl) {
+          localStorage.setItem('redirectTo', redirectUrl);
+
+          showToast("danger", "Not logged in! Redirecting to login page in 2s.");
+          setTimeout(() => {
+            window.location.href = _LOGIN_URL;
+          }, 2000);
+
+        }
+      } else {
+        window.location.href = packageLink(packageName);
+      }
+    }
+
+    function packageLink(packageName) {
+      console.log("Package name from package link: " + packageName);
+
+      switch (packageName) {
+        case "Azure Shan State, Myanmmar": return 'booking.html?id=8';  
+        case "Taste of Bangkok, Thailand": return 'booking.html?id=12';
+        case "Bali Thrills, Indonesia": return 'booking.html?id=15';
+        case "Cebu Food Hues, Philippines": return 'booking.html?id=21';
+        default: return "No package found!";
+      }
+    }
+
+
+    function showToast(type, message) {
+      const toastElement = document.getElementById("msg-toast");
+      const toastBodyElement = document.getElementById("msg-toast-body");
+      toastBodyElement.textContent = message;
+      toastElement.className = `toast align-items-center mt-2 bg-${type}`;
+      const toast = new bootstrap.Toast(toastElement);
+      toast.show();
+    }
+  </script>
 </body>
 
 </html>

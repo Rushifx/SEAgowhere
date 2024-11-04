@@ -23,6 +23,7 @@ const _CONTACT_URL = "contact.html";
 const _LOGIN_URL = "login.html";
 const _LOGOUT_URL = "logout.html";
 const _PROFILE_URL = "profile.html";
+const _UPROFILE_URL = "updateprofile.html";
 const _SIGNUP_URL = "signup.html";
 
 function getCategoryUrl(categoryId){
@@ -40,4 +41,7 @@ const _EXPERIENCE_ALL_URL = "experiences.html";
 const _USERTOKEN = "usertoken";
 
 // endponts
-const _ENDPOINT_LOGIN = "TBC";
+const _ENDPOINT_LOGIN = "http://localhost:8080/auth/api/signin";
+const _ENDPOINT_SIGNUP = "http://localhost:8080/auth/api/signup";
+const _ENDPOINT_PROFILE = "http://localhost:8080/restricted/api/profile";
+const _ENDPOINT_UPDATEPROFILE = "http://localhost:8080/restricted/api/profile/update";

@@ -47,6 +47,21 @@
   <!-- No Header in Packages -->
   <!-- End of Header -->
 
+  <!-- toast -->
+  <!-- https://getbootstrap.com/docs/5.3/components/toasts/ -->
+  <div class="toast-container p-3 top-0 start-50 translate-middle-x">
+    <!-- Put toasts within -->
+    <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-autohide="true" data-bs-delay="4000">
+      <div class="d-flex">
+        <div id="msg-toast-body" class="toast-body">
+          <!-- Message to be added here -->
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
   <!-- Start of mainsection -->
   <section id="mainsection">
 
@@ -64,28 +79,28 @@
       <!--Featured Card #1-->
       <div class="package-card" id="package-1">
         <div class="package-card-gradient"></div>
-        <img src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_3.jpg" alt="card image" width="100%"
-          height="500px">
+        <img src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_3.jpg" alt="card image" width="100%" height="500px">
         <div class="card-img-overlay">
           <div class="card-title d-flex justify-content-between">
             <p class="ms-3 fs-1 fw-bolder pt-3 px-3 w-75">Azure Shan State, Myanmar (7D6N)</p>
           </div>
-          <button type="button" class="btn btn-lg fa fa-bookmark btn-custom-dark text-white position-absolute top-right"></button>
-          <p class="card-text text-white ms-3 px-3">Escape to the breathtaking highlands with our 'Azure Shan State' tour!
+          <p class="card-text text-white ms-3 px-3">Escape to the breathtaking highlands with our 'Azure Shan State'
+            tour!
           </p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Depart: 10 Jan 2025</p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Return: 17 Jan 2025</p>
           <p class="card-text text-white ms-3 px-3 fs-5 fw-bold">From SGD$3500/Per Pax</p>
           <div class="position-absolute bottom-right lexend">
-            <button type="button" class="btn btn-lg btn-custom-dark text-white">Let's Go!</button>
+            <button type="button" class="btn btn-lg btn-custom-dark text-white"
+              onclick="checkAuthentication(this)" data-package-name="Azure Shan State, Myanmmar">Let's Go!</button>
           </div>
           <div class="sm-img-card d-flex justify-content-start position-absolute bottom-left gap-3">
-            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_2.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_7.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_4.jpg"
-              alt="sm image" width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_2.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_7.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/008_Myanmar_Resized_jpg/008_img_1020_4.jpg" alt="sm image"
+              width="col-auto" height="200px">
           </div>
         </div>
       </div>
@@ -100,22 +115,23 @@
           <div class="card-title d-flex justify-content-between">
             <p class="ms-3 px-3 fs-1 fw-bolder pt-3 w-75">The Taste of Bangkok, Thailand (5D4N)</p>
           </div>
-          <button type="button" class="btn btn-lg fa fa-bookmark btn-custom-dark text-white position-absolute top-right"></button>
-          <p class="card-text text-white ms-3 px-3">Indulge your senses with 'The Taste of Bangkok' tour, a culinary journey through Thailand’s vibrant capital!
+          <p class="card-text text-white ms-3 px-3">Indulge your senses with 'The Taste of Bangkok' tour, a culinary
+            journey through Thailand’s vibrant capital!
           </p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Depart: 07 Aug 2025</p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Return: 11 Aug 2025</p>
           <p class="card-text text-white ms-3 px-3 fs-5 fw-bold">From SGD$2500/Per Pax</p>
           <div class="position-absolute bottom-right lexend">
-            <button type="button" class="btn btn-lg btn-custom-dark text-white">Let's Go!</button>
+            <button type="button" class="btn btn-lg btn-custom-dark text-white"
+            onclick="checkAuthentication(this)" data-package-name="Taste of Bangkok, Thailand">Let's Go!</button>
           </div>
           <div class="sm-img-card d-flex justify-content-start position-absolute bottom-left gap-3">
-            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_4.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_5.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_3.jpg"
-              alt="sm image" width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_4.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_5.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/012_Thailand_Resized_jpg/012_img_1020_3.jpg" alt="sm image"
+              width="col-auto" height="200px">
           </div>
         </div>
       </div>
@@ -130,28 +146,28 @@
           <div class="card-title d-flex justify-content-between">
             <p class="ms-3 px-3 fs-1 fw-bolder pt-3 w-75">Bali Thrills, Indonesia (6D5N)</p>
           </div>
-          <button type="button" class="btn btn-lg fa fa-bookmark btn-custom-dark text-white position-absolute top-right"></button>
           <p class="card-text text-white ms-3 px-3">Get ready for an adrenaline-packed journey with 'Bali Thrills'!
           </p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Depart: 10 Jun 2025</p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Return: 15 Jun 2025</p>
           <p class="card-text text-white ms-3 px-3 fs-5 fw-bold">From SGD$1200/Per Pax</p>
           <div class="position-absolute bottom-right lexend">
-            <button type="button" class="btn btn-lg btn-custom-dark text-white">Let's Go!</button>
+            <button type="button" class="btn btn-lg btn-custom-dark text-white"
+            onclick="checkAuthentication(this)" data-package-name="Bali Thrills, Indonesia">Let's Go!</button>
           </div>
           <div class="sm-img-card d-flex justify-content-start position-absolute bottom-left gap-3">
-            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_5.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_4.jpg"
-              alt="sm image" width="col-auto" height="200px">
-            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_3.jpg"
-              alt="sm image" width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_5.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_4.jpg" alt="sm image"
+              width="col-auto" height="200px">
+            <img class="img-mini rounded" src="img/packages/015_Indonesia_Resized_jpg/015_img_1020_3.jpg" alt="sm image"
+              width="col-auto" height="200px">
           </div>
         </div>
       </div>
       <!--End of Featured Card #3-->
 
-    
+
 
       <!--Featured Card #4-->
       <div class="package-card mb-5" id="package-4">
@@ -162,14 +178,15 @@
           <div class="card-title d-flex justify-content-between">
             <p class="ms-3 px-3 pt-3 fs-1 fw-bolder ps-3 w-75">Cebu Food Hues, Philippines (4D3N)</p>
           </div>
-          <button type="button" class="btn btn-lg fa fa-bookmark btn-custom-dark text-white position-absolute top-right"></button>
-          <p class="card-text text-white ms-3 px-3">Dive into a culinary adventure with 'Cebu Food Hues' and savor the vibrant flavors of Cebu!
+          <p class="card-text text-white ms-3 px-3">Dive into a culinary adventure with 'Cebu Food Hues' and savor the
+            vibrant flavors of Cebu!
           </p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Depart: 19 Dec 2024</p>
           <p class="card-text text-uppercase text-white ms-3 px-3 fs-5 fw-bold">Return: 22 Dec 2024</p>
           <p class="card-text text-white ms-3 px-3 fs-5 fw-bold">From SGD$2500/Per Pax</p>
           <div class="position-absolute bottom-right lexend">
-            <button type="button" class="btn btn-lg btn-custom-dark text-white">Let's Go!</button>
+            <button type="button" class="btn btn-lg btn-custom-dark text-white"
+            onclick="checkAuthentication(this)" data-package-name="Cebu Food Hues, Philippines">Let's Go!</button>
           </div>
           <div class="sm-img-card d-flex justify-content-start position-absolute bottom-left gap-3">
             <img class="img-mini rounded" src="img/packages/021_Philippines_Resized_jpg/021_img_1020_11.jpg"
@@ -340,6 +357,53 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script>
+    function checkAuthentication(element) {
+      const packageName = element.getAttribute('data-package-name');
+      console.log("Package Name: ", packageName);
+
+      const token = isAuthenticated();
+
+      if (!token) {
+        const redirectUrl = packageLink(packageName);
+        console.log("Redirect URL: ", redirectUrl);
+
+        if (redirectUrl) {
+          localStorage.setItem('redirectTo', redirectUrl);
+
+          showToast("danger", "Not logged in! Redirecting to login page in 2s.");
+          setTimeout(() => {
+            window.location.href = _LOGIN_URL;
+          }, 2000);
+
+        }
+      } else {
+        window.location.href = packageLink(packageName);
+      }
+    }
+
+    function packageLink(packageName) {
+      console.log("Package name from package link: " + packageName);
+
+      switch (packageName) {
+        case "Azure Shan State, Myanmmar": return 'booking.html?id=8';
+        case "Taste of Bangkok, Thailand": return 'booking.html?id=12';
+        case "Bali Thrills, Indonesia": return 'booking.html?id=15';
+        case "Cebu Food Hues, Philippines": return 'booking.html?id=21';
+        default: return "No package found!";
+      }
+    }
+
+
+    function showToast(type, message) {
+      const toastElement = document.getElementById("msg-toast");
+      const toastBodyElement = document.getElementById("msg-toast-body");
+      toastBodyElement.textContent = message;
+      toastElement.className = `toast align-items-center mt-2 bg-${type}`;
+      const toast = new bootstrap.Toast(toastElement);
+      toast.show();
+    }
+  </script>
 </body>
 
 </html>

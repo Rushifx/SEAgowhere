@@ -18,6 +18,20 @@
 </head>
 
 <body>
+
+    <!-- toast for feedback messages -->
+    <div class="toast-container p-3 top-0 start-50 translate-middle-x">
+        <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="true" data-bs-delay="4000">
+            <div class="d-flex">
+                <div id="msg-toast-body" class="toast-body">
+                    <!-- Message will appear here -->
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
   <div class="min-vh-75 bg-body-secondary">
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-sm">
@@ -45,9 +59,6 @@
     </nav>
   </div>
 
-  <!-- Header -->
-
-  <!-- End of Header -->
   <!-- Start of mainsection -->
   <section id="mainsection" style="background-color: #607783;">
     <div class="container py-5">
@@ -70,58 +81,65 @@
                 class="rounded-circle img-fluid" style="width: 150px;">
               <h5 id="txtUsername" class="my-3 small fw-light lexend lexend"></h5>
               <h5 class="d-block my-3 small fw-light lexend lexend"><span id="txtUserRole"></span></h5>
-              <a href="updateprofile.html"
-                class="btn btn-outline-primary ms-1 mt-3 lexend lexend">Edit Profile</a>
             </div>
           </div>
         </div>
         <div class="col-lg-8">
           <div class="card mb-4">
             <div class="card-body">
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0 lexend">Full Name</p>
-                </div>
-                <div class="col-sm-9">
-                  <p class="text-muted mb-0 lexend" id="txtFullName"></p>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0 lexend">Email</p>
-                </div>
-                <div class="col-sm-9">
-                  <p id="txtEmail" class="text-muted mb-0 lexend"></p>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <p class="mb-0 lexend">Mobile</p>
-                </div>
-                <div class="col-sm-9">
-                  <p id="txtPhone" class="text-muted mb-0 lexend"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Booked Packages -->
-          <div class="row">
-            <div class="col-md-12 mb-4">
-              <div class="card mb-4 mb-md-0 h-auto">
-                <div class="card-body">
-                  <p class="mb-4"><span class="fs-4 lexend">Active Bookings</span>
-                  </p>
-
-                  <div class="profile-bookings row">
-                    <!-- Cards will show up here -->
-                  </div>
-
-
-                </div>
-              </div>
+                <form id="updateProfile" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txtFirstName" class="mb-0 lexend">First Name</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" id="txtFirstName" class="form-control" required />
+                            <div class="invalid-feedback">First Name is required.</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txtLastName" class="mb-0 lexend">Last Name</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" id="txtLastName" class="form-control" required />
+                            <div class="invalid-feedback">Last Name is required.</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                          <p class="mb-0 lexend">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                          <p id="txtEmail" class="text-muted mb-0 lexend"></p>
+                        </div>
+                      </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txtPhone" class="mb-0 lexend">Mobile</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" id="txtPhone" class="form-control" required />
+                            <div class="invalid-feedback">Mobile Number is required.</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="txtPassword" class="mb-0 lexend">Password</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="password" id="txtPassword" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Submit button -->
+                    <div class="d-flex justify-content-end pt-4 formBtn">
+                        <button type="submit" id="btnUpdate" class="btn btn-primary btn-block ms-2">Update</button>
+                    </div>
+                </form>
             </div>
           </div>
 
@@ -289,8 +307,103 @@
 
   <script src="js/boostrap-ftns.js"></script>
   <script src="js/form-validate.js"></script>
-  <script src="js/UserBookings.js"></script>
 
+  <script>
+
+  document.addEventListener("DOMContentLoaded", async (event) => {
+
+        const token = isAuthenticated();
+
+    console.log("im in update profile");
+
+    if (!token) {
+        window.location = _HOME_URL;  // Redirect if not authenticated
+        return;
+    }
+
+    const profileFirstName = document.getElementById("txtFirstName");
+    const profileLastName = document.getElementById("txtLastName");
+    const profileEmail = document.getElementById("txtEmail");
+    const profilePhone = document.getElementById("txtPhone");
+    const profilePwd = document.getElementById("txtPassword")
+
+
+    const response = await fetch(_ENDPOINT_PROFILE, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`,  // Send Bearer token for authentication
+            "Content-Type": "application/json"
+        }
+    });
+
+    if (response.ok) {
+        const user = await response.json();  // Parse the response JSON
+
+        // Pre-fill the form with the current user's data
+        profileFirstName.value = user.firstName;
+        profileLastName.value = user.lastName;
+        profileEmail.innerHTML = user.email;  // Email is read-only, but we still populate it
+        profilePhone.value = user.number;
+        profilePwd.value = user.password;
+
+        console.log(user);
+
+    } else {
+        console.error("Failed to load profile data");
+    }
+
+  });
+
+    document.getElementById("updateProfile").addEventListener("submit", async (event) => {
+
+        const token = window.localStorage.getItem(_USERTOKEN);
+        const user = decodeUser(token);
+
+
+        event.preventDefault();
+
+        const email = user.email;
+        const pwd = document.getElementById("txtPassword");                     // Create constant variables to capture form inputs - txtPassword
+        const firstName = document.getElementById("txtFirstName");              // Create constant variables to capture form inputs - txtFirstName
+        const lastName = document.getElementById("txtLastName");               // Create constant variables to capture form inputs - txtLasttName
+        const number = document.getElementById("txtPhone");               // Create constant variables to capture form inputs - txtLasttName
+
+        const toastElement = document.getElementById("msg-toast");              // Get the toast element - msg-toast
+        const toastBodyElement = document.getElementById("msg-toast-body");     // Get the toast element - msg-toast-body
+
+        if (isEmpty(firstName.value) || isEmpty(lastName.value) || isEmpty(number.value)) {      // Trap empty inputs - isEmpty()
+            showToast({
+                toastElement,
+                toastBodyElement,
+                bgColor: "danger", msg: "All inputs must not be empty."
+            });
+            return;
+        }
+
+        spinner.createSpinner("btnUpdate");                                      // Create the spinner, apply it to btnUpdate
+        spinner.displaySpinner(true);
+
+        const formData = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email,
+            number: number.value,
+            password: pwd.value,
+            role: "USER"
+        };
+
+        console.log(email);
+        console.log(formData);
+
+        const updateSuccess = await update(formData);
+
+        if (!updateSuccess) {
+                spinner.displaySpinner(false);                                                                          // If signup unsuccessful, hide spinner
+                showToast({ toastElement, toastBodyElement, bgColor: "danger", msg: "Unable to update information. Try again." });    // If signup unsuccessful, provide feeback
+            }
+    });
+
+  </script>
 </body>
 
 </html>
